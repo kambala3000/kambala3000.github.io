@@ -1,0 +1,90 @@
+body {
+    background-color: #f5f2f7;
+}
+h1, h3, p, ul {
+    margin: 0;
+}
+#wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+.box1, .box2, .box3 {
+    border-bottom: 1px solid #c4c4c8;
+}
+.box2 h3, .box3 h3, .box4 h3 {
+    font: bold 18px MyriadPro, sans-serif;
+    color: #1f1f1f;
+}
+.box3 p, .box4 p {
+    font: 14px MyriadPro, sans-serif;
+    color: #3a3a3a;
+}
+
+/* box1 start */
+
+.box1 h1 {
+    padding: 50px 0 23px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font: bold 36px Arial, sans-serif;
+}
+.box1 img {
+    outline: 1px solid #8f8f8f;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.box1 p {
+    font: 14px Arial, sans-serif;
+    color: #5d5e5f;
+    padding: 20px 0 21px 0;
+}
+
+/* box1 end */
+
+
+/* box2 start */
+
+.box2 h3 {
+    padding: 20px 0 25px 0;
+}
+.box2 ul {
+    padding: 0 0 20px 35px;
+    font: 14px MyriadPro, sans-serif;
+    color: #3b3b3b;
+}
+
+/* box2 end */
+
+
+/* box3 start */
+
+.box3 h3 {
+    padding: 20px 0 23px 0;
+}
+.box3 p {
+    padding: 0 0 0 35px;
+}
+.box3 ul {
+    padding: 0 0 20px 35px;
+    list-style: none;
+}
+.box3 ul li a {
+    text-decoration: underline;
+    font: italic 14px MyriadPro, sans-serif;
+    color: #0056d3;
+}
+
+/* box3 end */
+
+
+/* box4 start */
+
+.box4 h3 {
+    padding: 20px 0 24px 0;
+}
+.box4 p {
+    padding: 0 0 0 35px;
+}
+
+/* box4 end */
