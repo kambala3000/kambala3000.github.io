@@ -14,6 +14,7 @@ h1, h3, p, ul {
 .box2 h3, .box3 h3, .box4 h3 {
     font: bold 18px MyriadPro, sans-serif;
     color: #1f1f1f;
+    letter-spacing: -0.75px;
 }
 .box3 p, .box4 p {
     font: 14px MyriadPro, sans-serif;
@@ -38,6 +39,7 @@ h1, h3, p, ul {
     font: 14px Arial, sans-serif;
     color: #5d5e5f;
     padding: 20px 0 21px 0;
+    letter-spacing: 0.4px;
 }
 
 /* box1 end */
@@ -46,12 +48,16 @@ h1, h3, p, ul {
 /* box2 start */
 
 .box2 h3 {
-    padding: 20px 0 25px 0;
+    padding: 17px 0 22px 0;
 }
 .box2 ul {
-    padding: 0 0 20px 35px;
+    padding: 0 0 19px 32px;
     font: 14px MyriadPro, sans-serif;
     color: #3b3b3b;
+}
+.box2 ul li {
+  padding: 1px 0 0 4px;
+  letter-spacing: -0.2px;
 }
 
 /* box2 end */
@@ -59,9 +65,13 @@ h1, h3, p, ul {
 
 /* box3 start */
 
-.box3 h3 {
-    padding: 20px 0 23px 0;
+.box3_h3_1 {
+  padding: 18px 0 19px 0;
 }
+.box3_h3_2 {
+  padding: 15px 0 19px 0;
+}
+
 .box3 p {
     padding: 0 0 0 35px;
 }
