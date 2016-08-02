@@ -1,0 +1,32 @@
+.wrapper {
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    background-color: #9fa0a2;
+}
+.clear {
+    clear: both;
+}
+.line1 {
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+}
+.line1_box {
+    width: 33%;
+    height: 100px;
+    outline: 1px solid red;
+    float: left;
+}
+.line2 {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+}
+.line2_box {
+    width: 25%;
+    height: 100px;
+    outline: 1px solid red;
+    float: left;
+    margin: 0 auto;
+}
