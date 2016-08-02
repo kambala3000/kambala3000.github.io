@@ -8,6 +8,7 @@
     clear: both;
 }
 .line1 {
+  padding: 100px 0 0 0;
     width: 60%;
     height: 100px;
     margin: 0 auto;
@@ -15,7 +16,10 @@
 .line1_box {
     width: 33%;
     height: 100px;
-    outline: 1px solid red;
+    border: 1px solid black;
+    box-sizing: border-box;
+    line-height: 100px;
+    text-align: center;
     float: left;
 }
 .line2 {
@@ -26,7 +30,8 @@
 .line2_box {
     width: 25%;
     height: 100px;
-    outline: 1px solid red;
+    border: 1px solid black;
+    box-sizing: border-box;
     float: left;
     margin: 0 auto;
 }
