@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Helvetica_Neue';
+    src: url('../fonts/helveticaneuecyr-light-webfont.woff2') format('woff2'), url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+p, ul, h3 {
+    padding: 0;
+    margin: 0;
+}
+.nav, .nav li a, .faq_and_login span, .oferta a, .forms_box input, .forms_box span, .forms_box form label, .box2 p {
+    display: block;
+}
+.nav li a, .faq_and_login span, .faq_and_login span a, .box2 form, .forms_box input, .forms_box span {
+    font: 14px 'Helvetica_Neue', sans-serif;
+}
+.topline {
+    height: 35px;
+    background-color: #085495;
+}
+.topline_box {
+    float: right;
+    width: 741px;
+    margin: 0 20px 0 0;
+}
+.nav {
+    float: left;
+}
+.faq_and_login {
+    float: right;
+}
+.nav li {
+    display: inline-block;
+    width: 70px;
+}
+.nav li.first_elem {
+    width: 100px;
+}
+.nav li a {
+    padding: 10px 0 0 0;
+    height: 25px;
+    color: #60b5ed;
+    text-decoration: none;
+    text-align: center;
+}
+.nav li a:hover {
+    color: #fff;
+    background-color: #4eabda;
+}
+.faq_and_login span {
+    float: left;
+}
+.faq_and_login span, .faq_and_login span a {
+    color: #fff;
+    font-weight: 600;
+}
+.oferta {
+    width: 161px;
+    height: 35px;
+}
+.oferta {
+    background-image: url(../img/oferta_border.png);
+    background-repeat: no-repeat;
+    ;
+    background-position: 0 2px;
+    ;
+}
+.oferta a {
+    height: 25px;
+    padding: 10px 17px 0 0;
+    text-align: right;
+    text-decoration: none;
+    background-image: url(../img/oferta_flag.png);
+    background-repeat: no-repeat;
+    background-position: 19px 6px;
+}
+.oferta a:hover {
+    text-decoration: underline;
+}
+.login {
+    width: 166px;
+    height: 23px;
+    padding: 10px 0 0 13px;
+    ;
+    background: #3c8fce url(../img/login_bg.png);
+    border: 1px solid #4299d2;
+}
+.login a:hover {
+    text-decoration: none;
+}
+.content {
+    background: #fff url(../img/content_bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 1000px;
+}
+.form_boxes {
+    width: 550px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 150px 0 0 0;
+}
+.box1 {
+    height: 61px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 0 0 2px 0;
+}
+.box1 h3 {
+    text-align: center;
+    padding: 15px 0 0 0;
+    font: 24px 'Helvetica_Neue', sans-serif;
+    color: #ffffff;
+}
+.box2 {
+    height: 549px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.box2 p {
+    width: 315px;
+    margin: 0 auto;
+    font: 11px 'Helvetica_Neue', sans-serif;
+    color: #cccccc;
+    text-align: center;
+}
+.forms_box form {
+    color: #cccccc;
+}
+.forms_box {
+    width: 276px;
+    margin: 0 auto;
+    padding: 35px 0 0 0;
+    background-image: url(../img/forms_box_border.png);
+    background-repeat: no-repeat;
+    background-position: 0 108px;
+}
+.forms_box input {
+    width: 276px;
+    color: #cccccc;
+    border: 0px;
+}
+.forms_box span {
+    padding: 30px 0 5px 0;
+    text-align: center;
+    color: #999999;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    background-color: #111111;
+    width: 259px;
+    height: 30px;
+    margin: 20px 0 0 0;
+    border-bottom: 1px solid #484848;
+    padding: 0 0 0 17px;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+    background-color: #1b5288;
+    color: #fffbfb;
+    box-shadow: 0px 1px 20px 7px rgba(76,137,178,1);
+}
+input[type="checkbox"] {
+    width: 10px;
+    margin: 20px 5px 0 0;
+    float: left;
+}
+.forms_box form label {
+    margin: 18px 5px 0 0;
+}
+input[type="submit"] {
+    width: 151px;
+    height: 35px;
+    border: 0;
+    background: transparent url(../img/btn_submit.png) no-repeat center top;
+    text-indent: -1000em;
+    cursor: pointer;
+    cursor: hand;
+    margin: 20px auto;
+}
