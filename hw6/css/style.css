@@ -36,6 +36,7 @@ ul, p, h3, h4, h5, h6, figure {
     background-image: url(../img/telephone.png);
     background-repeat: no-repeat;
     background-position: 7px 4px;
+    letter-spacing: 0.5px;
 }
 .login_box {
     width: 495px;
@@ -225,7 +226,29 @@ a.cash {
 
 .search_boxes {
     height: 134px;
-    margin: 12px 0 0 0;
+    margin: 12px 0 0 4px;
+}
+.search_box1, .search_box2, .search_box3 {
+    height: 134px;
+    float: left;
+    border: 1px solid #b3b3b4;
+    border-radius: 15px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 3px 3px 17px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 17px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 17px -3px rgba(0, 0, 0, 0.75);
+}
+.search_box1 {
+    width: 415px;
+    margin: 0 14px 0 0;
+}
+.search_box2 {
+    width: 193px;
+    margin: 0 10px 0 0;
+}
+.search_box3 {
+    width: 268px;
+    float: left;
 }
 
 /* search boxes end */
@@ -440,11 +463,34 @@ a.cash {
     background-repeat: no-repeat;
 }
 .global_footer {
-  width: 909px;
-  height: 100px;
-  margin: 0 auto;
-  background-color: #213a4d;
-  border: 1px solid #242c3e;
-  border-bottom: none;
-  box-sizing: border-box;
+    width: 909px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #213a4d;
+    border: 1px solid #242c3e;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+.footer_nav {
+    width: 325px;
+    height: 25px;
+    margin: 6px auto 7px auto;
+    color: #bec6c9;
+}
+.footer_nav a {
+    padding: 0 8px 0 8px;
+    font: 12px Arial, sans-serif;
+    color: #bec6c9;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+}
+.footer_nav a:hover {
+    color: #52abcb;
+}
+.copyright {
+    width: 160px;
+    margin: 0 auto;
+    font: 10px Arial, sans-serif;
+    color: #7f4740;
+    letter-spacing: 0.4px;
 }
