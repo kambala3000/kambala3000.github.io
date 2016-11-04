@@ -1,0 +1,51 @@
+ul, li, a, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.carousel {
+    width: 700px;
+    height: 100px;
+    margin: 30px auto;
+}
+
+.profile-box {
+    width: 500px;
+    margin: 0 auto 20px auto;
+    ;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.profile-name {
+    text-align: center;
+    margin-bottom: 5px;
+    font: bold 24px Tahoma, sans-serif;
+}
+
+.profile-image {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    float: left;
+}
+
+.profile-text {
+    font: 18px Tahoma, sans-serif;
+    padding: 0 0 10px 0;
+}
+
+.profile-contacts {
+    padding: 0 0 5px 0;
+    font: bold 18px Tahoma, sans-serif;
+}
+
+.profile-links {
+    text-decoration: none;
+}
