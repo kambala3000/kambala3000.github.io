@@ -1,0 +1,1 @@
+$(function(){var o={header:"ui-icon-plus",activeHeader:"ui-icon-minus"};$("#accordion").accordion({icons:o}),$("#toggle").button().on("click",function(){$("#accordion").accordion("option","icons")?$("#accordion").accordion("option","icons",null):$("#accordion").accordion("option","icons",o)})});
