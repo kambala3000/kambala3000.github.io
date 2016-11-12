@@ -26,14 +26,14 @@ gulp.task('removedist', function() {
     return del.sync('dist');
 });
 
-gulp.task('minify-libs', function() {
+gulp.task('minify-libsjs', function() {
     return gulp.src('app/js/libs/*.js')
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('minify-plugins', function() {
+gulp.task('minify-pluginsjs', function() {
     return gulp.src('app/js/plugins/*.js')
         .pipe(concat('plugins.min.js'))
         .pipe(uglify())
@@ -46,9 +46,16 @@ gulp.task('minify-mainjs', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('minify-css', function() {
+gulp.task('minify-stylecss', function() {
     return gulp.src('app/css/*.css')
         .pipe(concatCSS('style.css'))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('minify-pluginscss', function() {
+    return gulp.src('app/css/plugins/*.css')
+        .pipe(concatCSS('plugins.css'))
         .pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
 });
@@ -66,10 +73,6 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('fonts', function() {
-    return gulp.src('app/fonts/*')
-        .pipe(gulp.dest('dist/fonts'))
-});
 
 gulp.task('watch', ['sass', 'browser-sync'], function() {
     gulp.watch('app/sass/**/*.scss', ['sass']);
@@ -78,12 +81,21 @@ gulp.task('watch', ['sass', 'browser-sync'], function() {
     gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('build', ['removedist', 'minify-libs', 'minify-plugins', 'minify-mainjs', 'minify-css', 'imagemin', 'fonts', 'sass'], function() {
+gulp.task('build', ['removedist', 'minify-libsjs', 'minify-pluginsjs', 'minify-mainjs', 'minify-stylecss', 'minify-pluginscss', 'imagemin', 'sass'], function() {
+    var buildFonts = gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
     var target = gulp.src('app/index.html');
-    var sources = gulp.src(['dist/js/**/*.js', 'dist/css/**/*.css'], {
+    var mainJsFile = gulp.src('dist/js/main.js', {
+        read: false
+    });
+    var sources = gulp.src(['dist/js/**/*.js', '!./dist/js/main.js', 'dist/css/**/*.css'], {
         read: false,
     });
-    target.pipe(inject(sources, {
+    target.pipe(inject(mainJsFile, {
+            ignorePath: 'dist',
+            addRootSlash: false,
+            name: 'afterdocument'
+        }))
+        .pipe(inject(sources, {
             ignorePath: 'dist',
             addRootSlash: false
         }))

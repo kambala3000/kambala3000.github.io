@@ -1,3 +1,5 @@
+'use strict';
+
 $(function() {
     var icons = {
         header: "ui-icon-plus",
@@ -13,4 +15,27 @@ $(function() {
             $("#accordion").accordion("option", "icons", icons);
         }
     });
+
+    $.getJSON("https://raw.githubusercontent.com/goit-fe/markup_fe2o/master/js_19-20/data.json",
+        function(dataSkills) {
+            dataSkills = _.union(_.flattenDeep(_.map(dataSkills, 'skills'))).sort();
+            var result = dataSkills;
+            console.log(dataSkills);
+        });
+
+    $.getJSON("https://raw.githubusercontent.com/goit-fe/markup_fe2o/master/js_19-20/data.json",
+        function(dataName) {
+            dataName = _.map(_.sortBy(dataName, function(obj) {
+                return obj.friends.length
+            }), 'name').reverse();
+            var result = dataName;
+            console.log(dataName);
+        });
+
+    $.getJSON("https://raw.githubusercontent.com/goit-fe/markup_fe2o/master/js_19-20/data.json",
+        function(dataFriends) {
+            dataFriends = _.uniq(_.map(_.flattenDeep(_.map(dataFriends, 'friends')), 'name')).sort();
+            var result = dataFriends;
+            console.log(dataFriends);
+        });
 });
