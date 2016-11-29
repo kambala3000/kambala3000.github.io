@@ -1,0 +1,810 @@
+@import "_vars";
+@import "_fonts";
+/* DEFAULT STYLES */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+.clearfix {
+    &:before {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+/* MAIN-HEADER STYLES */
+.main-header {
+    background: url("#{$images-path}/bg-header.jpg") 50% 0 no-repeat;
+    background-size: cover;
+
+    &__inner {
+        width: 320px;
+        margin: 0 auto;
+        padding: 20px 10px 138px;
+        @media only screen and (min-width: 768px) {
+            width: 760px;
+            padding-top: 40px;
+            padding-bottom: 217px;
+            @media (min-width: 960px) {
+                width: 940px;
+            }
+        }
+    }
+
+    &__top-bar {
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (min-width: 768px) {
+            height: auto;
+            flex-direction: row;
+        }
+    }
+
+    &__site-name {
+        order: 1;
+        font: 20px 'Montserrat Bold', $default-fonts;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        @media only screen and (min-width: 768px) {
+            order: 0;
+        }
+    }
+
+    &__site-name:hover {
+        color: $black;
+    }
+
+    &__jumbo {
+        margin-top: 35px;
+        @media only screen and (min-width: 768px) {
+            margin-top: 120px;
+        }
+    }
+
+    &__slogan {
+        text-align: center;
+        font: 30px 'Montserrat Bold', $default-fonts;
+        color: $white;
+        text-transform: uppercase;
+        @media only screen and (min-width: 768px) {
+            font-size: 52px;
+            padding: 0 80px;
+            @media (min-width: 960px) {
+                padding: 0 180px;
+            }
+        }
+    }
+
+    &__promo {
+        padding: 15px 35px 0;
+        text-align: center;
+        font: 18px 'Roboto Light', $default-fonts;
+        color: $white;
+        @media only screen and (min-width: 768px) {
+            font-size: 24px;
+            padding-top: 20px;
+        }
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+
+    &__login {
+        text-decoration: none;
+        margin-right: 20px;
+        font: 14px 'Montserrat Bold', $default-fonts;
+        color: $white;
+    }
+
+    &__login:hover {
+        color: $black;
+    }
+
+    &__signup {
+        padding: 10px 20px;
+        text-decoration: none;
+        font: 14px 'Montserrat Bold', $default-fonts;
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 63px;
+    }
+
+    &__signup:hover {
+        background-color: $black;
+    }
+}
+/* BUTTONS STYLES */
+.btn {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    background-color: $light-red;
+
+    &:hover {
+        background-color: darken($light-red, 10%);
+    }
+
+    &--findpart {
+        width: 280px;
+        height: 40px;
+        margin: 20px auto 0;
+        border-radius: 20px;
+        font: 14px/40px 'Montserrat Bold', $default-fonts;
+        @media only screen and (min-width: 768px) {
+            margin-top: 35px;
+            width: 226px;
+        }
+    }
+
+    &--step {
+        width: 70px;
+        height: 20px;
+        border-radius: 10px;
+        font: 10px /20px'Montserrat Regular', $default-fonts;
+        letter-spacing: 2px;
+    }
+
+    &--partners {
+        width: 280px;
+        height: 40px;
+        margin: 30px auto 0;
+        border-radius: 20px;
+        font: 14px/40px 'Montserrat Bold', $default-fonts;
+        border: 2px solid $light-red;
+        color: $light-red;
+        background-color: $white;
+        @media only screen and (min-width: 768px) {
+            width: 195px;
+            margin-top: 40px;
+        }
+    }
+
+    &--partners:hover {
+        color: $white;
+    }
+
+    &--search {
+        width: 280px;
+        height: 40px;
+        margin-top: 10px;
+        padding: 0;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        font: 14px/40px 'Montserrat Bold', $default-fonts;
+        cursor: pointer;
+        @media only screen and (min-width: 768px) {
+            width: 160px;
+            margin-top: 0;
+            margin-left: 10px;
+        }
+    }
+}
+/* HOW-WORKS STYLES */
+.how-works {
+    width: 100%;
+
+    &__inner {
+        width: 320px;
+        margin: 0 auto;
+        padding: 35px 10px 0;
+        @media only screen and (min-width: 768px) {
+            width: 760px;
+            padding-top: 90px;
+            padding-right: 0;
+            padding-left: 0;
+            @media (min-width: 960px) {
+                width: 940px;
+            }
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font: 21px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+        @media only screen and (min-width: 768px) {
+            font-size: 22px;
+        }
+    }
+
+    &__container {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            width: auto;
+        }
+    }
+
+    &__step {
+        margin-top: 10px;
+        @media only screen and (min-width: 768px) {
+            margin-top: 35px;
+        }
+    }
+}
+
+.step {
+    height: 240px;
+    padding: 60px 20px 20px;
+    border-radius: 5px;
+    @media only screen and (min-width: 768px) {
+        height: 400px;
+        width: 245px;
+        padding-top: 190px;
+        @media (min-width: 960px) {
+            width: 300px;
+        }
+    }
+
+    &__name {
+        padding-top: 20px;
+        font: 24px 'Montserrat Bold', $default-fonts;
+        color: $white;
+    }
+
+    &__text {
+        padding-top: 10px;
+        font: 14px 'Roboto Light', $default-fonts;
+        color: $lightest-grey;
+    }
+
+    &--1 {
+        background: url("#{$images-path}/bg-step-1--mobile.jpg") bottom no-repeat;
+        @media only screen and (min-width: 768px) {
+            background: url("#{$images-path}/bg-step-1.jpg") center no-repeat;
+        }
+    }
+
+    &--2 {
+        background: url("#{$images-path}/bg-step-2--mobile.jpg") bottom no-repeat;
+        @media only screen and (min-width: 768px) {
+            padding-top: 240px;
+            background: url("#{$images-path}/bg-step-2.jpg") bottom no-repeat;
+        }
+    }
+
+    &--3 {
+        background: url("#{$images-path}/bg-step-3--mobile.jpg") bottom no-repeat;
+        @media only screen and (min-width: 768px) {
+            background: url("#{$images-path}/bg-step-3.jpg") bottom no-repeat;
+        }
+    }
+}
+/* PARTNERS STYLES */
+.partners {
+    width: 100%;
+
+    &__inner {
+        width: 320px;
+        margin: 0 auto;
+        padding: 35px 10px 0;
+        @media only screen and (min-width: 768px) {
+            width: 760px;
+            padding-top: 90px;
+            @media (min-width: 960px) {
+                width: 940px;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font: 22px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 768px) {
+            width: 770px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            @media (min-width: 960px) {
+                width: 940px;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+
+    &__person {
+        margin-top: 20px;
+        @media only screen and (min-width: 768px) {
+            width: 280px;
+            margin-top: 35px;
+            @media (min-width: 960px) {
+                width: 230px;
+            }
+        }
+    }
+}
+
+.person {
+    text-align: center;
+    position: relative;
+    @media only screen and (min-width: 960px) {
+        padding: 0 7px;
+    }
+
+    &--1 {
+        @media only screen and (min-width: 768px) {
+            order: 1;
+        }
+    }
+
+    &--2 {
+        @media only screen and (min-width: 768px) {
+            order: 3;
+        }
+    }
+
+    &--3 {
+        @media only screen and (min-width: 768px) {
+            order: 2;
+        }
+    }
+
+    &--4 {
+        @media only screen and (min-width: 768px) {
+            order: 4;
+        }
+    }
+
+    &__avatar {}
+
+    &__name {
+        margin-top: 15px;
+        font: 14px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+    }
+
+    &__about {
+        margin-top: 10px;
+        font: 14px 'Roboto Light', $default-fonts;
+        color: $light-grey;
+        padding: 0 35px;
+        @media only screen and (min-width: 768px) {
+            padding: 0 30px;
+            @media (min-width: 960px) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 85px;
+        right: 85px;
+        border-radius: 20px;
+        border: solid 4px #fff;
+        @media only screen and (max-width: 960px) and (min-width: 768px) {
+            right: 96px;
+        }
+        @media only screen and (min-width: 960px) {
+            right: 52px;
+        }
+    }
+
+    &__icon--red {
+        background: $light-red url("#{$images-path}/bg-icon--1.png") 8px 6px no-repeat;
+    }
+
+    &__icon--yellow {
+        background: $yellow url("#{$images-path}/bg-icon--2.png") 8px 7px no-repeat;
+    }
+
+    &__icon--green {
+        background: $light-green url("#{$images-path}/bg-icon--3.png") 7px 6px no-repeat;
+    }
+
+    &__icon--blue {
+        background: $blue url("#{$images-path}/bg-icon--4.png") 7px 8px no-repeat;
+    }
+}
+/* IDEAS STYLES */
+.ideas {
+    width: 100%;
+
+    &__inner {
+        width: 320px;
+        margin: 0 auto;
+        padding: 35px 10px 0;
+        @media only screen and (min-width: 768px) {
+            width: 760px;
+            padding-top: 90px;
+            @media (min-width: 960px) {
+                width: 940px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font: 22px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    }
+
+    &__activity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 121px;
+        margin-top: 10px;
+        border-radius: 5px;
+        @media only screen and (min-width: 768px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__activity--sport {
+        background: url("#{$images-path}/bg-activity-1--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 237px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-1.jpg");
+            @media (min-width: 960px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__activity--health {
+        background: url("#{$images-path}/bg-activity-2--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 237px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-2.jpg");
+            @media (min-width: 960px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__activity--extreme {
+        background: url("#{$images-path}/bg-activity-3--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 237px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-3.jpg");
+            @media (min-width: 960px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__activity--games {
+        background: url("#{$images-path}/bg-activity-4--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 237px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-4.jpg");
+            @media (min-width: 960px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__activity--culture {
+        background: url("#{$images-path}/bg-activity-5--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 494px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-5.jpg");
+            @media (min-width: 960px) {
+                width: 620px;
+            }
+        }
+    }
+
+    &__activity--relax {
+        background: url("#{$images-path}/bg-activity-6--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 494px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-6.jpg");
+            @media (min-width: 960px) {
+                width: 620px;
+            }
+        }
+    }
+
+    &__activity--travelling {
+        background: url("#{$images-path}/bg-activity-7--mobile.jpg") no-repeat;
+        @media only screen and (min-width: 768px) {
+            width: 237px;
+            height: 310px;
+            background-image: url("#{$images-path}/bg-activity-7.jpg");
+            @media (min-width: 960px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__link {
+        text-align: center;
+        font: 22px 'Montserrat Bold', $default-fonts;
+        color: $white;
+        text-decoration: none;
+        transition: all 0.15s ease;
+        @media only screen and (max-width: 960px) and (min-width: 768px) {
+            padding: 0 12px;
+        }
+    }
+
+    &__link:hover {
+        font-size: 25px;
+        @media only screen and (max-width: 960px) and (min-width: 768px) {
+            font-size: 23px;
+        }
+    }
+}
+/* SEARCH-IDEAS STYLES */
+.search-ideas {
+    width: 100%;
+
+    &__inner {
+        width: 320px;
+        margin: 0 auto;
+        padding: 35px 10px 40px;
+        text-align: center;
+        @media only screen and (min-width: 768px) {
+            width: 760px;
+            padding-top: 90px;
+            padding-bottom: 100px;
+            @media (min-width: 960px) {
+                width: 940px;
+            }
+        }
+    }
+
+    &__header {
+        font: 22px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+    }
+
+    &__promo {
+        margin-top: 5px;
+        font: 18px 'Roboto Light', $default-fonts;
+        color: $grey;
+        @media only screen and (min-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__form {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (min-width: 768px) {
+            margin-top: 35px;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+.search-form {
+    &__input-container {
+        width: 280px;
+        padding: 10px 15px;
+        border: 1px solid #b9b9b9;
+        border-radius: 3px;
+        @media only screen and (min-width: 768px) {
+            width: 240px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        outline: none;
+        font: 14px 'Roboto Light', $default-fonts;
+        color: $grey;
+    }
+}
+/* MAIN-FOOTER STYLES */
+.main-footer {
+    width: 100%;
+    border-top: 4px solid #ff4e50;
+
+    &__inner {
+        width: 320px;
+        margin: 0 auto;
+        padding: 20px 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (min-width: 768px) {
+            width: 760px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            @media (min-width: 960px) {
+                width: 940px;
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (min-width: 768px) {
+            width: 500px;
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: space-around;
+            @media (min-width: 960px) {
+                width: 460px;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__head {
+        text-decoration: none;
+        text-transform: uppercase;
+        font: 16px 'Montserrat Bold', $default-fonts;
+        color: $light-red;
+    }
+
+    &__head:hover {
+        color: darken($light-red, 10%);
+    }
+
+    &__partners {
+        margin-top: 10px;
+        text-align: center;
+        font: 14px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+        @media only screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__nav {
+        margin-top: 15px;
+        @media only screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__copyright {
+        margin-top: 15px;
+        @media only screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+}
+
+.company-nav {
+    &__head {
+        text-align: center;
+        font: 14px 'Montserrat Bold', $default-fonts;
+        color: $grey;
+    }
+
+    &__list {
+        list-style: none;
+        margin-top: 5px;
+        overflow: hidden;
+        @media only screen and (min-width: 768px) {
+            margin-top: 7px;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 5px;
+        @media only screen and (min-width: 768px) {
+            display: block;
+            margin-top: 7px;
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font: 14px 'Roboto Light', $default-fonts;
+        color: $light-grey;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+}
+
+.rights {
+    text-align: center;
+    @media only screen and (min-width: 960px) {
+        text-align: right;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font: 10px 'Montserrat Bold', $default-fonts;
+        letter-spacing: 1px;
+        color: $lightest-grey;
+    }
+
+    &__image {
+        display: block;
+        width: 110px;
+        height: 24px;
+        margin-top: 5px;
+        background: url("#{$images-path}/bg-copyright.png") no-repeat;
+    }
+}

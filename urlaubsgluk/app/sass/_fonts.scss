@@ -1,0 +1,19 @@
+@import "_vars";
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('#{$font-path}/montserrat-bold-webfont.woff2') format('woff2'), url('#{$font-path}/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('#{$font-path}/montserrat-regular-webfont.woff2') format('woff2'), url('#{$font-path}/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('#{$font-path}/roboto-light-webfont.woff2') format('woff2'), url('#{$font-path}/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
