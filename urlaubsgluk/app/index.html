@@ -12,12 +12,18 @@
     <!-- inject:js -->
     <script src="js/libs/jquery-3.1.1.min.js"></script>
     <!-- endinject -->
+    <!--[if lt IE 9]>
+        <script src="js/libs/script.ie8.js"></script>
+        <link href="css/style.ie8.css" type="text/css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <![endif]-->
+
 </head>
 
 <body>
     <header class="main-header">
         <div class="main-header__inner">
-            <div class="main-header__top-bar">
+            <div class="main-header__top-bar" data-style="display: flex;">
                 <a href="index.html" class="main-header__site-name">URLAUBSGLÜCK</a>
                 <div class="auth">
                     <a href="#" class="auth__login">Log in</a>
@@ -37,22 +43,62 @@ to fullfill it</h4>
         <div class="how-works__inner">
             <h4 class="how-works__header">How Urlaubsglück works?</h4>
             <div class="how-works__container">
-                <div class="how-works__step step step--1">
-                    <a href="#" class="btn btn--step">STEP 1</a>
-                    <h4 class="step__name">Sed leo enim,
-    condimentum</h4>
-                    <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                <div id="slidr-div" style="dislay: block">
+                    <div data-slidr="one" class="how-works__step step step--1">
+                        <a href="#" class="btn btn--step">STEP 1</a>
+                        <h4 class="step__name">Sed leo enim,
+        condimentum</h4>
+                        <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                    <div data-slidr="two" class="how-works__step step step--2">
+                        <a href="#" class="btn btn--step">STEP 2</a>
+                        <h4 class="step__name">Morbi velit risus</h4>
+                        <p class="step__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
+                    </div>
+                    <div data-slidr="three" class="how-works__step step step--3">
+                        <a href="#" class="btn btn--step">STEP 3</a>
+                        <h4 class="step__name">Sed leo enim,
+        condimentum</h4>
+                        <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
                 </div>
-                <div class="how-works__step step step--2">
-                    <a href="#" class="btn btn--step">STEP 2</a>
-                    <h4 class="step__name">Morbi velit risus</h4>
-                    <p class="step__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
+                <div id="slidr-div2" style="dislay: block">
+                    <div data-slidr="one" class="how-works__step step step--2">
+                        <a href="#" class="btn btn--step">STEP 2</a>
+                        <h4 class="step__name">Morbi velit risus</h4>
+                        <p class="step__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
+                    </div>
+                    <div data-slidr="two" class="how-works__step step step--1">
+                        <a href="#" class="btn btn--step">STEP 1</a>
+                        <h4 class="step__name">Sed leo enim,
+        condimentum</h4>
+                        <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                    <div data-slidr="three" class="how-works__step step step--3">
+                        <a href="#" class="btn btn--step">STEP 3</a>
+                        <h4 class="step__name">Sed leo enim,
+        condimentum</h4>
+                        <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
                 </div>
-                <div class="how-works__step step step--3">
-                    <a href="#" class="btn btn--step">STEP 3</a>
-                    <h4 class="step__name">Sed leo enim,
-    condimentum</h4>
-                    <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                <div id="slidr-div3" style="dislay: block">
+                    <div data-slidr="one" class="how-works__step step step--3">
+                        <a href="#" class="btn btn--step">STEP 3</a>
+                        <h4 class="step__name">Sed leo enim,
+        condimentum</h4>
+                        <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                    <div data-slidr="two" class="how-works__step step step--1">
+                        <a href="#" class="btn btn--step">STEP 1</a>
+                        <h4 class="step__name">Sed leo enim,
+        condimentum</h4>
+                        <p class="step__text">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                    </div>
+                    <div data-slidr="three" class="how-works__step step step--2">
+                        <a href="#" class="btn btn--step">STEP 2</a>
+                        <h4 class="step__name">Morbi velit risus</h4>
+                        <p class="step__text">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,25 +110,33 @@ best holiday</h4>
             <div class="partners__container">
                 <div class="partners__person person person--1">
                     <img src="img/person-ava--1.png" alt="Bradley Hunter" class="person__avatar" width="120px" height="120px">
-                    <div class="person__icon person__icon--red"></div>
+                    <div class="person__elipse person__elipse--red">
+                        <span class="person__icon person__icon--red"></span>
+                    </div>
                     <h5 class="person__name">Bradley Hunter</h5>
                     <p class="person__about">Based in Chicago. I love playing tennis and loud music.</p>
                 </div>
                 <div class="partners__person person person--2">
                     <img src="img/person-ava--2.png" alt="Lucas Marsha" class="person__avatar" width="120px" height="120px">
-                    <div class="person__icon person__icon--yellow"></div>
+                    <div class="person__elipse person__elipse--yellow">
+                        <span class="person__icon person__icon--yellow"></span>
+                    </div>
                     <h5 class="person__name">Lucas Marsha</h5>
                     <p class="person__about">I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.</p>
                 </div>
                 <div class="partners__person person person--3">
                     <img src="img/person-ava--3.png" alt="Heather Walker" class="person__avatar" width="120px" height="120px">
-                    <div class="person__icon person__icon--green"></div>
+                    <div class="person__elipse person__elipse--green">
+                        <span class="person__icon person__icon--green"></span>
+                    </div>
                     <h5 class="person__name">Heather Walker</h5>
                     <p class="person__about">I'm a happy person that loves cats and climbing on mountains.</p>
                 </div>
                 <div class="partners__person person person--4">
                     <img src="img/person-ava--4.png" alt="Bradley Hunter" class="person__avatar" width="120px" height="120px">
-                    <div class="person__icon person__icon--blue"></div>
+                    <div class="person__elipse person__elipse--blue">
+                        <span class="person__icon person__icon--blue"></span>
+                    </div>
                     <h5 class="person__name">Bradley Hunter</h5>
                     <p class="person__about">Based in Chicago. I love playing tennis and loud music.</p>
                 </div>
@@ -94,28 +148,21 @@ best holiday</h4>
         <div class="ideas__inner">
             <h4 class="ideas__header">Discover holiday activity
 ideas</h4>
+
             <div class="ideas__container">
-                <div class="ideas__activity ideas__activity--sport">
-                    <a href="#" class="ideas__link">Sport and Activity</a>
-                </div>
-                <div class="ideas__activity ideas__activity--health">
-                    <a href="#" class="ideas__link">Wellnes and Health</a>
-                </div>
-                <div class="ideas__activity ideas__activity--extreme">
-                    <a href="#" class="ideas__link">Extreme Sports and Expeditions</a>
-                </div>
-                <div class="ideas__activity ideas__activity--games">
-                    <a href="#" class="ideas__link">Games</a>
-                </div>
-                <div class="ideas__activity ideas__activity--culture">
-                    <a href="#" class="ideas__link">Culture and Education</a>
-                </div>
-                <div class="ideas__activity ideas__activity--relax">
-                    <a href="#" class="ideas__link">Relaxation</a>
-                </div>
-                <div class="ideas__activity ideas__activity--travelling">
-                    <a href="#" class="ideas__link">Travelling</a>
-                </div>
+                <script type="text/template" id="masonry-tmpl">
+                    <div class="grid">
+                        <div class="grid-sizer"></div>
+                        <% for (var i = 0; i < 11; i++) { %>
+                            <figure class="grid-item">
+                                <img src="<%= hits[i].webformatURL %>" alt="picture" class="grid__img" />
+                                <figcaption class="grid__title">
+                                    <%= hits[i].tags.split(', ')[1] %>
+                                </figcaption>
+                            </figure>
+                            <% }; %>
+                    </div>
+                </script>
             </div>
         </div>
     </section>
@@ -126,9 +173,9 @@ ideas</h4>
             <p class="search-ideas__promo">Hi! What are your holiday interests?</p>
             <form action="index.html" class="search-ideas__form search-form">
                 <div class="search-form__input-container">
-                    <input class="search-form__input" type="text" name="search-form__input" placeholder="Enter your interests">
+                    <input class="search-form__input js-search-keyword" type="text" name="search-form__input" placeholder="Enter your interests">
                 </div>
-                <button class="btn btn--search" type="submit" name="btn--search">Search partners</button>
+                <button class="btn btn--search js-btn-search" type="submit" name="btn--search">Search partners</button>
             </form>
         </div>
     </section>
@@ -153,7 +200,16 @@ ideas</h4>
             </div>
         </div>
     </footer>
+
+    <!--[if lt IE 9]>
+        <script src="js/libs/html5shiv.ie8.js"></script>
+        <script src="js/libs/respond.ie8.js"></script>
+    <![endif]-->
     <!-- afterdocument:js -->
+    <script src="js/libs/slidr.min.js"></script>
+    <script src="js/libs/tmpl.js"></script>
+    <script src="js/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="js/libs/masonry.pkgd.min.js"></script>
     <script src="js/main.js"></script>
     <!-- endinject -->
 </body>

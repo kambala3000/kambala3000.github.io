@@ -12,6 +12,8 @@ html {
 }
 
 a,
+figcaption,
+figure,
 h1,
 h2,
 h3,
@@ -50,7 +52,7 @@ body {
 }
 /* MAIN-HEADER STYLES */
 .main-header {
-    background: url("#{$images-path}/bg-header.jpg") 50% 0 no-repeat;
+    background: url("#{$images-path}/bg-header.jpg") no-repeat 50% 0;
     background-size: cover;
 
     &__inner {
@@ -59,8 +61,7 @@ body {
         padding: 20px 10px 138px;
         @media only screen and (min-width: 768px) {
             width: 760px;
-            padding-top: 40px;
-            padding-bottom: 217px;
+            padding: 39px 0 233px;
             @media (min-width: 960px) {
                 width: 940px;
             }
@@ -69,6 +70,7 @@ body {
 
     &__top-bar {
         height: 180px;
+        // -js-display: flex;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -84,8 +86,11 @@ body {
         font: 20px 'Montserrat Bold', $default-fonts;
         text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: 1px;
         color: $white;
         @media only screen and (min-width: 768px) {
+            align-self: flex-end;
+            margin-bottom: 3px;
             order: 0;
         }
     }
@@ -97,7 +102,7 @@ body {
     &__jumbo {
         margin-top: 35px;
         @media only screen and (min-width: 768px) {
-            margin-top: 120px;
+            margin-top: 140px;
         }
     }
 
@@ -122,12 +127,13 @@ body {
         color: $white;
         @media only screen and (min-width: 768px) {
             font-size: 24px;
-            padding-top: 20px;
+            padding-top: 18px;
         }
     }
 }
 
 .auth {
+    // -js-display: flex;
     display: flex;
     align-items: center;
 
@@ -143,7 +149,7 @@ body {
     }
 
     &__signup {
-        padding: 10px 20px;
+        padding: 8px 16px;
         text-decoration: none;
         font: 14px 'Montserrat Bold', $default-fonts;
         color: $white;
@@ -174,7 +180,7 @@ body {
         border-radius: 20px;
         font: 14px/40px 'Montserrat Bold', $default-fonts;
         @media only screen and (min-width: 768px) {
-            margin-top: 35px;
+            margin-top: 33px;
             width: 226px;
         }
     }
@@ -183,6 +189,7 @@ body {
         width: 70px;
         height: 20px;
         border-radius: 10px;
+        text-transform: uppercase;
         font: 10px /20px'Montserrat Regular', $default-fonts;
         letter-spacing: 2px;
     }
@@ -198,7 +205,7 @@ body {
         background-color: $white;
         @media only screen and (min-width: 768px) {
             width: 195px;
-            margin-top: 40px;
+            margin-top: 32px;
         }
     }
 
@@ -233,7 +240,7 @@ body {
         padding: 35px 10px 0;
         @media only screen and (min-width: 768px) {
             width: 760px;
-            padding-top: 90px;
+            padding-top: 95px;
             padding-right: 0;
             padding-left: 0;
             @media (min-width: 960px) {
@@ -253,6 +260,7 @@ body {
 
     &__container {
         width: 300px;
+        -js-display: flex;
         display: flex;
         flex-direction: column;
         @media only screen and (min-width: 768px) {
@@ -272,12 +280,12 @@ body {
 
 .step {
     height: 240px;
-    padding: 60px 20px 20px;
+    padding: 60px 20px 0;
     border-radius: 5px;
     @media only screen and (min-width: 768px) {
         height: 400px;
         width: 245px;
-        padding-top: 190px;
+        padding-top: 224px;
         @media (min-width: 960px) {
             width: 300px;
         }
@@ -305,7 +313,7 @@ body {
     &--2 {
         background: url("#{$images-path}/bg-step-2--mobile.jpg") bottom no-repeat;
         @media only screen and (min-width: 768px) {
-            padding-top: 240px;
+            padding-top: 255px;
             background: url("#{$images-path}/bg-step-2.jpg") bottom no-repeat;
         }
     }
@@ -327,7 +335,7 @@ body {
         padding: 35px 10px 0;
         @media only screen and (min-width: 768px) {
             width: 760px;
-            padding-top: 90px;
+            padding-top: 95px;
             @media (min-width: 960px) {
                 width: 940px;
                 padding-right: 0;
@@ -343,6 +351,7 @@ body {
     }
 
     &__container {
+        -js-display: flex;
         display: flex;
         flex-direction: column;
         @media only screen and (min-width: 768px) {
@@ -352,6 +361,7 @@ body {
             justify-content: center;
             @media (min-width: 960px) {
                 width: 940px;
+                justify-content: space-between;
                 flex-wrap: nowrap;
             }
         }
@@ -361,9 +371,9 @@ body {
         margin-top: 20px;
         @media only screen and (min-width: 768px) {
             width: 280px;
-            margin-top: 35px;
+            margin-top: 33px;
             @media (min-width: 960px) {
-                width: 230px;
+                width: 225px;
             }
         }
     }
@@ -372,9 +382,6 @@ body {
 .person {
     text-align: center;
     position: relative;
-    @media only screen and (min-width: 960px) {
-        padding: 0 7px;
-    }
 
     &--1 {
         @media only screen and (min-width: 768px) {
@@ -416,12 +423,12 @@ body {
         @media only screen and (min-width: 768px) {
             padding: 0 30px;
             @media (min-width: 960px) {
-                padding: 0;
+                padding: 0 4px;
             }
         }
     }
 
-    &__icon {
+    &__elipse {
         width: 40px;
         height: 40px;
         position: absolute;
@@ -429,28 +436,57 @@ body {
         right: 85px;
         border-radius: 20px;
         border: solid 4px #fff;
+        padding: 7px 6px 6px 8px;
         @media only screen and (max-width: 960px) and (min-width: 768px) {
-            right: 96px;
+            right: 75px;
         }
         @media only screen and (min-width: 960px) {
-            right: 52px;
+            right: 47px;
         }
+    }
+
+    &__elipse--red {
+        background-color: $light-red;
+    }
+
+    &__elipse--yellow {
+        background-color: $yellow;
+    }
+
+    &__elipse--green {
+        background-color: $light-green;
+    }
+
+    &__elipse--blue {
+        padding: 8px 6px 6px;
+        background-color: $blue;
+    }
+
+    &__icon {
+        display: block;
+        width: 17px;
+        height: 17px;
+        background-image: url("#{$images-path}/sprite.png");
     }
 
     &__icon--red {
-        background: $light-red url("#{$images-path}/bg-icon--1.png") 8px 6px no-repeat;
+        background-position: -66px -26px;
+        background-repeat: no-repeat;
     }
 
     &__icon--yellow {
-        background: $yellow url("#{$images-path}/bg-icon--2.png") 8px 7px no-repeat;
+        background-position: -85px -26px;
+        background-repeat: no-repeat;
     }
 
     &__icon--green {
-        background: $light-green url("#{$images-path}/bg-icon--3.png") 7px 6px no-repeat;
+        background-position: -66px -45px;
+        background-repeat: no-repeat;
     }
 
     &__icon--blue {
-        background: $blue url("#{$images-path}/bg-icon--4.png") 7px 8px no-repeat;
+        background-position: -85px -45px;
+        background-repeat: no-repeat;
     }
 }
 /* IDEAS STYLES */
@@ -463,7 +499,7 @@ body {
         padding: 35px 10px 0;
         @media only screen and (min-width: 768px) {
             width: 760px;
-            padding-top: 90px;
+            padding-top: 96px;
             @media (min-width: 960px) {
                 width: 940px;
                 padding-left: 0;
@@ -479,128 +515,8 @@ body {
     }
 
     &__container {
-        display: flex;
-        flex-direction: column;
         @media only screen and (min-width: 768px) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-    }
-
-    &__activity {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 121px;
-        margin-top: 10px;
-        border-radius: 5px;
-        @media only screen and (min-width: 768px) {
-            margin-top: 20px;
-        }
-    }
-
-    &__activity--sport {
-        background: url("#{$images-path}/bg-activity-1--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 237px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-1.jpg");
-            @media (min-width: 960px) {
-                width: 300px;
-            }
-        }
-    }
-
-    &__activity--health {
-        background: url("#{$images-path}/bg-activity-2--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 237px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-2.jpg");
-            @media (min-width: 960px) {
-                width: 300px;
-            }
-        }
-    }
-
-    &__activity--extreme {
-        background: url("#{$images-path}/bg-activity-3--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 237px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-3.jpg");
-            @media (min-width: 960px) {
-                width: 300px;
-            }
-        }
-    }
-
-    &__activity--games {
-        background: url("#{$images-path}/bg-activity-4--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 237px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-4.jpg");
-            @media (min-width: 960px) {
-                width: 300px;
-            }
-        }
-    }
-
-    &__activity--culture {
-        background: url("#{$images-path}/bg-activity-5--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 494px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-5.jpg");
-            @media (min-width: 960px) {
-                width: 620px;
-            }
-        }
-    }
-
-    &__activity--relax {
-        background: url("#{$images-path}/bg-activity-6--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 494px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-6.jpg");
-            @media (min-width: 960px) {
-                width: 620px;
-            }
-        }
-    }
-
-    &__activity--travelling {
-        background: url("#{$images-path}/bg-activity-7--mobile.jpg") no-repeat;
-        @media only screen and (min-width: 768px) {
-            width: 237px;
-            height: 310px;
-            background-image: url("#{$images-path}/bg-activity-7.jpg");
-            @media (min-width: 960px) {
-                width: 300px;
-            }
-        }
-    }
-
-    &__link {
-        text-align: center;
-        font: 22px 'Montserrat Bold', $default-fonts;
-        color: $white;
-        text-decoration: none;
-        transition: all 0.15s ease;
-        @media only screen and (max-width: 960px) and (min-width: 768px) {
-            padding: 0 12px;
-        }
-    }
-
-    &__link:hover {
-        font-size: 25px;
-        @media only screen and (max-width: 960px) and (min-width: 768px) {
-            font-size: 23px;
+            margin-top: 13px;
         }
     }
 }
@@ -615,7 +531,7 @@ body {
         text-align: center;
         @media only screen and (min-width: 768px) {
             width: 760px;
-            padding-top: 90px;
+            padding-top: 96px;
             padding-bottom: 100px;
             @media (min-width: 960px) {
                 width: 940px;
@@ -639,6 +555,7 @@ body {
 
     &__form {
         margin-top: 15px;
+        -js-display: flex;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -680,12 +597,13 @@ body {
         width: 320px;
         margin: 0 auto;
         padding: 20px 10px 15px;
+        -js-display: flex;
         display: flex;
         flex-direction: column;
         align-items: center;
         @media only screen and (min-width: 768px) {
             width: 760px;
-            padding-top: 35px;
+            padding-top: 38px;
             padding-bottom: 35px;
             flex-direction: row;
             align-items: flex-start;
@@ -699,6 +617,7 @@ body {
     }
 
     &__container {
+        -js-display: flex;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -718,6 +637,7 @@ body {
         text-decoration: none;
         text-transform: uppercase;
         font: 16px 'Montserrat Bold', $default-fonts;
+        letter-spacing: 1px;
         color: $light-red;
     }
 
@@ -805,6 +725,108 @@ body {
         width: 110px;
         height: 24px;
         margin-top: 5px;
-        background: url("#{$images-path}/bg-copyright.png") no-repeat;
+        background: url("#{$images-path}/sprite.png") 0 0 no-repeat;
+    }
+}
+/* CUSTOMIZE PLUGINS */
+/* SLIDR */
+
+aside[id*="-control"] .slidr-control.right {
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: block;
+        width: 31px !important;
+        height: 56px !important;
+        top: 50% !important;
+        margin-top: -25px !important;
+        right: 18px !important;
+        border-radius: 25px;
+        background-image: url("#{$images-path}/sprite.png");
+        background-position: -33px -26px;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+}
+
+aside[id*="-control"] .slidr-control.right:hover {
+    opacity: 1;
+}
+
+aside[id*="-control"] .slidr-control.left {
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: block;
+        width: 31px !important;
+        height: 56px !important;
+        top: 50% !important;
+        margin-top: -25px !important;
+        left: 23px !important;
+        border-radius: 25px;
+        background-image: url("#{$images-path}/sprite.png");
+        background-position: 0 -26px;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+}
+
+aside[id*="-control"] .slidr-control.left:hover {
+    opacity: 1;
+}
+
+aside[id*="-control"] .slidr-control:after {
+    border-color: transparent !important;
+}
+/* MASONRY */
+.grid__img {
+    width: 100%;
+    height: 121px;
+    border-radius: 8px;
+    @media only screen and (min-width: 768px) {
+        height: inherit;
+        max-width: 95%;
+    }
+}
+
+.grid__title {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    text-align: center;
+    text-transform: capitalize;
+    font: 22px 'Montserrat Bold', $default-fonts;
+    color: #fff;
+    @media only screen and (min-width: 768px) {
+        width: 95%;
+        top: 45%;
+    }
+}
+
+.grid {
+    width: 100%;
+}
+
+.grid-item,
+.grid-sizer {
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+        width: 33%;
+    }
+}
+
+.grid-item--width2 {
+    @media only screen and (min-width: 768px) {
+        width: 66%;
+    }
+}
+
+.grid-item--width2 .grid__img {
+    max-height: 320px;
+}
+
+.grid-item {
+    margin-top: 10px;
+    @media only screen and (min-width: 768px) {
+        margin-top: 20px;
     }
 }
