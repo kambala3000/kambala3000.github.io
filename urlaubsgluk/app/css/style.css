@@ -130,7 +130,7 @@ body {
     @media only screen and (min-width: 768px) {
       .main-header__slogan {
         font-size: 52px;
-        padding: 0 80px; } }
+        padding: 0 85px; } }
   @media only screen and (min-width: 768px) and (min-width: 960px) {
     .main-header__slogan {
       padding: 0 180px; } }
