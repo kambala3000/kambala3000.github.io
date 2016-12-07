@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Ubuntu Regular';
+    src: url('#{$font-path}/ubuntu_condensed_regular-webfont.woff2') format('woff2'), url('#{$font-path}/ubuntu_condensed_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu Medium';
+    src: url('#{$font-path}/ubuntu_medium-webfont.woff2') format('woff2'), url('#{$font-path}/ubuntu_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

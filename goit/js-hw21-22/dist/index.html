@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="js/libs.min.js"></script>
+    <!-- endinject -->
+</head>
+
+<body>
+    <div class="page">
+        <h5 class="header">Тест</h5>
+        <script type="text/template" id="test">
+            <form action="index.html" class="main-form" method="post">
+                <% var qwCounter = 0;%>
+                <% var answCounter = 0;%>
+                <% for (var key in data) {%>
+                    <% qwCounter++;%>
+                    <div class="answers-box" id="qw<%= qwCounter %>">
+                        <p class="answers-box__question"><%= qwCounter%>. <%= data[key].question %></p>
+                        <% for (var i = 0; i < data[key].answers.length; i++) {%>
+                        <% answCounter++;%>
+                            <p class="answers-box__answers">
+                                <input type="checkbox" class="answers__checkbox" id="che<%= answCounter %>">
+                                <label for="che<%= answCounter %>" class="answers__label"><%= data[key].answers[i][0] %></label>
+                            </p>
+                        <% } %>
+                    </div>
+                <% }; %>
+                <input  class="main-form__button" type="button" value="Проверить мои результаты">
+            </form>
+        </script>
+    </div>
+    <!-- afterdocument:js -->
+    <script src="js/main.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

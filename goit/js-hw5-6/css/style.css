@@ -1,0 +1,44 @@
+body {
+    background-color: #290b0b;
+}
+
+.timer {
+    padding: 100px 0 0 0;
+}
+
+#display {
+    display: block;
+    width: 470px;
+    text-align: left;
+    margin: 0 auto;
+    font: bold 84px Arial, sans-serif;
+    color: #ffb208;
+    background-color: transparent;
+    border: none;
+}
+
+.buttons_block {
+    width: 270px;
+    margin: 10px auto 0 auto;
+}
+
+#start-stop_button {
+    display: inline-block;
+    width: 80px;
+}
+
+.buttons {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#splits {
+    width: 240px;
+    margin: 0 auto;
+}
+
+#splits p {
+    font: bold 20px Arial, sans-serif;
+    padding: 0 0 0 20px;
+    color: #bababa;
+}

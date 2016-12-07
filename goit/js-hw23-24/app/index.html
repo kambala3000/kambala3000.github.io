@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <!-- inject:css -->
+    <link href="css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script data-main="js/main" src="js/require.js"></script>
+    <!-- endinject -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="todo-block">
+            <h3 class="todo-block__head">JavaScript Todo list</h3>
+            <ul class="tasks-list js-tasks-list">
+
+            </ul>
+            <div class="controls clearfix">
+                <div class="controls__value-wrapper"><input type="text" class="controls__value js-input" placeholder="Add task..."></div>
+                <button type="button" class="btn btn--item-add js-btn-add">Okay</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="list-template">
+        <% for (let i = 0; i < data.length; i++) {%>
+            <li class="tasks-list__item clearfix">
+                <p class="tasks-list__text js-textfield">
+                    <%= data[i]%>
+                </p><button type="button" class="btn btn--item-delete js-btn-del">x</button>
+                <button type="button" class="btn btn--item-edit js-btn-edit">Edit</button></li>
+            <% }; %>
+    </script>
+
+    <!-- afterdocument:js -->
+    <!-- endinject -->
+</body>
+
+</html>
