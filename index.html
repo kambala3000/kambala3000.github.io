@@ -3,44 +3,233 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My repository</title>
-    <link rel="shortcut icon" href="goit/favicon.png" type="image/png">
+    <title>Home Page</title>
+    <link rel="shortcut icon" href="main-page/img/favicon.png" type="image/png">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="main-page/css/plugins/plugins.css">
+    <link rel="stylesheet" href="main-page/css/style.css">
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="main-page/js/libs.min.js"></script>
+    <script src="main-page/js/plugins.min.js"></script>
+    <!-- endinject -->
 </head>
 
 <body>
-    <img src="construction.png" alt="Construction" width="80px" height="80px">
-    <p>Hello! This page is under construction.</p>
-    <p>HTML/CSS</p>
-    <ul>
-        <li><a href="goit/hw1/index.html" target="_blank">hw1, markup basic</a></li>
-        <li><a href="goit/hw3/index.html" target="_blank">hw3, "Fitness"</a></li>
-        <li><a href="goit/hw4/index.html" target="_blank">hw4, "Asia Holydays"</a></li>
-        <li><a href="goit/hw5/index.html" target="_blank">hw5, registration form</a></li>
-        <li><a href="goit/hw6/index.html" target="_blank">hw6, "Zazor market"</a></li>
-        <li><a href="goit/hw7-8/index.html" target="_blank">hw7-8, "Pingbuller" responsive design</a></li>
-        <li><a href="goit/hw9/index.html" target="_blank">hw9, "Pingbuller" IE8</a></li>
-    </ul>
-    <p>JS+</p>
-    <ul>
-        <li><a href="goit/js-hw1-2/index.html" target="_blank">js-hw1-2, JS basic</a></li>
-        <li><a href="goit/js-hw3-4/index.html" target="_blank">js-hw3-4, DOM</a></li>
-        <li><a href="goit/js-hw5-6/index.html" target="_blank">js-hw5-6, timer, events</a></li>
-        <li><a href="goit/js-hw7-8/index.html" target="_blank">js-hw7-8, JQuery, tabs, tooltips, animations</a></li>
-        <li><a href="goit/js-hw9-10/index.html" target="_blank">js-hw9-10, JQuery, plugins</a></li>
-        <li><a href="goit/js-hw11-12/index.html" target="_blank">js-hw11-12, plugins, teplates</a></li>
-        <li><a href="goit/js-hw13-14/index.html" target="_blank">js-hw13-14, localStorage, JSON</a></li>
-        <li><a href="goit/js-hw15-16/index.html" target="_blank">js-hw15-16, API's, class inheritance</a></li>
-        <li><a href="goit/js-hw17-18/dist/index.html" target="_blank">js-hw17-18, NPM, Gulp</a></li>
-        <li><a href="goit/js-hw19-20/dist/index.html" target="_blank">js-hw19-20, SCSS</a></li>
-        <li><a href="goit/js-hw21-22/dist/index.html" target="_blank">js-hw21-22, ES6, Jasmine</a></li>
-        <li><a href="goit/js-hw23-24/app/index.html" target="_blank">js-hw23-24, Todo list, MVC, require.js</a></li>
-    </ul>
-    <p>Templates</p>
-    <ul>
-        <li><a href="urlaubsgluk/app/index.html" target="_blank">Urlaubsgluk</a></li>
-        <li><a href="buildhome/app/index.html" target="_blank">Build Home</a></li>
-        <li><a href="pingbuller/index.html" target="_blank">Pingbuller</a></li>
-    </ul>
+    <div class="wrapper">
+        <aside class="about">
+            <div class="about__logo"></div>
+            <div class="about__info">
+                <h4 class="about__header">INFO</h4>
+                <ul class="about__list">
+                    <li class="about__item about__item--username">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p class="about__title">Username</p>
+                        <p class="about__content">kambala3000</p>
+                    </li>
+                    <li class="about__item about__item--marker">
+                        <a class="about__link" href="https://goo.gl/maps/8Q5cJmyXgsA2" target="_blank">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p class="about__title">Location</p>
+                            <p class="about__content">Ukraine, Kremenchuk</p>
+                        </a>
+                    </li>
+                    <li class="about__item about__item--phone">
+                        <a class="about__link" href="callto:+380952248481">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            <p class="about__title">Phone</p>
+                            <p class="about__content">+380 95 224 8481</p>
+                        </a>
+                    </li>
+                    <li class="about__item about__item--skype">
+                        <a class="about__link" href="skype:kambala3000?chat">
+                            <i class="fa fa-skype" aria-hidden="true"></i>
+                            <p class="about__title">Skype</p>
+                            <p class="about__content">kambala3000</p>
+                        </a>
+                    </li>
+                    <li class="about__item about__item--email">
+                        <a class="about__link" href="mailto:ar.krivobok@gmail.com" class="">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <p class="about__title">E-mail</p>
+                            <p class="about__content">ar.krivobok@gmail.com</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="about__info">
+                <h4 class="about__header">Social</h4>
+                <ul class="about__list">
+                    <li class="about__item about__item--facebook">
+                        <a href="https://www.facebook.com/ar.krivobok" target="_blank" class="about__link">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            <p class="about__title">Facebook</p>
+                            <p class="about__content">facebook.com/ar.krivobok</p>
+                        </a>
+                    </li>
+                    <li class="about__item about__item--github">
+                        <a class="about__link" href="https://github.com/kambala3000" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                            <p class="about__title">GitHub</p>
+                            <p class="about__content">github.com/kambala3000</p>
+                        </a>
+                    </li>
+                    <li class="about__item about__item--linkedin">
+                        <a class="about__link" href="https://www.linkedin.com/in/krivobok" target="_blank">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <p class="about__title">LinkedIn</p>
+                            <p class="about__content">linkedin.com/in/krivobok</p>
+                        </a>
+                    </li>
+                    <li class="about__item about__item--download">
+                        <a class="about__link" href="#" target="_blank">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                            <p class="about__title">Download my CV</p>
+                            <p class="about__content">PDF, 56.0 kb</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="content">
+            <h4 class="content__header">MY FOLIO</h4>
+            <h1 class="content__name">Artem Krivobok / Артем Кривобок</h1>
+            <ul class="skills">
+                <li class="skills__item">HTML&amp;CSS</li>
+                <li class="skills__item">JavaScript</li>
+            </ul>
+            <div class="content__inner">
+
+                <section class="content__edu education">
+                    <h4 class="education__header">Education &amp; Current employment</h4>
+                    <ul class="education__list">
+                        <li class="education__item"><span class="education__date">2016 - Today</span>
+                            <p class="education__text">Study in Kremenchuk National University</p>
+                            <p class="education__note">Software Engineer, computer science</p>
+                        </li>
+                        <li class="education__item"><span class="education__date">2012 - 2016</span>
+                            <p class="education__text">Study in Kremenchuk National University College</p>
+                            <p class="education__note">Technician-programmer, computer networks</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="content__tech technologies">
+                    <h4 class="technologies__header">I Use</h4>
+                    <div class="technologies__slider slider-wrap">
+                        <div class="slider one">
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/html5.png');"></div>
+                            </div>
+
+                            <!-- DELETE -->
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/sass.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/js.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/react.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/angular.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/wordpress.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/atom.png');"></div>
+                            </div>
+                            <!-- DELETE END -->
+                        </div>
+                        <div class="slider two owl-loaded owl-drag">
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/css3.png');"></div>
+                            </div>
+
+                            <!-- DELETE -->
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/gulp.svg');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/nodejs.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/redux.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/github.png');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/ps.svg');"></div>
+                            </div>
+                            <div class="item">
+                                <div class="image" style="background-image: url('main-page/img/slider/win10.png');"></div>
+                            </div>
+                            <!-- DELETE END -->
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <section class="content__addedu education">
+                <h4 class="education__header">Additional education</h4>
+                <ul class="education__list">
+                    <li class="education__item education__item--addedu"><span class="education__date education__date--addedu">2016</span>
+                        <p class="education__text">Intensive course "Advanced HTML &amp; CSS" <a class="education__text--addedu" href="https://htmlacademy.ru/" target="_blank">By HTMLAcademy</a></p>
+                        <p class="education__note">SCSS/LESS, semantic markup, adaptive grid, Retina support</p>
+                    </li>
+                    <li class="education__item education__item--addedu"><span class="education__date education__date--addedu">2016</span>
+                        <p class="education__text">Frontend Online Course <a class="education__text--addedu" href="http://goit.ua/" target="_blank">By GOIT</a></p>
+                        <p class="education__note">HTML5 &amp; CSS3, JavaScript, jQuery, Git</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content__projects projects">
+                <h4 class="projects__header">Projects</h4>
+                <div class="projects__inner">
+                    <div class="projects__row">
+                        <div class="projects__item">
+                            <a class="projects__link" href="https://github.com/kambala3000/kambala3000.github.io/tree/master/urlaubsgluk" target="_blank">
+                                <div class="projects__image projects__image--urlaus"></div>
+                                <div class="projects__promo">
+                                    <h4 class="projects__name">Urlaubsgluk</h4>
+                                    <p class="projects__subtext">Project page, adaptive</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="projects__item">
+                            <a class="projects__link" href="https://github.com/kambala3000/kambala3000.github.io/tree/master/buildhome" target="_blank">
+                                <div class="projects__image projects__image--build"></div>
+                                <div class="projects__promo">
+                                    <h4 class="projects__name">Build Home</h4>
+                                    <p class="projects__subtext">Landing page, semantic markup</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="projects__item">
+                            <a class="projects__link" href="https://github.com/kambala3000/kambala3000.github.io/tree/master/pingbuller" target="_blank">
+                                <div class="projects__image projects__image--ping"></div>
+                                <div class="projects__promo">
+                                    <h4 class="projects__name">Pingbuller</h4>
+                                    <p class="projects__subtext">Landing page, responsive</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="main-footer">
+                <p class="main-footer__rights">design:&nbsp; <a class="main-footer__link" href="https://github.com/braindefender" target="_blank" >braindefender</a>&nbsp;&nbsp; code:&nbsp; <a class="main-footer__link" href="https://github.com/kambala3000" target="_blank">kambala3000</a>&nbsp; &copy; 2017 &nbsp;</p>
+            </footer>
+        </main>
+    </div>
+    <!-- afterdocument:js -->
+    <script src="main-page/js/main.js"></script>
+    <!-- endinject -->
 </body>
 
 </html>
