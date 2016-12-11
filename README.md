@@ -1,1 +1,1 @@
-Greetings. traveler!
+Greetings, traveler!
