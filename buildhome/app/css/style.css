@@ -3075,7 +3075,7 @@ body {
     text-align: center;
     color: #d5d5d6; }
     .main-nav__link:hover {
-      color: #cc9919; }
+      color: #f4b60d; }
 
 .search-form {
   width: 241px;
@@ -3104,13 +3104,14 @@ body {
     .search-form__lens:hover {
       color: #ffffff; }
 
-.slider {
-  padding-top: 40px; }
-  .slider__item-1 {
+.slider-wrapper {
+  padding-top: 40px;
+  position: relative; }
+  .slider-wrapper__item-1 {
     height: 470px;
     position: relative;
     background-image: url("../img/slider-photo1.jpg"); }
-  .slider__link {
+  .slider-wrapper__link {
     position: absolute;
     display: block;
     width: 300px;
@@ -3172,10 +3173,12 @@ body {
     float: left;
     padding-right: 30px;
     text-align: center; }
+  .services__image:hover + .services__link {
+    color: #f4b60d; }
   .services__image {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     width: 260px;
-    height: 290px; }
+    height: 260px; }
     .services__image--engineer {
       background: url("../img/bg-engineer.jpg") no-repeat; }
     .services__image--truck {
@@ -3202,7 +3205,7 @@ body {
     font: 16px "Ubuntu Medium", Arial, sans-serif;
     color: #ffffff; }
     .services__link:hover {
-      color: #cc9919; }
+      color: #f4b60d; }
 
 .content__inner {
   margin: 0 auto;
@@ -3290,20 +3293,6 @@ body {
   .ui-accordion-header-collapsed {
     color: #2a2d32; }
 
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-br,
-.ui-corner-right,
-.ui-corner-top {
-  border-radius: 0 0 0 0; }
-
-.ui-state-default {
-  border: 1px solid #e8e8e8; }
-
-.ui-accordion-content {
-  font: 13px Arial, sans-serif;
-  color: #8a8a8a; }
-
 .sponsors__inner {
   margin: 0 auto;
   width: 1160px;
@@ -3388,3 +3377,69 @@ body {
   .rights__text {
     font: 12px Arial, sans-serif;
     color: #616365; }
+
+/* PLUGINS */
+.jcarousel {
+  position: relative;
+  overflow: hidden; }
+
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.jcarousel li {
+  float: left; }
+
+.jcarousel-pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 45%; }
+
+.jcarousel-pagination a {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 15px 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-size: 1px;
+  color: transparent; }
+
+.jcarousel-pagination a:before {
+  content: " ";
+  display: block;
+  width: 15px;
+  height: 15px;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6); }
+
+.jcarousel-pagination a.active:before {
+  background-color: #001d1d; }
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-br,
+.ui-corner-right,
+.ui-corner-top {
+  border-radius: 0 0 0 0; }
+
+.ui-accordion-header {
+  color: #2a2d32; }
+
+.ui-accordion .ui-accordion-header:focus {
+  outline: none; }
+
+.ui-accordion .ui-state-active {
+  color: #ffffff; }
+
+.ui-state-default {
+  border: 1px solid #e8e8e8; }
+
+.ui-accordion-content {
+  font: 13px Arial, sans-serif;
+  color: #8a8a8a; }

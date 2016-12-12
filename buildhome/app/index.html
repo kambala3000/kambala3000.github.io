@@ -12,6 +12,7 @@
     <!-- inject:js -->
     <script src="js/libs/jquery-3.1.1.min.js"></script>
     <script src="js/libs/jquery-ui.js"></script>
+    <script src="js/libs/jquery.jcarousel.min.js"></script>
     <script src="js/libs/lodash.min.js"></script>
     <!-- endinject -->
 </head>
@@ -72,10 +73,16 @@
                     </form>
                 </div>
             </div>
-            <div class="slider">
-                <div class="slider__item-1">
-                    <a href="#" class="slider__link"></a>
+            <div class="slider-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="img/slider-photo1.jpg" alt="angar"></li>
+                        <li><img src="img/slider-photo2.jpg" alt="car factory"></li>
+                        <li><img src="img/slider-photo3.jpg" alt="welder"></li>
+                        <li><img src="img/slider-photo4.jpg" alt="construction"></li>
+                    </ul>
                 </div>
+                <div class="jcarousel-pagination"></div>
             </div>
         </div>
     </header>

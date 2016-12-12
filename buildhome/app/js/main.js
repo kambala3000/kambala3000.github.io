@@ -15,6 +15,26 @@ $(function() {
             $("#accordion").accordion("option", "icons", icons);
         }
     });
+    $('.jcarousel')
+        .jcarousel({
+            wrap: 'circular'
+        })
+        .jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        });
+    $('.jcarousel-pagination')
+        .on('jcarouselpagination:active', 'a', function() {
+            $(this).addClass('active');
+        })
+        .on('jcarouselpagination:inactive', 'a', function() {
+            $(this).removeClass('active');
+        }).jcarouselPagination({
+            item: function(page) {
+                return '<a>' + page + '</a>';
+            }
+        });
 
     $.getJSON("https://raw.githubusercontent.com/goit-fe/markup_fe2o/master/js_19-20/data.json",
         function(dataSkills) {

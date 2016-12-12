@@ -178,8 +178,9 @@ body {
     }
 }
 
-.slider {
+.slider-wrapper {
     padding-top: 40px;
+    position: relative;
 
     &__item-1 {
         height: 470px;
@@ -284,10 +285,14 @@ body {
         text-align: center;
     }
 
+    &__image:hover+ &__link {
+        color: $links-hover;
+    }
+
     &__image {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
         width: 260px;
-        height: 290px;
+        height: 260px;
 
         &--engineer {
             background: url("#{$images-path}/bg-engineer.jpg") no-repeat;
@@ -391,7 +396,7 @@ body {
             top: 52px;
             left: -15px;
             color: #2a2b2e;
-            background-color: #f4b60d;
+            background-color: $links-hover;
         }
     }
 
@@ -450,23 +455,6 @@ body {
     &-collapsed {
         color: #2a2d32;
     }
-}
-
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-br,
-.ui-corner-right,
-.ui-corner-top {
-    border-radius: 0 0 0 0;
-}
-
-.ui-state-default {
-    border: 1px solid #e8e8e8;
-}
-
-.ui-accordion-content {
-    font: 13px $default-fonts;
-    color: #8a8a8a;
 }
 
 .sponsors {
@@ -597,4 +585,80 @@ body {
         font: 12px $default-fonts;
         color: #616365;
     }
+}
+/* PLUGINS */
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: 15px;
+    left: 45%;
+}
+
+.jcarousel-pagination a {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 15px 0 0;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $white;
+    font-size: 1px;
+    color: transparent;
+}
+
+.jcarousel-pagination a:before {
+    content: " ";
+    display: block;
+    width: 15px;
+    height: 15px;
+    transform: scale(.6);
+}
+
+.jcarousel-pagination a.active:before {
+    background-color: #001d1d;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-br,
+.ui-corner-right,
+.ui-corner-top {
+    border-radius: 0 0 0 0;
+}
+
+.ui-accordion-header {
+    color: #2a2d32;
+}
+
+.ui-accordion .ui-accordion-header:focus {
+    outline: none;
+}
+
+.ui-accordion .ui-state-active {
+    color: $white;
+}
+
+.ui-state-default {
+    border: 1px solid #e8e8e8;
+}
+
+.ui-accordion-content {
+    font: 13px $default-fonts;
+    color: #8a8a8a;
 }
