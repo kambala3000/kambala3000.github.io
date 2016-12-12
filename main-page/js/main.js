@@ -1,1 +1,1 @@
-"use strict";var owl=$(".slider");owl.owlCarousel({items:5,loop:!0,autoWidth:!0,margin:30,autoplay:!0,autoplayTimeout:2e3,autoplayHoverPause:!0});
+"use strict";var owl=$(".slider");owl.owlCarousel({items:5,loop:!0,autoWidth:!0,margin:15,autoplay:!0,autoplayTimeout:2e3,autoplayHoverPause:!0}),$(".about").stick_in_parent();
