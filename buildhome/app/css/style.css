@@ -3159,6 +3159,7 @@ body {
       color: #248cec; }
 
 .services {
+  width: 100%;
   background-color: #2a2d32; }
   .services__inner {
     margin: 0 auto;
@@ -3207,11 +3208,13 @@ body {
     .services__link:hover {
       color: #f4b60d; }
 
-.content__inner {
-  margin: 0 auto;
-  width: 1160px;
-  padding: 60px 0 80px;
-  background-color: #f7f7f7; }
+.content {
+  width: 100%; }
+  .content__inner {
+    margin: 0 auto;
+    width: 1160px;
+    padding: 60px 0 80px;
+    background-color: #f7f7f7; }
 
 .latest-news {
   float: left;
@@ -3319,7 +3322,11 @@ body {
   width: 150px;
   height: 75px; }
 
+.main-footer {
+  width: 100%; }
+
 .footer-links {
+  width: 100%;
   background-color: #2a2d32; }
   .footer-links__inner {
     margin: 0 auto;
@@ -3350,6 +3357,7 @@ body {
       color: #248cec; }
 
 .footer-bottomline {
+  width: 100%;
   background-color: #35383c; }
   .footer-bottomline__inner {
     margin: 0 auto;
@@ -3381,7 +3389,8 @@ body {
 /* PLUGINS */
 .jcarousel {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 470px; }
 
 .jcarousel ul {
   width: 20000em;
@@ -3405,9 +3414,7 @@ body {
   margin: 0 15px 0 0;
   text-decoration: none;
   cursor: pointer;
-  background-color: #ffffff;
-  font-size: 1px;
-  color: transparent; }
+  background-color: #ffffff; }
 
 .jcarousel-pagination a:before {
   content: " ";
