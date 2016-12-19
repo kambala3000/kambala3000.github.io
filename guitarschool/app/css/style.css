@@ -1,0 +1,298 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Thin"), local("Roboto-Thin"), url("../fonts/Robotothin.woff2") format("woff2"), url("../fonts/Robotothin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Robotolight.woff2") format("woff2"), url("../fonts/Robotolight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Robotobold.woff2") format("woff2"), url("../fonts/Robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Black Italic"), local("Roboto-BlackItalic"), url("../fonts/Robotoblackitalic.woff2") format("woff2"), url("../fonts/Robotoblackitalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Light"), local("Lato-Light"), url("../fonts/latolight.woff2") format("woff2"), url("../fonts/latolight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url("../fonts/latolightitalic.woff2") format("woff2"), url("../fonts/latolightitalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/latoregular.woff2") format("woff2"), url("../fonts/latoregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #fff; }
+
+.main-header {
+  max-width: 100%;
+  box-shadow: inset 0 0 6px 1px #f8f8f8; }
+  .main-header__wrap {
+    width: 1200px;
+    height: 102px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+.logo {
+  width: 200px;
+  height: 102px; }
+  .logo__link {
+    height: 100%;
+    padding-top: 25px;
+    padding-right: 5px;
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    font: italic 900 40px "Roboto", Arial, sans-serif;
+    color: #032f3e;
+    background: url("../img/logo.png") 27px 22px no-repeat; }
+
+.social {
+  height: 102px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .social__section {
+    width: 200px;
+    height: 45px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-left: 1px solid #d5d5d5; }
+  .social__section:last-child {
+    border-right: 1px solid #d5d5d5; }
+  .social__section--icons {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .social__icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ab987a; }
+  .social__icon--secondary {
+    margin-right: 0;
+    color: #032f3e; }
+  .social__link {
+    text-decoration: none;
+    cursor: pointer;
+    font: 400 18px "Lato", Arial, sans-serif;
+    color: #032f3e; }
+
+.main-nav {
+  width: 100%;
+  height: 100px;
+  background-color: #032f3e; }
+  .main-nav__list {
+    width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .main-nav__item {
+    width: 200px;
+    height: 100px;
+    border-left: 1px solid #0d3948; }
+  .main-nav__item:last-child {
+    border-right: 1px solid #0d3948; }
+  .main-nav__link {
+    display: block;
+    font: 700 18px "Roboto", Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 100px;
+    color: #ffffff; }
+  .main-nav__link:hover {
+    color: #ab987a; }
+
+.slider {
+  width: 100%;
+  height: 862px;
+  background: url("../img/bg-slider-1.jpg") center center no-repeat;
+  background-size: cover;
+  box-shadow: inset 1px 20px 79px -16px #000000; }
+  .slider__inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+  .slider__about {
+    position: absolute;
+    right: 0;
+    top: 40%; }
+  .slider__text {
+    font: 70px "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+    color: white; }
+  .slider__text--sub {
+    font-weight: 100;
+    margin-bottom: 20px; }
+  .slider__video {
+    display: block;
+    width: 170px;
+    height: 122px;
+    float: right;
+    position: relative;
+    background: url("../img/bg-video.png") -172px 0 no-repeat;
+    cursor: pointer; }
+  .slider__video:hover {
+    background-position: 0 0; }
+  .slider__video::after {
+    display: block;
+    content: " ";
+    position: absolute;
+    left: 33%;
+    top: 25%;
+    width: 58px;
+    height: 58px;
+    opacity: 1;
+    background-image: url("../img/bg-play.png"); }
+
+.services {
+  width: 100%;
+  text-align: center;
+  background-color: #f8f9fb; }
+  .services__inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 146px; }
+  .services__head {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font: 700 26px "Roboto", Arial, sans-serif;
+    color: #032f3e; }
+  .services__line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    margin: 0 0 35px;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    background-color: #ab987a; }
+  .services__text {
+    margin-bottom: 150px;
+    padding: 0 10%;
+    font: 300 16px "Lato", Arial, sans-serif;
+    color: #616161; }
+  .services__wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .services__service {
+    width: 171px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .services__circle {
+    width: 171px;
+    height: 171px;
+    margin-bottom: 30px;
+    border: 1px solid #ab987a;
+    border-radius: 50%; }
+  .services__circle--micro {
+    background: url("../img/bg-service-micro.png") 50% 50% no-repeat; }
+  .services__circle--doc {
+    background: url("../img/bg-service-doc.png") 60% 50% no-repeat; }
+  .services__circle--cam {
+    background: url("../img/bg-service-cam.png") 50% 50% no-repeat; }
+  .services__name {
+    text-transform: uppercase;
+    font: 700 18px/25px "Roboto", Arial, sans-serif;
+    color: #032f3e;
+    margin-bottom: 25px; }

@@ -1,0 +1,292 @@
+@import "_vars";
+@import "_fonts";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+}
+@mixin clearfix() {
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.main-header {
+    max-width: 100%;
+    box-shadow: inset 0 0 6px 1px #f8f8f8;
+
+    &__wrap {
+        width: 1200px;
+        height: 102px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    width: 200px;
+    height: 102px;
+
+    &__link {
+        height: 100%;
+        padding-top: 25px;
+        padding-right: 5px;
+        display: block;
+        text-decoration: none;
+        text-align: right;
+        font: italic 900 40px "Roboto", $default-fonts;
+        color: $dark-blue;
+        background: url("#{$images-path}/logo.png") 27px 22px no-repeat;
+    }
+}
+
+.social {
+    height: 102px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__section {
+        width: 200px;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid $light-grey;
+    }
+
+    &__section:last-child {
+        border-right: 1px solid $light-grey;
+    }
+
+    &__section--icons {
+        justify-content: space-around;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        font-size: 18px;
+        color: $primary-icons-color;
+    }
+
+    &__icon--secondary {
+        margin-right: 0;
+        color: $dark-blue;
+    }
+
+    &__link {
+        text-decoration: none;
+        cursor: pointer;
+        font: 400 18px "Lato", $default-fonts;
+        color: $dark-blue;
+    }
+}
+
+.main-nav {
+    width: 100%;
+    height: 100px;
+    background-color: $dark-blue;
+
+    &__list {
+        width: 1200px;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__item {
+        width: 200px;
+        height: 100px;
+        border-left: 1px solid $light-blue;
+    }
+
+    &__item:last-child {
+        border-right: 1px solid $light-blue;
+    }
+
+    &__link {
+        display: block;
+        font: 700 18px "Roboto", $default-fonts;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 100px;
+        color: $white;
+    }
+
+    &__link:hover {
+        color: $primary-icons-color;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 862px;
+    background: url("#{$images-path}/bg-slider-1.jpg") center center no-repeat;
+    background-size: cover;
+    box-shadow: inset 1px 20px 79px -16px $black;
+
+    &__inner {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__about {
+        position: absolute;
+        right: 0;
+        top: 40%;
+    }
+
+    &__text {
+        font: 70px "Roboto", $default-fonts;
+        font-weight: 700;
+        text-align: right;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    &__text--sub {
+        font-weight: 100;
+        margin-bottom: 20px;
+    }
+
+    &__video {
+        display: block;
+        width: 170px;
+        height: 122px;
+        float: right;
+        position: relative;
+        background: url("#{$images-path}/bg-video.png") -172px 0 no-repeat;
+        cursor: pointer;
+    }
+
+    &__video:hover {
+        background-position: 0 0;
+    }
+
+    &__video::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        left: 33%;
+        top: 25%;
+        width: 58px;
+        height: 58px;
+        opacity: 1;
+        background-image: url("#{$images-path}/bg-play.png");
+    }
+}
+
+.services {
+    width: 100%;
+    text-align: center;
+    background-color: #f8f9fb;
+
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 146px;
+    }
+
+    &__head {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font: 700 26px "Roboto", $default-fonts;
+        color: $dark-blue;
+    }
+
+    &__line {
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        margin: 0 0 35px;
+        padding: 0;
+        text-align: center;
+        border: 0;
+        outline: 0;
+        background-color: $primary-icons-color;
+    }
+
+    &__text {
+        margin-bottom: 150px;
+        padding: 0 10%;
+        font: 300 16px "Lato", $default-fonts;
+        color: $grey;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__service {
+        width: 171px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__circle {
+        width: 171px;
+        height: 171px;
+        margin-bottom: 30px;
+        border: 1px solid $primary-icons-color;
+        border-radius: 50%;
+    }
+
+    &__circle--micro {
+        background: url("#{$images-path}/bg-service-micro.png") 50% 50% no-repeat;
+    }
+    &__circle--doc {
+        background: url("#{$images-path}/bg-service-doc.png") 60% 50% no-repeat;
+    }
+    &__circle--cam {
+        background: url("#{$images-path}/bg-service-cam.png") 50% 50% no-repeat;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font: 700 18px/25px "Roboto", $default-fonts;
+        color: $dark-blue;
+        margin-bottom: 25px;
+    }
+}
