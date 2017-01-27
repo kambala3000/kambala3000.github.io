@@ -1,6 +1,5 @@
 @import "_vars";
 @import "_fonts";
-
 html {
     box-sizing: border-box;
 }
@@ -28,23 +27,39 @@ ul {
 body {
     background-color: #fff;
 }
+
 @mixin clearfix() {
     &:after,
     &:before {
         content: "";
         display: table;
     }
-
     &:after {
         clear: both;
+    }
+}
+
+.button {
+    display: block;
+    font: 700 18px "Roboto", $default-fonts;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background-color: $dark-blue;
+    color: $white;
+    &--article {
+        width: 270px;
+        line-height: 62px;
+        &:hover {
+            background-color: $light-blue;
+        }
     }
 }
 
 .main-header {
     max-width: 100%;
     box-shadow: inset 0 0 6px 1px #f8f8f8;
-
-    &__wrap {
+    &__inner {
         width: 1200px;
         height: 102px;
         margin: 0 auto;
@@ -57,7 +72,6 @@ body {
 .logo {
     width: 200px;
     height: 102px;
-
     &__link {
         height: 100%;
         padding-top: 25px;
@@ -77,7 +91,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     &__section {
         width: 200px;
         height: 45px;
@@ -87,26 +100,24 @@ body {
         align-items: center;
         border-left: 1px solid $light-grey;
     }
-
     &__section:last-child {
         border-right: 1px solid $light-grey;
     }
-
     &__section--icons {
         justify-content: space-around;
     }
-
     &__icon {
         margin-right: 10px;
         font-size: 18px;
         color: $primary-icons-color;
     }
-
     &__icon--secondary {
         margin-right: 0;
         color: $dark-blue;
     }
-
+    &__icon--secondary:hover {
+        color: #00749c;
+    }
     &__link {
         text-decoration: none;
         cursor: pointer;
@@ -119,7 +130,6 @@ body {
     width: 100%;
     height: 100px;
     background-color: $dark-blue;
-
     &__list {
         width: 1200px;
         margin: 0 auto;
@@ -128,17 +138,14 @@ body {
         flex-direction: row;
         justify-content: center;
     }
-
     &__item {
         width: 200px;
         height: 100px;
         border-left: 1px solid $light-blue;
     }
-
     &__item:last-child {
         border-right: 1px solid $light-blue;
     }
-
     &__link {
         display: block;
         font: 700 18px "Roboto", $default-fonts;
@@ -149,7 +156,6 @@ body {
         line-height: 100px;
         color: $white;
     }
-
     &__link:hover {
         color: $primary-icons-color;
     }
@@ -161,20 +167,17 @@ body {
     background: url("#{$images-path}/bg-slider-1.jpg") center center no-repeat;
     background-size: cover;
     box-shadow: inset 1px 20px 79px -16px $black;
-
     &__inner {
         width: 1200px;
         height: 100%;
         margin: 0 auto;
         position: relative;
     }
-
     &__about {
         position: absolute;
         right: 0;
         top: 40%;
     }
-
     &__text {
         font: 70px "Roboto", $default-fonts;
         font-weight: 700;
@@ -182,12 +185,10 @@ body {
         text-transform: uppercase;
         color: white;
     }
-
     &__text--sub {
         font-weight: 100;
         margin-bottom: 20px;
     }
-
     &__video {
         display: block;
         width: 170px;
@@ -197,11 +198,9 @@ body {
         background: url("#{$images-path}/bg-video.png") -172px 0 no-repeat;
         cursor: pointer;
     }
-
     &__video:hover {
         background-position: 0 0;
     }
-
     &__video::after {
         display: block;
         content: " ";
@@ -219,20 +218,17 @@ body {
     width: 100%;
     text-align: center;
     background-color: #f8f9fb;
-
     &__inner {
         width: 1200px;
         margin: 0 auto;
         padding-top: 146px;
     }
-
     &__head {
         margin-bottom: 30px;
         text-transform: uppercase;
         font: 700 26px "Roboto", $default-fonts;
         color: $dark-blue;
     }
-
     &__line {
         display: inline-block;
         width: 30px;
@@ -243,36 +239,39 @@ body {
         border: 0;
         outline: 0;
         background-color: $primary-icons-color;
+        transition: all .25s ease;
     }
-
+    &__service:hover &__line {
+        width: 120px;
+    }
     &__text {
         margin-bottom: 150px;
         padding: 0 10%;
         font: 300 16px "Lato", $default-fonts;
         color: $grey;
     }
-
     &__wrap {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-
     &__service {
         width: 171px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     &__circle {
         width: 171px;
         height: 171px;
         margin-bottom: 30px;
         border: 1px solid $primary-icons-color;
         border-radius: 50%;
+        transition: all .25s ease;
     }
-
+    &__service:hover &__circle {
+        border-radius: 10%;
+    }
     &__circle--micro {
         background: url("#{$images-path}/bg-service-micro.png") 50% 50% no-repeat;
     }
@@ -282,11 +281,217 @@ body {
     &__circle--cam {
         background: url("#{$images-path}/bg-service-cam.png") 50% 50% no-repeat;
     }
-
     &__name {
         text-transform: uppercase;
         font: 700 18px/25px "Roboto", $default-fonts;
         color: $dark-blue;
         margin-bottom: 25px;
+    }
+}
+
+.ourlessons {
+    width: 100%;
+    background: $dark-blue url(#{$images-path}/ourlessons-bg.jpg) right 0 no-repeat;
+    background-size: 50% 100%;
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    &__leftside {
+        width: 640px;
+        padding: 110px 0 90px;
+        color: $white;
+    }
+    &__head {
+        font: 70px "Roboto", $default-fonts;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__head--thin {
+        font-weight: 100;
+        margin-bottom: 70px;
+    }
+}
+
+.steps-list {
+    width: 500px;
+    list-style: none;
+    background: url(#{$images-path}/ourlessons-line.jpg) 39px 0 repeat-y;
+    &__item {
+        padding: 20px 0 20px 100px;
+        margin-bottom: 50px;
+        font: 18px "Roboto", $default-fonts;
+        font-weight: 700;
+        line-height: 1.6;
+        text-transform: uppercase;
+        background-color: $dark-blue;
+        background-position: 18px 27px;
+        background-repeat: no-repeat;
+        transition: all .25s ease;
+    }
+    &__item:hover {
+        transform: scale(1.1);
+    }
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+    &__item--stack {
+        background-image: url(#{$images-path}/ourlessons-stack.png);
+    }
+    &__item--planet {
+        background-image: url(#{$images-path}/ourlessons-planet.png);
+    }
+    &__item--rocket {
+        background-image: url(#{$images-path}/ourlessons-rocket.png);
+    }
+    &__item--sound {
+        background-image: url(#{$images-path}/ourlessons-sound.png);
+        background-position: 25px 27px;
+    }
+}
+
+.projects {
+    width: 100%;
+    background-color: #f8f9fb;
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 135px;
+        text-align: center;
+    }
+    &__head {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font: 700 26px "Roboto", $default-fonts;
+        color: $dark-blue;
+    }
+    &__line {
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        margin: 0 0 35px;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background-color: $primary-icons-color;
+    }
+    &__text {
+        margin-bottom: 150px;
+        padding: 0 10%;
+        font: 300 16px "Lato", $default-fonts;
+        color: $grey;
+    }
+}
+
+.proj-slider {
+    margin-bottom: 230px;
+    &__item {
+        float: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item:focus {
+        outline: none;
+    }
+    &__image {
+        flex: 1 0 auto;
+    }
+    &__article {
+        flex: 0 1 auto;
+    }
+}
+
+.article {
+    padding: 85px 25px 0 25px;
+    text-align: left;
+    &__info {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font: 400 14px "Roboto", $default-fonts;
+    }
+    &__category {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $primary-icons-color;
+    }
+    &__category .fa {
+        padding-right: 5px;
+    }
+    &__date {
+        text-decoration: none;
+        color: $middle-grey;
+    }
+    &__date .fa {
+        padding-right: 5px;
+    }
+    &__head {
+        margin-bottom: 25px;
+        font: 700 18px "Roboto", $default-fonts;
+        text-transform: uppercase;
+        color: $dark-blue;
+    }
+    &__line {
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        margin: 0 0 35px;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        background-color: $primary-icons-color;
+    }
+    &__text {
+        margin-bottom: 40px;
+        font: 300 16px/1.4 "Lato", $default-fonts;
+        color: $grey;
+    }
+    &__social {
+        padding-top: 100px;
+        font: 400 14px "Roboto", $default-fonts;
+        text-transform: uppercase;
+        color: $middle-grey;
+    }
+    &__social-link {
+        text-decoration: none;
+        color: $middle-grey
+    }
+    &__social-link:hover {
+        color: $black;
+    }
+    &__social .fa {
+        padding-left: 25px;
+    }
+}
+
+.slick-dots {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    & li {
+        display: inline-block;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+    & li:last-child {
+        margin-right: 0;
+    }
+    & li button {
+        width: 15px;
+        height: 15px;
+        font-size: 0;
+        cursor: pointer;
+        background-color: $white;
+        border: 2px solid $middle-grey;
+        transform: rotate(45deg);
+    }
+    & li.slick-active button {
+        background-color: $primary-icons-color;
+        border: none;
+    }
+    & li button:focus {
+        outline: none;
     }
 }
