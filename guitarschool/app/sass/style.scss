@@ -54,6 +54,24 @@ body {
             background-color: $light-blue;
         }
     }
+    &--skype-details {
+        width: 270px;
+        margin-right: 40px;
+        line-height: 62px;
+        border: 3px solid $dark-blue;
+        background-color: transparent;
+        &:hover {
+            background-color: $light-blue;
+            border-color: $light-blue;
+        }
+    }
+    &--plan {
+        width: 270px;
+        line-height: 62px;
+        &:hover {
+            background-color: $light-blue;
+        }
+    }
 }
 
 .main-header {
@@ -103,26 +121,45 @@ body {
     &__section:last-child {
         border-right: 1px solid $light-grey;
     }
-    &__section--icons {
-        justify-content: space-around;
-    }
     &__icon {
         margin-right: 10px;
         font-size: 18px;
         color: $primary-icons-color;
-    }
-    &__icon--secondary {
-        margin-right: 0;
-        color: $dark-blue;
-    }
-    &__icon--secondary:hover {
-        color: #00749c;
     }
     &__link {
         text-decoration: none;
         cursor: pointer;
         font: 400 18px "Lato", $default-fonts;
         color: $dark-blue;
+    }
+}
+
+.social-icons {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-left: 1px solid $light-grey;
+    &--bottom {
+        border-left: none;
+    }
+    &__item {
+        text-decoration: none;
+        cursor: pointer;
+        font: 400 18px "Lato", $default-fonts;
+        color: $dark-blue;
+    }
+    &__icon {
+        font-size: 18px;
+        color: $dark-blue;
+    }
+    &__icon:hover {
+        color: #00749c;
+    }
+    &__icon--bottom {
+        color: #5f737a;
     }
 }
 
@@ -251,6 +288,7 @@ body {
         color: $grey;
     }
     &__wrap {
+        margin-bottom: 140px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -356,7 +394,8 @@ body {
     &__inner {
         width: 1200px;
         margin: 0 auto;
-        padding-top: 135px;
+        padding: 135px 0 230px 0;
+        overflow: hidden;
         text-align: center;
     }
     &__head {
@@ -384,7 +423,7 @@ body {
 }
 
 .proj-slider {
-    margin-bottom: 230px;
+    margin-bottom: 150px;
     &__item {
         float: left;
         display: flex;
@@ -493,5 +532,141 @@ body {
     }
     & li button:focus {
         outline: none;
+    }
+}
+
+.gallery {
+    @include clearfix();
+    text-align: left;
+    position: relative;
+     :focus {
+        outline: none;
+    }
+    &__wrap {
+        float: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item {
+        display: block;
+        position: relative;
+    }
+    &__doubled-item {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__text {
+        padding: 0 5px 0 5px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: rgba(0, 0, 0, .4);
+        font: 400 14px "Roboto", $default-fonts;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__text .fa {
+        padding-right: 7px;
+    }
+    & .slick-arrow {
+        display: block;
+        width: 70px;
+        height: 62px;
+        position: absolute;
+        bottom: -100px;
+        border: 3px solid $primary-icons-color;
+        text-decoration: none;
+        text-align: center;
+        background-color: $white;
+        color: $primary-icons-color;
+    }
+    & .slick-arrow:hover {
+        background-color: $primary-icons-color;
+        color: $white;
+    }
+    & .slick-arrow .fa {
+        font-size: 20px;
+        line-height: 62px;
+    }
+    & .slick-next {
+        right: 0;
+    }
+    & .slick-prev {
+        right: 120px;
+    }
+}
+
+.call-us {
+    width: 100%;
+    background: $primary-icons-color url("#{$images-path}/call-us-bg.jpg") repeat-x;
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__skype {
+        width: 500px;
+        height: 202px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        width: 375px;
+        font: 30px "Roboto", $default-fonts;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $dark-blue;
+    }
+    &__link {
+        text-decoration: none;
+        font-weight: 700;
+        color: $dark-blue;
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
+    &__link--icon {
+        margin-right: 30px;
+        font-size: 90px;
+    }
+    &__btn-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.g-map {
+    width: 100%;
+    height: 460px;
+}
+
+.main-footer {
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    &__inner--bottom {
+        height: 106px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bottom-line {
+        width: 100%;
+        background-color: $dark-blue;
+    }
+    &__copiright {
+        font: 300 14px "Roboto", $default-fonts;
+        color: #5f737a;
     }
 }

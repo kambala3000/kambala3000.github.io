@@ -34,11 +34,11 @@
                     <i class="social__icon fa fa-phone" aria-hidden="true"></i>
                     <a href="#" class="social__link">013 045 608 65</a>
                 </div>
-                <div class="social__section social__section--icons">
-                    <a href="#" class="social__link social__link--icons"><i class="social__icon social__icon--secondary fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="social__link social__link--icons"><i class="social__icon social__icon--secondary fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#" class="social__link social__link--icons"><i class="social__icon social__icon--secondary fa fa-google-plus" aria-hidden="true"></i></a>
-                    <a href="#" class="social__link social__link--icons"><i class="social__icon social__icon--secondary fa fa-rss" aria-hidden="true"></i></a>
+                <div class="social-icons social__section">
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon fa fa-rss" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -186,8 +186,109 @@
                     </article>
                 </div>
             </div>
+            <div class="gallery js-gallery">
+                <div class="gallery__wrap">
+                    <a class="gallery__item" href="#">
+                        <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Music</p>
+                        <img src="img/gallery-music.jpg" alt="Music" class="gallery__image" width="369" height="369">
+                    </a>
+                    <div class="gallery__doubled-item">
+                        <a class="gallery__item" href="#">
+                            <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Rock</p>
+                            <img src="img/gallery-rock.jpg" alt="Rock" class="gallery__image" width="271" height="169">
+                        </a>
+                        <a class="gallery__item" href="#">
+                            <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Shows</p>
+                            <img src="img/gallery-show.jpg" alt="Shows" class="gallery__image" width="271" height="169">
+                        </a>
+                    </div>
+                    <a class="gallery__item" href="#">
+                        <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Lessons</p>
+                        <img src="img/gallery-lessons.jpg" alt="Lessons" class="gallery__image" width="469" height="369">
+                    </a>
+                </div>
+                <div class="gallery__wrap">
+                    <a class="gallery__item" href="#">
+                        <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Bands</p>
+                        <img src="img/gallery-bands.jpg" alt="Bands" class="gallery__image" width="369" height="369">
+                    </a>
+                    <div class="gallery__doubled-item">
+                        <a class="gallery__item" href="#">
+                            <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Albums</p>
+                            <img src="img/gallery-albums.jpg" alt="Albums" class="gallery__image" width="271" height="169">
+                        </a>
+                        <a class="gallery__item" href="#">
+                            <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Interviews</p>
+                            <img src="img/gallery-interviews.jpg" alt="Interviews" class="gallery__image" width="271" height="169">
+                        </a>
+                    </div>
+                    <a class="gallery__item" href="#">
+                        <p class="gallery__text"><i class="fa fa-folder-open" aria-hidden="true"></i>Concerts</p>
+                        <img src="img/gallery-concerts.jpg" alt="Concerts" class="gallery__image" width="469" height="369">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+    <div class="call-us">
+        <div class="call-us__inner">
+            <div class="call-us__skype">
+                <a href="#" class="call-us__link call-us__link--icon"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                <p class="call-us__text">
+                    <a href="#" class="call-us__link">Call us on Skype!</a> <br> AND LEARN HOW TO PLAY GUITAR
+                </p>
+            </div>
+            <p class="call-us__btn-wrap">
+                <a href="#" class="button button--skype-details">More details</a>
+                <a href="#" class="button button--plan">CHOOSE YOUR PLAN</a>
+            </p>
+        </div>
+    </div>
+    <div id="map" class="g-map"></div>
+    <footer class="main-footer">
+        <div class="main-footer__bottom-line">
+            <div class="main-footer__inner main-footer__inner--bottom">
+                <p class="main-footer__copiright">&copy; Copyright 2017 Guitar. All rights reserved.</p>
+                <div class="social-icons social-icons--bottom">
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon social-icons__icon--bottom fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon social-icons__icon--bottom fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon social-icons__icon--bottom fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icons__item"><i class="social-icons__icon social-icons__icon--bottom fa fa-rss" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function initMap() {
+            var myLatLng = {
+                lat: 50.106835,
+                lng: 8.682173
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 16,
+                zoomControl: true,
+                disableDoubleClickZoom: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                scrollwheel: false,
+                panControl: false,
+                streetViewControl: false,
+                draggable: true,
+                overviewMapControl: false,
+                overviewMapControlOptions: {
+                    opened: false,
+                },
+            });
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        };
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB5In7UGQ1MvPQP55WbmWZpD7p2c_VVAA&callback=initMap">
+    </script>
     <!-- afterdocument:js -->
     <script src="js/plugins/slick.min.js"></script>
     <script src="js/main.js"></script>
