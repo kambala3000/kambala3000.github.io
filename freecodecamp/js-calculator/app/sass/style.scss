@@ -1,0 +1,66 @@
+@import "_vars";
+@import "_fonts";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.container {
+    width: 700px;
+    padding: 100px 0 0 0;
+    margin: 0 auto;
+}
+
+.calc {
+    width: 500px;
+    margin: 0 auto;
+    background-color: $interface-gray;
+
+    &__head {
+        text-align: center;
+    }
+
+    &__head--link {
+        padding: 0 0 0 20px;
+        background: url("#{$images-path}/github-logo.svg") 0 5px no-repeat;
+        background-size: 16px 16px;
+        text-decoration: none;
+        font: 16px 'Pacifico', $default-fonts;
+        color: $black;
+    }
+}

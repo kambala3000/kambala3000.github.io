@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url("../fonts/pacifico.woff2") format("woff2"), url("../fonts/pacifico.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #fff; }
+
+.container {
+  width: 700px;
+  padding: 100px 0 0 0;
+  margin: 0 auto; }
+
+.calc {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #E9E9E9; }
+  .calc__head {
+    text-align: center; }
+  .calc__head--link {
+    padding: 0 0 0 20px;
+    background: url("../img/github-logo.svg") 0 5px no-repeat;
+    background-size: 16px 16px;
+    text-decoration: none;
+    font: 16px "Pacifico", Arial, sans-serif;
+    color: #000000; }
