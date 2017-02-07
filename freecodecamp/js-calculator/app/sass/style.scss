@@ -81,10 +81,12 @@ body {
         text-align: right;
     }
     &__entry {
+        height: 35px;
         font: 400 26px 'Roboto', $default-fonts;
         margin-bottom: 5px;
     }
     &__history {
+        height: 24px;
         font: 300 18px 'Roboto', $default-fonts;
     }
     &__buttons {
@@ -119,18 +121,23 @@ body {
         margin-top: -90px;
     }
 }
+
 .button:nth-child(n+3) {
     font-size: 20px;
 }
+
 .button:nth-child(3) {
     font-size: 25px;
 }
+
 .button:nth-child(4) {
     font-size: 23px;
 }
+
 .button:nth-child(12) {
     font-size: 22px;
 }
+
 .button:nth-child(16) {
     font-size: 25px;
 }
