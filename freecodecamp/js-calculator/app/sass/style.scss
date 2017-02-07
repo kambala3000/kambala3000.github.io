@@ -1,6 +1,5 @@
 @import "_vars";
 @import "_fonts";
-
 html {
     box-sizing: border-box;
 }
@@ -42,25 +41,109 @@ body {
 
 .container {
     width: 700px;
-    padding: 100px 0 0 0;
+    padding: 60px 0 0 0;
     margin: 0 auto;
 }
 
 .calc {
     width: 500px;
     margin: 0 auto;
+    padding: 5px 0 20px 0;
     background-color: $interface-gray;
-
+    outline: 1px solid $outline-color;
     &__head {
         text-align: center;
+        margin-bottom: 5px;
     }
-
+    &__svg-image {
+        width: 16px;
+        height: 16px;
+        margin: 1px 3px 0 0;
+    }
     &__head--link {
-        padding: 0 0 0 20px;
-        background: url("#{$images-path}/github-logo.svg") 0 5px no-repeat;
-        background-size: 16px 16px;
         text-decoration: none;
         font: 16px 'Pacifico', $default-fonts;
-        color: $black;
+        fill: $link-color;
+        color: $link-color;
+        cursor: pointer;
+        transition: linear .2s;
     }
+    &__head--link:hover {
+        fill: $interface-hover;
+        color: $interface-hover;
+    }
+    &__display {
+        width: 92%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        padding: 20px 10px 20px 10px;
+        background-color: $white;
+        text-align: right;
+    }
+    &__entry {
+        font: 400 26px 'Roboto', $default-fonts;
+        margin-bottom: 5px;
+    }
+    &__history {
+        font: 300 18px 'Roboto', $default-fonts;
+    }
+    &__buttons {
+        width: 92%;
+        margin: 0 auto;
+        font-size: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+}
+
+.button {
+    width: 115px;
+    height: 90px;
+    padding: 0;
+    margin: 0;
+    background-color: $interface-gray;
+    font: 400 18px 'Roboto', $default-fonts;
+    color: $black;
+    text-align: center;
+    border: none;
+    transition: linear .05s;
+    &--high {
+        height: 180px;
+    }
+    &--long {
+        width: 230px;
+    }
+    &--align {
+        margin-top: -90px;
+    }
+}
+.button:nth-child(n+3) {
+    font-size: 20px;
+}
+.button:nth-child(3) {
+    font-size: 25px;
+}
+.button:nth-child(4) {
+    font-size: 23px;
+}
+.button:nth-child(12) {
+    font-size: 22px;
+}
+.button:nth-child(16) {
+    font-size: 25px;
+}
+
+.button:last-child {
+    font-size: 30px;
+}
+
+.button:hover {
+    background-color: $interface-hover;
+    color: $white;
+}
+
+.button:focus {
+    outline: none;
 }
