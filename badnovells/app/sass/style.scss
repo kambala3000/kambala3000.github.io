@@ -1,6 +1,5 @@
 @import "_vars";
 @import "_fonts";
-
 html {
     box-sizing: border-box;
 }
@@ -37,5 +36,59 @@ body {
     }
     &:after {
         clear: both;
+    }
+}
+
+.main-header {
+    background-color: $main-blue;
+    &__inner {
+        width: 1322px;
+        margin: 0 auto;
+    }
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__logo {
+        margin-top: -100px;
+    }
+}
+
+.main-logo {
+    width: 520px;
+    height: 520px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+        content: " ";
+        position: absolute;
+        top: 76px;
+        left: 75px;
+        display: block;
+        width: 368px;
+        height: 368px;
+        border: 30px solid $sub-blue;
+        transform: rotate(45deg);
+        z-index: 5;
+    }
+    &__link {
+        display: block;
+        padding: 165px 0 0 0;
+        width: 210px;
+        height: 210px;
+        background: url("#{$images-path}/main-logo.png") 4px 5px no-repeat;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font: 20px/18px 'Martina Regular', $default-fonts;
+        color: $white;
+        z-index: 10;
+    }
+    &__link--break {
+        display: block;
+        text-transform: lowercase;
     }
 }
