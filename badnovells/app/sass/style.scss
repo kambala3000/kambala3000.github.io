@@ -41,9 +41,51 @@ body {
 
 .main-header {
     background-color: $main-blue;
+    position: relative;
+    // &::before {
+    //     content: " ";
+    //     display: block;
+    //     width: 50%;
+    //     height: 50%;
+    //     background-color: red;
+    //     position: absolute;
+    //     right: 0;
+    //     bottom: 0;
+    //     z-index: 3;
+    //     transform: rotate(-24deg);
+    // }
+    &::after {
+        content: " ";
+        display: block;
+        width: 50%;
+        height: 37px;
+        position: absolute;
+        left: 0;
+        top: 41px;
+        background-color: $sub-blue;
+        z-index: 1;
+    }
     &__inner {
         width: 1322px;
         margin: 0 auto;
+        position: relative;
+        background-color: $main-blue;
+        z-index: 2;
+        &::before {
+            content: "B.A.D. novells";
+            display: block;
+            width: 17.5%;
+            height: 37px;
+            padding: 0 0 0 32px;
+            position: absolute;
+            left: 0;
+            top: 41px;
+            background-color: $sub-blue;
+            text-transform: uppercase;
+            font: 34px "Bebas Neue Regular", $default-fonts;
+            color: $white;
+            z-index: 2;
+        }
     }
     &__top {
         display: flex;
@@ -51,8 +93,49 @@ body {
         justify-content: space-between;
     }
     &__logo {
-        margin-top: -100px;
+        margin: -100px 0 0 110px;
     }
+    &__social {
+        width: 160px;
+        height: 71px;
+        margin: 180px 200px 0 0;
+    }
+    &__lang {
+        margin-top: 40px;
+        padding-right: 20px;
+        height: 37px;
+        cursor: pointer;
+        background: url("#{$images-path}/lang-arrow.png") 87px 9px no-repeat;
+        transition: background-color linear 0.2s;
+    }
+    &__lang:hover {
+        background-color: $sub-blue;
+        background-position: 87px -25px;
+    }
+    &__lang-item {
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        font: 34px 'Bebas Neue Regular', $default-fonts;
+        color: $white;
+    }
+    &__lang-item--transparent {
+        opacity: 0;
+        transition: linear 0.2s;
+    }
+    &__lang:hover &__lang-item--transparent {
+        opacity: 1;
+    }
+}
+
+.triangle-right {
+    position: relative;
+    top: 6px;
+}
+
+.triangle-left {
+    position: relative;
+    top: -6px;
+    left: -10px;
 }
 
 .main-logo {
@@ -90,5 +173,81 @@ body {
     &__link--break {
         display: block;
         text-transform: lowercase;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__link {
+        display: flex;
+        width: 71px;
+        height: 71px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        fill: $icons-color;
+        border: 3px solid $icons-color;
+        border-radius: 15px;
+        transition: linear 0.1s;
+    }
+    &__link:hover {
+        fill: $white;
+        border-color: $white;
+    }
+    &__svg {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* PROJECTS SECTION */
+
+.projects {
+    background-color: $white;
+    &__inner {
+        width: 1322px;
+        margin: 0 auto;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.gallery {
+    width: 650px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    &__item {
+        width: 314px;
+        height: 240px;
+        position: relative;
+    }
+    &__item:hover {}
+    &__overlay {
+        width: 314px;
+        height: 240px;
+        position: absolute;
+        top: 0;
+        border: 10px solid $sub-blue;
+        background: rgba(0,
+        0,
+        0,
+        .6) url("#{$images-path}/magnifier.png") center center no-repeat;
+        cursor: pointer;
+        transition: linear 0.1s;
+        opacity: 0;
+    }
+    &__overlay:hover {
+        opacity: 1;
     }
 }

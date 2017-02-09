@@ -5,14 +5,14 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'Martina Regular';
-  src: url("../fonts/martina_regular-webfont.woff2") format("woff2"), url("../fonts/martina_regular-webfont.woff") format("woff");
+  font-family: 'Bebas Neue Bold';
+  src: url("../fonts/bebas-neue-bold-webfont.woff2") format("woff2"), url("../fonts/bebas-neue-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Bebas Neue Bold';
-  src: url("../fonts/bebas-neue-bold-webfont.woff2") format("woff2"), url("../fonts/bebas-neue-bold-webfont.woff") format("woff");
+  font-family: 'Martina Regular';
+  src: url("../fonts/martina_regular-webfont.woff2") format("woff2"), url("../fonts/martina_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -53,10 +53,38 @@ body {
   background-color: #fff; }
 
 .main-header {
-  background-color: #3d6dd1; }
+  background-color: #3d6dd1;
+  position: relative; }
+  .main-header::after {
+    content: " ";
+    display: block;
+    width: 50%;
+    height: 37px;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    background-color: #1f90fe;
+    z-index: 1; }
   .main-header__inner {
     width: 1322px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative;
+    background-color: #3d6dd1;
+    z-index: 2; }
+    .main-header__inner::before {
+      content: "B.A.D. novells";
+      display: block;
+      width: 17.5%;
+      height: 37px;
+      padding: 0 0 0 32px;
+      position: absolute;
+      left: 0;
+      top: 41px;
+      background-color: #1f90fe;
+      text-transform: uppercase;
+      font: 34px "Bebas Neue Regular", Arial, sans-serif;
+      color: #ffffff;
+      z-index: 2; }
   .main-header__top {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -68,7 +96,40 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .main-header__logo {
-    margin-top: -100px; }
+    margin: -100px 0 0 110px; }
+  .main-header__social {
+    width: 160px;
+    height: 71px;
+    margin: 180px 200px 0 0; }
+  .main-header__lang {
+    margin-top: 40px;
+    padding-right: 20px;
+    height: 37px;
+    cursor: pointer;
+    background: url("../img/lang-arrow.png") 87px 9px no-repeat;
+    transition: background-color linear 0.2s; }
+  .main-header__lang:hover {
+    background-color: #1f90fe;
+    background-position: 87px -25px; }
+  .main-header__lang-item {
+    padding: 0 0 0 10px;
+    text-decoration: none;
+    font: 34px "Bebas Neue Regular", Arial, sans-serif;
+    color: #ffffff; }
+  .main-header__lang-item--transparent {
+    opacity: 0;
+    transition: linear 0.2s; }
+  .main-header__lang:hover .main-header__lang-item--transparent {
+    opacity: 1; }
+
+.triangle-right {
+  position: relative;
+  top: 6px; }
+
+.triangle-left {
+  position: relative;
+  top: -6px;
+  left: -10px; }
 
 .main-logo {
   width: 520px;
@@ -111,3 +172,90 @@ body {
   .main-logo__link--break {
     display: block;
     text-transform: lowercase; }
+
+.social {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .social__link {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 71px;
+    height: 71px;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    fill: #87a6ea;
+    border: 3px solid #87a6ea;
+    border-radius: 15px;
+    transition: linear 0.1s; }
+  .social__link:hover {
+    fill: #ffffff;
+    border-color: #ffffff; }
+  .social__svg {
+    display: block;
+    width: 40px;
+    height: 40px; }
+
+/* PROJECTS SECTION */
+.projects {
+  background-color: #ffffff; }
+  .projects__inner {
+    width: 1322px;
+    margin: 0 auto; }
+  .projects__wrap {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+.gallery {
+  width: 650px;
+  height: 500px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between; }
+  .gallery__item {
+    width: 314px;
+    height: 240px;
+    position: relative; }
+  .gallery__overlay {
+    width: 314px;
+    height: 240px;
+    position: absolute;
+    top: 0;
+    border: 10px solid #1f90fe;
+    background: rgba(0, 0, 0, 0.6) url("../img/magnifier.png") center center no-repeat;
+    cursor: pointer;
+    transition: linear 0.1s;
+    opacity: 0; }
+  .gallery__overlay:hover {
+    opacity: 1; }
