@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url("../fonts/bebas_neue_regular-webfont.woff2") format("woff2"), url("../fonts/bebas_neue_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Martina Regular';
+  src: url("../fonts/martina_regular-webfont.woff2") format("woff2"), url("../fonts/martina_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url("../fonts/bebas-neue-bold-webfont.woff2") format("woff2"), url("../fonts/bebas-neue-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothamPro Regular';
+  src: url("../fonts/GothamProRegular.woff2") format("woff2"), url("../fonts/GothamProRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothamPro Light';
+  src: url("../fonts/GothamProLight.woff2") format("woff2"), url("../fonts/GothamProLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #fff; }

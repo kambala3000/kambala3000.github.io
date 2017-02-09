@@ -1,0 +1,38 @@
+@import "_vars";
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('#{$font-path}/bebas_neue_regular-webfont.woff2') format('woff2'),
+    url('#{$font-path}/bebas_neue_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Martina Regular';
+    src: url('#{$font-path}/martina_regular-webfont.woff2') format('woff2'),
+    url('#{$font-path}/martina_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Bold';
+    src: url('#{$font-path}/bebas-neue-bold-webfont.woff2') format('woff2'),
+    url('#{$font-path}/bebas-neue-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamPro Regular';
+    src: url('#{$font-path}/GothamProRegular.woff2') format('woff2'),
+    url('#{$font-path}/GothamProRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamPro Light';
+    src: url('#{$font-path}/GothamProLight.woff2') format('woff2'),
+    url('#{$font-path}/GothamProLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

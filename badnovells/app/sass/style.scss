@@ -1,0 +1,41 @@
+@import "_vars";
+@import "_fonts";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
