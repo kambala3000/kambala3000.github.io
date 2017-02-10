@@ -26,6 +26,7 @@ ul {
 
 body {
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 @mixin clearfix() {
@@ -42,19 +43,7 @@ body {
 .main-header {
     background-color: $main-blue;
     position: relative;
-    // &::before {
-    //     content: " ";
-    //     display: block;
-    //     width: 50%;
-    //     height: 50%;
-    //     background-color: red;
-    //     position: absolute;
-    //     right: 0;
-    //     bottom: 0;
-    //     z-index: 3;
-    //     transform: rotate(-24deg);
-    // }
-    &::after {
+    &::before {
         content: " ";
         display: block;
         width: 50%;
@@ -71,23 +60,25 @@ body {
         position: relative;
         background-color: $main-blue;
         z-index: 2;
+        // overflow: hidden;
         &::before {
             content: "B.A.D. novells";
             display: block;
             width: 17.5%;
             height: 37px;
-            padding: 0 0 0 32px;
+            padding: 0 0 0 24px;
             position: absolute;
             left: 0;
             top: 41px;
             background-color: $sub-blue;
             text-transform: uppercase;
             font: 34px "Bebas Neue Regular", $default-fonts;
+            letter-spacing: 1px;
             color: $white;
             z-index: 2;
         }
     }
-    &__top {
+    &__top-wrap {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -125,17 +116,93 @@ body {
     &__lang:hover &__lang-item--transparent {
         opacity: 1;
     }
+    &__bottom-wrap {
+        position: relative;
+        z-index: 5;
+    }
+    &__promo {
+        width: 485px;
+        padding: 0 0 0 20px;
+    }
+    &__greetings {
+        font: 60px/1.4 "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 3px;
+        color: $icons-color;
+        text-transform: uppercase;
+    }
+    &__promo-text {
+        padding: 30px 0 0 0;
+        text-align: justify;
+        font: 24px/1.3 "GothamPro Regular", $default-fonts;
+        color: $white;
+    }
+    &__images-box {
+        position: absolute;
+        right: 13px;
+        top: 13px;
+        width: 818px;
+        height: 818px;
+        margin: -150px -257px 0 0;
+        border: 30px solid $sub-blue;
+        // z-index: 3;
+    }
+    &__img-box1 {
+        width: 1192px;
+        height: 521px;
+        position: absolute;
+        top: -36px;
+        left: -131px;
+        background: url('#{$images-path}/image-box1.png') no-repeat;
+        transform: rotate(-45deg);
+        -webkit-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
+        box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
+        // z-index: 6;
+    }
+    &__img-box2 {
+        width: 758px;
+        height: 254px;
+        position: absolute;
+        bottom: 65px;
+        left: 342px;
+        background: url('#{$images-path}/image-box2.png') no-repeat;
+        transform: rotate(-45deg);
+        -webkit-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
+        box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
+        // z-index: 6;
+    }
+}
+
+.button {
+    display: block;
+    border: 3px solid $icons-color;
+    text-decoration: none;
+    text-align: center;
+    font: 34px/56px "Bebas Neue Regular", $default-fonts;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $icons-color;
+    transition: linear 0.2s;
+    &:hover {
+        background-color: $icons-color;
+        color: $white;
+    }
+    &--promo {
+        width: 303px;
+        margin: 45px 0 0 0;
+    }
 }
 
 .triangle-right {
     position: relative;
-    top: 6px;
+    top: 4px;
 }
 
 .triangle-left {
     position: relative;
-    top: -6px;
-    left: -10px;
+    top: 0;
+    left: 0;
 }
 
 .main-logo {
@@ -232,7 +299,6 @@ body {
         height: 240px;
         position: relative;
     }
-    &__item:hover {}
     &__overlay {
         width: 314px;
         height: 240px;

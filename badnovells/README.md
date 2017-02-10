@@ -1,0 +1,2 @@
+# badnovells
+badnovells.ru
