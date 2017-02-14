@@ -16,20 +16,31 @@
     <!-- endinject -->
     <!-- inject:js -->
     <script src="js/libs/jquery-3.1.1.min.js"></script>
+    <script src="js/plugins/jquery.scrollTo.min.js"></script>
     <!-- endinject -->
 </head>
 
 <body>
+    <div class="modal-window">
+        <div class="frame-for-modal-image">
+            <div class="close-modal"></div>
+            <div class="cross-in-circle"><img src="img/cross-in-circle.svg" alt="" width="70%"></div>
+            <img src="img/preview--1.jpg" data-link="received" alt="screen1" width="100%">
+        </div>
+    </div>
     <header class="main-header">
         <div class="main-header__inner">
             <div class="main-header__top-wrap">
                 <div class="main-logo main-header__logo">
-                    <a href="#" class="main-logo__link">Blue Angry Dog<span class="main-logo__link--break">team</span>
+                    <a href="#" class="main-logo__link">
+                        <img src="img/main-logo.png" alt="BAD" class="main-logo__image">
+                        Blue Angry Dog
+                        <span class="main-logo__link--break">team</span>
                     </a>
                 </div>
                 <div class="main-header__social">
                     <div class="social">
-                        <a href="#" class="social__link">
+                        <a href="https://www.facebook.com/badnovells/" class="social__link" target="_blank">
                             <svg class="social__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 x="0px" y="0px" width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
                                 xml:space="preserve">
@@ -40,10 +51,10 @@
                                     c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
                                     />
                                 </g>
-                                </svg>
+                            </svg>
                         </a>
-                        <a href="#" class="social__link">
-                            <svg class="social__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        <a href="https://vk.com/badnovells" class="social__link" target="_blank">
+                            <svg class="social__svg  social__svg--big" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 x="0px" y="0px" width="548.358px" height="548.358px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;"
                                 xml:space="preserve">
                                 <g>
@@ -79,7 +90,7 @@
                                     c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
                                     C546.782,404.25,546.115,401.725,545.451,400.298z" />
                                 </g>
-                                </svg>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -92,56 +103,237 @@
                 <div class="main-header__promo">
                     <h3 class="main-header__greetings">Привет!</h3>
                     <p class="main-header__promo-text">Добро пожаловать в наш мир!</p>
-                    <p class="main-header__promo-text">B.A.D. team - команда увлеченных и творческих людей, разрабатываю- щих графические новеллы своей мечты.
-                        Мы воплощаем наши чувства в своих проектах, делая их интерес- ными для каждого.</p>
+                    <p class="main-header__promo-text">B.A.D. team - команда увлеченных и творческих людей, разрабатываю&shy;щих графические новеллы своей мечты.
+                        Мы воплощаем наши чувства в своих проектах, делая их интерес&shy;ными для каждого.</p>
                     <p class="main-header__promo-text">Попробуйте наши продукты </br> и вы не пожалеете!</p>
-                    <a href="#" class="button button--promo">Смотреть проекты</a>
+                    <a class="button button--promo js-watch-proj">Смотреть проекты</a>
                 </div>
                 <div class="main-header__images-box">
                     <div class="main-header__img-box1"></div>
                     <div class="main-header__img-box2"></div>
                 </div>
             </div>
-            <!-- inner end -->
         </div>
-        <svg class="triangle-right" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1280 70" enable-background="new 0 0 1280 70"
+        <svg class="triangle-right" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130"
             xml:space="preserve">
-            <polygon id="svg_2" points="637,70 1285,70 1285,0 " fill="white" />
-            </svg>
+            <polygon stroke="null" fill="white" points="629.51171875,132.7905479669571 1281.51123046875,132.7905479669571 1281.51123046875,1.16279137134552 "
+                id="svg_2" />
+        </svg>
     </header>
     <section class="projects">
         <svg class="triangle-left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 1280 70" enable-background="new 0 0 1280 70" xml:space="preserve">
-            <polygon stroke="null" id="svg_1" points="644,-0.9302533864974976 -5,-0.9302533864974976 -5,68.60471880435944 " fill="#3d6dd1"
-            />
-            </svg>
-            <div class="projects__inner">
-                <div class="projects__wrap">
-                    <div class="projects__logo"></div>
-                    <div class="gallery projects__gallery">
-                        <div class="gallery__item">
-                            <img src="img/preview--1.jpg" alt="screen1" class="gallery__image">
-                            <div class="gallery__overlay"></div>
-                        </div>
-                        <div class="gallery__item">
-                            <img src="img/preview--2.jpg" alt="screen2">
-                            <div class="gallery__overlay"></div>
-                        </div>
-                        <div class="gallery__item">
-                            <img src="img/preview--3.jpg" alt="screen3">
-                            <div class="gallery__overlay"></div>
-                        </div>
-                        <div class="gallery__item">
-                            <img src="img/preview--4.jpg" alt="screen4">
-                            <div class="gallery__overlay"></div>
-                        </div>
+            x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130" xml:space="preserve">
+            <polygon stroke="null" id="svg_3" points="651.51171875,-0.15048885345458984 -0.8411632180213928,-0.15048885345458984 -0.8411632180213928,127.04531633853912 "
+                fill="#3d6dd1" />
+        </svg>
+        <div class="projects__inner">
+            <h4 class="projects__header">Проекты</h4>
+            <div class="projects__wrap js-proj-arch">
+                <div class="projects__logo-wrap">
+                    <img src="img/project-logo--1.png" alt="Сопредельные острова: право на жизнь" class="projects__logo-img">
+                </div>
+                <div class="gallery projects__gallery">
+                    <div class="gallery__item">
+                        <img src="img/preview--1.jpg" alt="screen1" class="gallery__image" data-link='modal'>
+                        <div class="gallery__overlay"></div>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/preview--2.jpg" alt="screen2" data-link='modal'>
+                        <div class="gallery__overlay"></div>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/preview--3.jpg" alt="screen3" data-link='modal'>
+                        <div class="gallery__overlay"></div>
+                    </div>
+                    <div class="gallery__item">
+                        <img src="img/preview--4.jpg" alt="screen4" data-link='modal'>
+                        <div class="gallery__overlay"></div>
                     </div>
                 </div>
             </div>
+            <p class="projects__text">Палящее солнце играет своими лучами на поверхности водной глади недалеко от неизвестного тропи&shy;ческого острова.
+                Морские волны омывают борт тонущего пиратского судна «Сирена Санти», нале&shy;тевшего на рифы во время шторма.
+                Повсюду видны следы этого кораблекрушения, чайки кружат в синеве небес, а под водой незадачливых моряков
+                уже поджидают акулы, спешащие принять участие в пире смерти. Именно в такой ситуации начинают свой путь герои
+                первой части цикла визуальных новелл «Сопредельные острова» под названием «Право на жизнь».
+            </p>
+            <p class="projects__text">Вас ждут увлекательный сюжет и по-настоящему живые герои, сопереживать которым будет интересно на протяжении
+                всего игрового процесса. Неповторимая атмосфера пиратского куража, моральные выборы, множество концовок –
+                всё это вы найдёте в нашей игре. </p>
+            <p class="projects__text">
+                «Сопредельные острова» - это не просто визуальная новелла. Это настоящий визуальный роман, который будет выходить постепенно,
+                раз за разом приоткрывая перед своими читателями завесу тайны над этим авторским миром.</p>
+            <div class="projects__links">
+                <a href="#" class="projects__app-link projects__app-link--gplay" target="_blank"></a>
+                <a href="#" class="projects__app-link projects__app-link--steam" target="_blank"></a>
+            </div>
+        </div>
+        <svg class="triangle-right" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130"
+            xml:space="preserve">
+            <polygon stroke="null" fill="#3d6dd1" points="629.51171875,132.7905479669571 1281.51123046875,132.7905479669571 1281.51123046875,1.16279137134552 "
+                id="svg_2" />
+        </svg>
     </section>
+    <section class="features">
+        <svg class="triangle-left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130" xml:space="preserve">
+            <polygon stroke="null" id="svg_3" points="651.51171875,-0.15048885345458984 -0.8411632180213928,-0.15048885345458984 -0.8411632180213928,127.04531633853912 "
+                fill="white" />
+        </svg>
+        <div class="features__inner">
+            <h4 class="features__header">Особенности</h4>
+            <p class="features__text">Почему наши визуальные новеллы точно не оставят вас равнодушными? </br> Потому что мы стараемся сделать их особеными,
+                используя следующие принципы:</p>
+            <div class="features__wrap">
+                <div class="features__item">
+                    <div class="features__border-wrap">
+                        <div class="features__border">
+                            <img src="img/features--1-1.png" alt="image" class="features__image">
+                        </div>
+                    </div>
+                    <h5 class="features__item-head">Авторские миры</h5>
+                    <p class="features__text features__text">Мы вкладываем в них интересные сюжетные задумки, которых нам так не хватало в других играх.</p>
+                </div>
+                <div class="features__item">
+                    <div class="features__border-wrap">
+                        <div class="features__border">
+                            <img src="img/features--2-1.png" alt="image" class="features__image">
+                        </div>
+                    </div>
+                    <h5 class="features__item-head">ВНИМАНИЕ к деталям</h5>
+                    <p class="features__text">Мы - геймеры, такие же как и вы. И игры мы делаем вдумчиво, </br> как для себя.</p>
+                </div>
+                <div class="features__item">
+                    <div class="features__border-wrap">
+                        <div class="features__border">
+                            <img src="img/features--3-1.png" alt="image" class="features__image">
+                        </div>
+                    </div>
+                    <h5 class="features__item-head">Необычная графика</h5>
+                    <p class="features__text">Анимэ в новеллах хватает. Наша же графика для этого жанра необычна, чем и ценна.</p>
+                </div>
+            </div>
+        </div>
+        <svg class="triangle-right" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130"
+            xml:space="preserve">
+            <polygon stroke="null" fill="white" points="627.51171875,132.7905479669571 1281.51123046875,132.7905479669571 1281.51123046875,1.16279137134552 "
+                id="svg_2" />
+        </svg>
+    </section>
+    <section class="contacts">
+        <svg class="triangle-left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130" xml:space="preserve">
+            <polygon stroke="null" id="svg_3" points="641.51171875,-0.15048885345458984 -0.8411632180213928,-0.15048885345458984 -0.8411632180213928,127.04531633853912 "
+                fill="#3d6dd1" />
+        </svg>
+        <div class="contacts__inner">
+            <h4 class="contacts__header">Контакты</h4>
+            <h4 class="contacts__promo-head">Будем на связи!</h4>
+            <p class="contacts__text">Для нас важно быть на связи с игроками,</br> дабы делать наши продукты лучше и интереснее.</p>
+            <p class="contacts__text">Если у вас есть предложения или пожелания по нашим играм,</br> то вы можете легко связаться с нами:</p>
+            <div class="contacts__social">
+                <div class="social">
+                    <a href="https://www.facebook.com/badnovells/" class="social__link social__link--hover-blue" target="_blank">
+                        <svg class="social__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+                            xml:space="preserve">
+                            <g>
+                                <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                                    c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                                    c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                                    c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                                />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="https://vk.com/badnovells" class="social__link social__link--hover-blue" target="_blank">
+                        <svg class="social__svg social__svg--big" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" width="548.358px" height="548.358px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;"
+                            xml:space="preserve">
+                            <g>
+                                <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
+                                    l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13
+                                    c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939
+                                    l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712c-4.764-1.427-10.853-1.663-18.278-0.712l-82.224,0.568
+                                    c-1.332-0.472-3.234-0.428-5.712,0.144c-2.475,0.572-3.713,0.859-3.713,0.859l-1.431,0.715l-1.136,0.859
+                                    c-0.952,0.568-1.999,1.567-3.142,2.995c-1.137,1.423-2.088,3.093-2.848,4.996c-8.952,23.031-19.13,44.444-30.553,64.238
+                                    c-7.043,11.803-13.511,22.032-19.418,30.693c-5.899,8.658-10.848,15.037-14.842,19.126c-4,4.093-7.61,7.372-10.852,9.849
+                                    c-3.237,2.478-5.708,3.525-7.419,3.142c-1.715-0.383-3.33-0.763-4.859-1.143c-2.663-1.714-4.805-4.045-6.42-6.995
+                                    c-1.622-2.95-2.714-6.663-3.285-11.136c-0.568-4.476-0.904-8.326-1-11.563c-0.089-3.233-0.048-7.806,0.145-13.706
+                                    c0.198-5.903,0.287-9.897,0.287-11.991c0-7.234,0.141-15.085,0.424-23.555c0.288-8.47,0.521-15.181,0.716-20.125
+                                    c0.194-4.949,0.284-10.185,0.284-15.705s-0.336-9.849-1-12.991c-0.656-3.138-1.663-6.184-2.99-9.137
+                                    c-1.335-2.95-3.289-5.232-5.853-6.852c-2.569-1.618-5.763-2.902-9.564-3.856c-10.089-2.283-22.936-3.518-38.547-3.71
+                                    c-35.401-0.38-58.148,1.906-68.236,6.855c-3.997,2.091-7.614,4.948-10.848,8.562c-3.427,4.189-3.905,6.475-1.431,6.851
+                                    c11.422,1.711,19.508,5.804,24.267,12.275l1.715,3.429c1.334,2.474,2.666,6.854,3.999,13.134c1.331,6.28,2.19,13.227,2.568,20.837
+                                    c0.95,13.897,0.95,25.793,0,35.689c-0.953,9.9-1.853,17.607-2.712,23.127c-0.859,5.52-2.143,9.993-3.855,13.418
+                                    c-1.715,3.426-2.856,5.52-3.428,6.28c-0.571,0.76-1.047,1.239-1.425,1.427c-2.474,0.948-5.047,1.431-7.71,1.431
+                                    c-2.667,0-5.901-1.334-9.707-4c-3.805-2.666-7.754-6.328-11.847-10.992c-4.093-4.665-8.709-11.184-13.85-19.558
+                                    c-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267
+                                    c-4.952-10.185-9.329-20.037-13.134-29.554c-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-0.859c-0.95-0.76-2.475-1.567-4.567-2.427
+                                    c-2.095-0.859-4.281-1.475-6.567-1.854l-78.229,0.568c-7.994,0-13.418,1.811-16.274,5.428l-1.143,1.711
+                                    C0.288,140.146,0,141.668,0,143.763c0,2.094,0.571,4.664,1.714,7.707c11.42,26.84,23.839,52.725,37.257,77.659
+                                    c13.418,24.934,25.078,45.019,34.973,60.237c9.897,15.229,19.985,29.602,30.264,43.112c10.279,13.515,17.083,22.176,20.412,25.981
+                                    c3.333,3.812,5.951,6.662,7.854,8.565l7.139,6.851c4.568,4.569,11.276,10.041,20.127,16.416
+                                    c8.853,6.379,18.654,12.659,29.408,18.85c10.756,6.181,23.269,11.225,37.546,15.126c14.275,3.905,28.169,5.472,41.684,4.716h32.834
+                                    c6.659-0.575,11.704-2.669,15.133-6.283l1.136-1.431c0.764-1.136,1.479-2.901,2.139-5.276c0.668-2.379,1-5,1-7.851
+                                    c-0.195-8.183,0.428-15.558,1.852-22.124c1.423-6.564,3.045-11.513,4.859-14.846c1.813-3.33,3.859-6.14,6.136-8.418
+                                    c2.282-2.283,3.908-3.666,4.862-4.142c0.948-0.479,1.705-0.804,2.276-0.999c4.568-1.522,9.944-0.048,16.136,4.429
+                                    c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274
+                                    l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14
+                                    c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
+                                    C546.782,404.25,546.115,401.725,545.451,400.298z" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="http://steamcommunity.com/id/bad_team" class="social__link social__link--hover-blue" target="_blank">
+                        <svg class="social__svg social__svg--big" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;"
+                            xml:space="preserve">
+                            <g>
+                                <path id="Steam" d="M83.266,33.541c0,4.582-3.729,8.298-8.328,8.298c-4.604,0-8.33-3.716-8.33-8.298s3.728-8.297,8.33-8.297   C79.537,25.244,83.266,28.959,83.266,33.541z M79.91,47.561l-10.086,8.594c0.109,0.686,0.183,1.383,0.183,2.098   c0,7.316-5.954,13.248-13.296,13.248c-6.334,0-11.623-4.414-12.963-10.32l-24.931-8.427c-1.97,1.49-4.419,2.386-7.083,2.386   C5.254,55.139,0,49.903,0,43.447c0-6.455,5.254-11.688,11.734-11.688c5.572,0,10.226,3.87,11.427,9.055l24.083,8.141   c2.346-2.369,5.581-3.854,9.166-3.934l3.607-10.924c-0.011-0.217-0.033-0.431-0.033-0.65c0-8.255,6.72-14.947,15.008-14.947   C83.279,18.5,90,25.192,90,33.447C90,39.987,85.779,45.531,79.91,47.561z M19.112,39.446c-1.402-2.514-4.093-4.217-7.184-4.217   c-4.538,0-8.217,3.665-8.217,8.185c0,4.52,3.679,8.184,8.217,8.184c0.839,0,1.647-0.125,2.409-0.358l-3.904-1.319   c-3.146-1.678-4.33-5.579-2.645-8.713c1.686-3.132,5.602-4.31,8.745-2.632L19.112,39.446z M63.288,33.483   c0,6.412,5.218,11.61,11.655,11.61c6.437,0,11.658-5.198,11.658-11.61c0-6.415-5.222-11.613-11.658-11.613   C68.506,21.87,63.288,27.068,63.288,33.483z M63.518,59.389c0-4.881-3.973-8.84-8.873-8.84c-0.688,0-1.352,0.086-1.994,0.232   l4.959,1.676c3.145,1.68,4.326,5.58,2.642,8.711c-1.685,3.137-5.601,4.312-8.744,2.635l-5.344-1.807   c1.116,3.609,4.491,6.232,8.481,6.232C59.545,68.229,63.518,64.27,63.518,59.389z"
+                                />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="social__link social__link--hover-blue" target="_blank">
+                        <svg class="social__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                            x="0px" y="0px" viewBox="0 0 505.499 505.499" style="enable-background:new 0 0 505.499 505.499;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <g>
+                                <path d="M471.497,234.466l-92.082-53.135l-75.733,73.207l69.215,66.907l98.599-56.91c5.432-3.133,8.678-8.756,8.678-15.03     C480.175,243.23,476.929,237.607,471.497,234.466z"
+                                />
+                                <polygon points="363.785,172.301 262.453,113.803 40.375,0 291.203,242.471    " />
+                                <polygon points="44.063,505.499 262.834,384.988 357.268,330.473 291.203,266.604    " />
+                                <polygon points="25.559,9.815 25.324,499.486 278.721,254.533    " />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="contacts__form-wrap">
+                <form action="URL" class="feedback" method="post">
+                    <input type="text" class="feedback__inp-text" placeholder="Укажите ваше имя" maxlength="60">
+                    <input type="email" class="feedback__inp-text" placeholder="Укажите ваш E-mail" maxlength="60">
+                    <input type="text" class="feedback__inp-text feedback__inp-text--last" placeholder="Текст вашего сообщения" maxlength="2000">
+                    <button type="submit" class="button button--submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="main-footer__inner">
+            <a class="up-arrow  js-up main-footer__up" title="UP"></a>
+            <div class="main-footer__wrap">
+                <a href="https://github.com/ogurchik" class="main-footer__link" target="_blank">ogurchik</a>
+                <a href="https://github.com/kambala3000" class="main-footer__link" target="_blank">kambala3000</a>
+                <p class="main-footer__text">BLUE ANGREE DOG TEAM &copy; 2017</p>
+            </div>
+        </div>
+    </footer>
     <!-- afterdocument:js -->
     <script src="js/main.js"></script>
     <!-- endinject -->
+    <script src="js/modal-window.js"></script>
 </body>
 
 </html>

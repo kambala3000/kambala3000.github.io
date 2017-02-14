@@ -59,24 +59,23 @@ body {
         margin: 0 auto;
         position: relative;
         background-color: $main-blue;
+        z-index: 4;
+    }
+    &__inner::before {
+        content: "B.A.D. novells";
+        display: block;
+        width: 17.5%;
+        height: 37px;
+        padding: 0 0 0 24px;
+        position: absolute;
+        left: 0;
+        top: 41px;
+        background-color: $sub-blue;
+        text-transform: uppercase;
+        font: 34px/1.1 "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
         z-index: 2;
-        // overflow: hidden;
-        &::before {
-            content: "B.A.D. novells";
-            display: block;
-            width: 17.5%;
-            height: 37px;
-            padding: 0 0 0 24px;
-            position: absolute;
-            left: 0;
-            top: 41px;
-            background-color: $sub-blue;
-            text-transform: uppercase;
-            font: 34px "Bebas Neue Regular", $default-fonts;
-            letter-spacing: 1px;
-            color: $white;
-            z-index: 2;
-        }
     }
     &__top-wrap {
         display: flex;
@@ -144,7 +143,6 @@ body {
         height: 818px;
         margin: -150px -257px 0 0;
         border: 30px solid $sub-blue;
-        // z-index: 3;
     }
     &__img-box1 {
         width: 1192px;
@@ -157,7 +155,6 @@ body {
         -webkit-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
         box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
-        // z-index: 6;
     }
     &__img-box2 {
         width: 758px;
@@ -170,7 +167,6 @@ body {
         -webkit-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
         box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
-        // z-index: 6;
     }
 }
 
@@ -183,6 +179,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $icons-color;
+    cursor: pointer;
     transition: linear 0.2s;
     &:hover {
         background-color: $icons-color;
@@ -192,16 +189,28 @@ body {
         width: 303px;
         margin: 45px 0 0 0;
     }
+    &--submit {
+        width: 300px;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        background-color: $white;
+    }
 }
 
 .triangle-right {
     position: relative;
-    top: 4px;
+    top: 5px;
+    &--special {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 .triangle-left {
     position: relative;
-    top: 0;
+    top: -1px;
     left: 0;
 }
 
@@ -224,12 +233,15 @@ body {
         transform: rotate(45deg);
         z-index: 5;
     }
+    &__image {
+        padding: 5px 0 5px 0;
+    }
     &__link {
         display: block;
-        padding: 165px 0 0 0;
+        // padding: 165px 0 0 0;
         width: 210px;
         height: 210px;
-        background: url("#{$images-path}/main-logo.png") 4px 5px no-repeat;
+        // background: url("#{$images-path}/main-logo.png") 4px 5px no-repeat;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
@@ -263,10 +275,18 @@ body {
         fill: $white;
         border-color: $white;
     }
+    &__link--hover-blue:hover {
+        fill: $sub-blue;
+        border-color: $sub-blue;
+    }
     &__svg {
         display: block;
         width: 40px;
         height: 40px;
+    }
+    &__svg--big {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -278,11 +298,86 @@ body {
     &__inner {
         width: 1322px;
         margin: 0 auto;
+        padding: 140px 0 0 0;
+        position: relative;
+        z-index: 3;
+    }
+    &__inner::before {
+        content: " ";
+        display: block;
+        width: 50%;
+        height: 50px;
+        position: absolute;
+        top: -45%;
+        left: 26.03%;
+        transform: rotate(-90deg);
+        background-color: $main-blue;
+    }
+    &__header {
+        width: 265px;
+        height: 50px;
+        padding: 0 0 0 15px;
+        top: -7%;
+        left: 41%;
+        position: absolute;
+        transform: rotate(-90deg);
+        font: 34px/50px "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
+        background-color: $main-blue;
+    }
+    &__header::after {
+        content: "02";
+        display: block;
+        width: 100px;
+        position: absolute;
+        top: -11px;
+        right: 40px;
+        transform: rotate(90deg);
+        font: 71px "GothamPro Light", $default-fonts;
+        color: $icons-color;
     }
     &__wrap {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    &__logo-wrap {
+        width: 650px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo-img {
+        width: 580px;
+    }
+    &__text {
+        padding: 30px 0 0 0;
+        font: 24px/1.2 "GothamPro Regular", $default-fonts;
+        text-align: justify;
+        color: $dark-text-color;
+    }
+    &__links {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: row;
+    }
+    &__app-link {
+        display: block;
+        width: 315px;
+        height: 102px;
+        margin-right: 45px;
+        cursor: pointer;
+    }
+    &__app-link:last-child {
+        margin-right: 0;
+    }
+    &__app-link--gplay {
+        background-image: url("#{$images-path}/app-link--gplay.png");
+    }
+    &__app-link--steam {
+        background-image: url("#{$images-path}/app-link--steam.png");
     }
 }
 
@@ -316,4 +411,289 @@ body {
     &__overlay:hover {
         opacity: 1;
     }
+}
+
+.features {
+    background-color: $main-blue;
+    &__inner {
+        width: 1322px;
+        margin: 0 auto;
+        padding: 165px 0 0 0;
+        position: relative;
+        z-index: 2;
+    }
+    &__inner::before {
+        content: " ";
+        display: block;
+        width: 50%;
+        height: 50px;
+        position: absolute;
+        top: -45%;
+        left: 25.74%;
+        transform: rotate(-90deg);
+        background-color: $white;
+    }
+    &__header {
+        width: 310px;
+        height: 50px;
+        padding: 0 0 0 15px;
+        top: -9%;
+        left: 39%;
+        position: absolute;
+        transform: rotate(-90deg);
+        font: 34px/50px "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $main-blue;
+        background-color: $white;
+    }
+    &__header::after {
+        content: "03";
+        display: block;
+        width: 100px;
+        position: absolute;
+        top: -11px;
+        right: 47px;
+        transform: rotate(90deg);
+        font: 71px "GothamPro Light", $default-fonts;
+        color: $icons-color;
+    }
+    &__text {
+        padding: 0 20px;
+        text-align: center;
+        font: 24px/1.2 "GothamPro Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
+    }
+    &__wrap {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &__item-head {
+        text-align: center;
+        text-transform: uppercase;
+        font: 34px/1.6 "Bebas Neue Bold", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
+    }
+    &__border-wrap {
+        width: 400px;
+        height: 335px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__border {
+        width: 216px;
+        height: 216px;
+        overflow: hidden;
+        border: 18px solid $sub-blue;
+        transform: rotate(45deg);
+        background-color: $features-bg;
+    }
+    // &__image {}
+}
+
+.contacts {
+    background-color: $white;
+    &__inner {
+        width: 1322px;
+        padding: 110px 0 0 0;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__inner::before {
+        content: " ";
+        display: block;
+        width: 50%;
+        height: 50px;
+        position: absolute;
+        top: -45%;
+        left: 23.85%;
+        transform: rotate(-90deg);
+        background-color: $main-blue;
+    }
+    &__header {
+        width: 260px;
+        height: 50px;
+        padding: 0 0 0 15px;
+        top: -9%;
+        left: 39%;
+        position: absolute;
+        transform: rotate(-90deg);
+        font: 34px/50px "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
+        background-color: $main-blue;
+    }
+    &__header::after {
+        content: "04";
+        display: block;
+        width: 100px;
+        position: absolute;
+        top: -13px;
+        right: 30px;
+        transform: rotate(90deg);
+        font: 71px "GothamPro Light", $default-fonts;
+        color: $icons-color;
+    }
+    &__promo-head {
+        text-align: center;
+        text-transform: uppercase;
+        font: 60px/1.2 "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 2px;
+        color: $icons-color;
+    }
+    &__text {
+        padding: 25px 0 0 0;
+        font: 24px/1.2 "GothamPro Regular", $default-fonts;
+        text-align: center;
+        color: $dark-text-color;
+    }
+    &__social {
+        width: 350px;
+        margin: 40px 0 30px 0;
+    }
+    &__form-wrap {
+        width: 960px;
+        padding-top: 20px;
+    }
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    &__inp-text {
+        padding: 20px 0 20px 0;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid $main-blue;
+        outline: none;
+        font: 18px "GothamPro Light", $default-fonts;
+        color: $dark-text-color;
+    }
+    &__inp-text--last {
+        margin-bottom: 55px;
+    }
+}
+
+.main-footer {
+    position: relative;
+    background: url("#{$images-path}/footer-bg.svg") right bottom no-repeat;
+    // background-size: cover;
+    &__inner {
+        width: 1322px;
+        padding: 100px 0 0 0;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__up {
+        margin-bottom: 20px;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__text {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font: 30px "Bebas Neue Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
+    }
+    &__link {
+        display: inline-block;
+        margin-bottom: 7px;
+        padding: 0 20px 0 0;
+        position: relative;
+        font: 18px/1.4 "GothamPro Regular", $default-fonts;
+        letter-spacing: 1px;
+        text-decoration: none;
+        cursor: pointer;
+        color: $white;
+    }
+    &__link::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 3px;
+        right: 0;
+        background: url("#{$images-path}/gh-bg.svg") center center no-repeat;
+        background-size: cover;
+    }
+}
+
+.up-arrow {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    font-size: 50px;
+    color: $white;
+    background: url("#{$images-path}/up-arrow.svg") center center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+// .gallery__image {}
+
+/******** modal window *************/
+
+.frame-for-modal-image {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-window {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    position: fixed;
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.close-modal {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    right: -120px;
+    top: -120px;
+    transform: rotate(45deg);
+}
+
+.cross-in-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    top: 10px;
 }
