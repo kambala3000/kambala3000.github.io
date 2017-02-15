@@ -522,7 +522,7 @@ body {
         height: 50px;
         position: absolute;
         top: -45%;
-        left: 23.85%;
+        left: 24.85%;
         transform: rotate(-90deg);
         background-color: $main-blue;
     }
@@ -531,7 +531,7 @@ body {
         height: 50px;
         padding: 0 0 0 15px;
         top: -9%;
-        left: 39%;
+        left: 40%;
         position: absolute;
         transform: rotate(-90deg);
         font: 34px/50px "Bebas Neue Regular", $default-fonts;
@@ -659,41 +659,42 @@ body {
 
 /******** modal window *************/
 
-.frame-for-modal-image {
-    width: 60%;
-    height: 60%;
+.modal-frame {
+    width: 70%;
     position: relative;
     overflow: hidden;
 }
 
 .modal-window {
+    width: 100%;
+    height: 100%;
+    padding-top: 4%;
+    position: fixed;
     display: flex;
     justify-content: center;
-    padding-top: 5%;
-    position: fixed;
-    width: 100%;
-    height: 1000px;
     background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
     z-index: 1000;
 }
 
 .close-modal {
     width: 200px;
     height: 200px;
-    background-color: #ffffff;
     position: absolute;
     right: -120px;
     top: -120px;
     transform: rotate(45deg);
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
 .cross-in-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
     width: 35px;
     height: 35px;
+    position: absolute;
     right: 10px;
     top: 10px;
+    cursor: pointer;
+    background: url('#{$images-path}/cross-in-circle.svg') no-repeat;
+    background-size: 35px 35px;
 }
