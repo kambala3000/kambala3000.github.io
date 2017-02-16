@@ -100,10 +100,26 @@
                     <p class="main-header__promo-text">Попробуйте наши продукты </br> и вы не пожалеете!</p>
                     <a class="button button--promo js-watch-proj">Смотреть проекты</a>
                 </div>
-                <div class="main-header__images-box">
-                    <div class="main-header__img-box1"></div>
-                    <div class="main-header__img-box2"></div>
+                <!-- topSlider start -->
+                <div class="top-slider main-header__images-box js-top-slider">
+                    <div class="top-slider__item">
+                        <div class="top-slider__img-box1">
+                            <img src="img/top-slider/item1-big.png" width="1192" height="521">
+                        </div>
+                        <div class="top-slider__img-box2">
+                            <img src="img/top-slider/item1-small.png" width="758" height="254">
+                        </div>
+                    </div>
+                    <div class="top-slider__item">
+                        <div class="top-slider__img-box1">
+                            <img src="img/top-slider/item2-big-test.png" width="1192" height="521">
+                        </div>
+                        <div class="top-slider__img-box2">
+                            <img src="img/top-slider/item2-small-test.png" width="758" height="254">
+                        </div>
+                    </div>
                 </div>
+                <!-- topSlider end -->
             </div>
         </div>
         <svg class="triangle-right" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130"
@@ -121,43 +137,54 @@
         <div class="projects__inner">
             <h4 class="projects__header">Проекты</h4>
             <div class="projects__wrap js-proj-arch">
-                <div class="projects__logo-wrap">
-                    <img src="img/project-logo--1.png" alt="Сопредельные острова: право на жизнь" class="projects__logo-img">
+                <!-- project-box start -->
+                <div class="project-box">
+                    <div class="project-box__wrap">
+                        <div class="project-box__logo-wrap">
+                            <img src="img/projects/islands/project-logo--1.png" alt="Сопредельные острова: право на жизнь" class="projects__logo-img">
+                        </div>
+                        <div class="gallery project-box__gallery">
+                            <div class="gallery__item">
+                                <img src="img/projects/islands/gallery-image-1.jpg" alt="screen1" class="gallery__image" width="314" height="240" data-link='modal'>
+                                <div class="gallery__overlay"></div>
+                            </div>
+                            <div class="gallery__item">
+                                <img src="img/projects/islands/gallery-image-2.jpg" alt="screen2" width="314" height="240" data-link='modal'>
+                                <div class="gallery__overlay"></div>
+                            </div>
+                            <div class="gallery__item">
+                                <img src="img/projects/islands/gallery-image-3.jpg" alt="screen3" width="314" height="240" data-link='modal'>
+                                <div class="gallery__overlay"></div>
+                            </div>
+                            <div class="gallery__item">
+                                <img src="img/projects/islands/gallery-image-4.jpg" alt="screen4" width="314" height="240" data-link='modal'>
+                                <div class="gallery__overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="project-box__text">Палящее солнце играет своими лучами на поверхности водной глади недалеко от неизвестного тропи&shy;ческого
+                        острова. Морские волны омывают борт тонущего пиратского судна «Сирена Санти», нале&shy;тевшего на
+                        рифы во время шторма. Повсюду видны следы этого кораблекрушения, чайки кружат в синеве небес, а под
+                        водой незадачливых моряков уже поджидают акулы, спешащие принять участие в пире смерти. Именно в
+                        такой ситуации начинают свой путь герои первой части цикла визуальных новелл «Сопредельные острова»
+                        под названием «Право на жизнь».
+                    </p>
+                    <p class="project-box__text">Вас ждут увлекательный сюжет и по-настоящему живые герои, сопереживать которым будет интересно на протяжении
+                        всего игрового процесса. Неповторимая атмосфера пиратского куража, моральные выборы, множество концовок
+                        – всё это вы найдёте в нашей игре. </p>
+                    <p class="project-box__text">
+                        «Сопредельные острова» - это не просто визуальная новелла. Это настоящий визуальный роман, который будет выходить постепенно,
+                        раз за разом приоткрывая перед своими читателями завесу тайны над этим авторским миром.</p>
+                    <div class="project-box__links">
+                        <a href="#" class="project-box__app-link" target="_blank">
+                            <img src="img/projects/islands/app-link--gplay.png" alt="Google Play" width="315" height="102">
+                        </a>
+                        <a href="#" class="project-box__app-link" target="_blank">
+                            <img src="img/projects/islands/app-link--steam.png" alt="Steam" width="315" height="102">
+                        </a>
+                    </div>
                 </div>
-                <div class="gallery projects__gallery">
-                    <div class="gallery__item">
-                        <img src="img/gallery-image-1.jpg" alt="screen1" class="gallery__image" data-link='modal'>
-                        <div class="gallery__overlay"></div>
-                    </div>
-                    <div class="gallery__item">
-                        <img src="img/gallery-image-2.jpg" alt="screen2" data-link='modal'>
-                        <div class="gallery__overlay"></div>
-                    </div>
-                    <div class="gallery__item">
-                        <img src="img/gallery-image-3.jpg" alt="screen3" data-link='modal'>
-                        <div class="gallery__overlay"></div>
-                    </div>
-                    <div class="gallery__item">
-                        <img src="img/gallery-image-4.jpg" alt="screen4" data-link='modal'>
-                        <div class="gallery__overlay"></div>
-                    </div>
-                </div>
-            </div>
-            <p class="projects__text">Палящее солнце играет своими лучами на поверхности водной глади недалеко от неизвестного тропи&shy;ческого острова.
-                Морские волны омывают борт тонущего пиратского судна «Сирена Санти», нале&shy;тевшего на рифы во время шторма.
-                Повсюду видны следы этого кораблекрушения, чайки кружат в синеве небес, а под водой незадачливых моряков
-                уже поджидают акулы, спешащие принять участие в пире смерти. Именно в такой ситуации начинают свой путь герои
-                первой части цикла визуальных новелл «Сопредельные острова» под названием «Право на жизнь».
-            </p>
-            <p class="projects__text">Вас ждут увлекательный сюжет и по-настоящему живые герои, сопереживать которым будет интересно на протяжении
-                всего игрового процесса. Неповторимая атмосфера пиратского куража, моральные выборы, множество концовок –
-                всё это вы найдёте в нашей игре. </p>
-            <p class="projects__text">
-                «Сопредельные острова» - это не просто визуальная новелла. Это настоящий визуальный роман, который будет выходить постепенно,
-                раз за разом приоткрывая перед своими читателями завесу тайны над этим авторским миром.</p>
-            <div class="projects__links">
-                <a href="#" class="projects__app-link projects__app-link--gplay" target="_blank"></a>
-                <a href="#" class="projects__app-link projects__app-link--steam" target="_blank"></a>
+                <!-- project-box end -->
             </div>
         </div>
         <svg class="triangle-right" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1280 130" enable-background="new 0 0 1280 130"
@@ -277,6 +304,21 @@
                             </g>
                         </svg>
                     </a>
+                    <a href="https://twitter.com/BAD_novells" class="social__link social__link--hover-blue" target="_blank">
+                        <svg class="social__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                            <g>
+                                <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+                                c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+                                c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+                                c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+                                c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+                                c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+                                c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"
+                                />
+                            </g>
+                        </svg>
+                    </a>
                     <a href="http://steamcommunity.com/id/bad_team" class="social__link social__link--hover-blue" target="_blank">
                         <svg class="social__svg social__svg--big" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;"
@@ -324,8 +366,9 @@
     </footer>
     <!-- afterdocument:js -->
     <script src="js/main.js"></script>
-    <!-- endinject -->
     <script src="js/modal-window.js"></script>
+    <script src="js/plugins/slick.min.js"></script>
+    <!-- endinject -->
 </body>
 
 </html>

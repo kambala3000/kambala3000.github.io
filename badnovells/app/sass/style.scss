@@ -139,18 +139,30 @@ body {
         position: absolute;
         right: 13px;
         top: 13px;
-        width: 818px;
-        height: 818px;
         margin: -150px -257px 0 0;
-        border: 30px solid $sub-blue;
+    }
+}
+
+.top-slider {
+    width: 818px;
+    height: 818px;
+    border: 30px solid $sub-blue;
+    @include clearfix();
+    &__item {
+        width: 761px;
+        height: 761px;
+        // position: relative;
+        float: left;
+    }
+    &__item:focus {
+        outline: none;
     }
     &__img-box1 {
         width: 1192px;
         height: 521px;
         position: absolute;
-        top: -36px;
-        left: -131px;
-        background: url('#{$images-path}/image-box1.png') no-repeat;
+        top: -37px;
+        left: -129px;
         transform: rotate(-45deg);
         -webkit-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
@@ -160,9 +172,8 @@ body {
         width: 758px;
         height: 254px;
         position: absolute;
-        bottom: 65px;
+        bottom: 67px;
         left: 342px;
-        background: url('#{$images-path}/image-box2.png') no-repeat;
         transform: rotate(-45deg);
         -webkit-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75);
@@ -238,10 +249,8 @@ body {
     }
     &__link {
         display: block;
-        // padding: 165px 0 0 0;
         width: 210px;
         height: 210px;
-        // background: url("#{$images-path}/main-logo.png") 4px 5px no-repeat;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
@@ -337,6 +346,13 @@ body {
         font: 71px "GothamPro Light", $default-fonts;
         color: $icons-color;
     }
+}
+
+.project-box {
+    margin-bottom: 100px;
+    &:last-child {
+        margin-bottom: 0;
+    }
     &__wrap {
         display: flex;
         flex-direction: row;
@@ -351,6 +367,10 @@ body {
     }
     &__logo-img {
         width: 580px;
+    }
+    &__gallery {
+        width: 650px;
+        height: 500px;
     }
     &__text {
         padding: 30px 0 0 0;
@@ -373,17 +393,9 @@ body {
     &__app-link:last-child {
         margin-right: 0;
     }
-    &__app-link--gplay {
-        background-image: url("#{$images-path}/app-link--gplay.png");
-    }
-    &__app-link--steam {
-        background-image: url("#{$images-path}/app-link--steam.png");
-    }
 }
 
 .gallery {
-    width: 650px;
-    height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -495,10 +507,19 @@ body {
     &__border {
         width: 216px;
         height: 216px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         border: 18px solid $sub-blue;
         transform: rotate(45deg);
         background-color: $features-bg;
+        transition: linear .2s;
+    }
+    &__border:hover {
+        width: 180px;
+        height: 180px;
+        border-width: 10px;
     }
     // &__image {}
 }
@@ -564,7 +585,7 @@ body {
         color: $dark-text-color;
     }
     &__social {
-        width: 350px;
+        width: 410px;
         margin: 40px 0 30px 0;
     }
     &__form-wrap {
@@ -629,6 +650,10 @@ body {
         text-decoration: none;
         cursor: pointer;
         color: $white;
+        transition: linear .1s;
+    }
+    &__link:hover {
+        opacity: 0.6;
     }
     &__link::after {
         content: "";

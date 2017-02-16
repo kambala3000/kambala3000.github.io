@@ -143,28 +143,39 @@ body {
     position: absolute;
     right: 13px;
     top: 13px;
-    width: 818px;
-    height: 818px;
-    margin: -150px -257px 0 0;
-    border: 30px solid #1f90fe; }
-  .main-header__img-box1 {
+    margin: -150px -257px 0 0; }
+
+.top-slider {
+  width: 818px;
+  height: 818px;
+  border: 30px solid #1f90fe; }
+  .top-slider:before, .top-slider:after {
+    content: "";
+    display: table; }
+  .top-slider:after {
+    clear: both; }
+  .top-slider__item {
+    width: 761px;
+    height: 761px;
+    float: left; }
+  .top-slider__item:focus {
+    outline: none; }
+  .top-slider__img-box1 {
     width: 1192px;
     height: 521px;
     position: absolute;
-    top: -36px;
-    left: -131px;
-    background: url("../img/image-box1.png") no-repeat;
+    top: -37px;
+    left: -129px;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
     box-shadow: -19px 23px 40px -21px rgba(0, 0, 0, 0.75); }
-  .main-header__img-box2 {
+  .top-slider__img-box2 {
     width: 758px;
     height: 254px;
     position: absolute;
-    bottom: 65px;
+    bottom: 67px;
     left: 342px;
-    background: url("../img/image-box2.png") no-repeat;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -337,7 +348,12 @@ body {
             transform: rotate(90deg);
     font: 71px "GothamPro Light", Arial, sans-serif;
     color: #87a6ea; }
-  .projects__wrap {
+
+.project-box {
+  margin-bottom: 100px; }
+  .project-box:last-child {
+    margin-bottom: 0; }
+  .project-box__wrap {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -347,7 +363,7 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  .projects__logo-wrap {
+  .project-box__logo-wrap {
     width: 650px;
     height: 500px;
     display: -webkit-flex;
@@ -359,14 +375,17 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .projects__logo-img {
+  .project-box__logo-img {
     width: 580px; }
-  .projects__text {
+  .project-box__gallery {
+    width: 650px;
+    height: 500px; }
+  .project-box__text {
     padding: 30px 0 0 0;
     font: 24px/1.2 "GothamPro Regular", Arial, sans-serif;
     text-align: justify;
     color: #2b2a2c; }
-  .projects__links {
+  .project-box__links {
     margin-top: 35px;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -374,22 +393,16 @@ body {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row; }
-  .projects__app-link {
+  .project-box__app-link {
     display: block;
     width: 315px;
     height: 102px;
     margin-right: 45px;
     cursor: pointer; }
-  .projects__app-link:last-child {
+  .project-box__app-link:last-child {
     margin-right: 0; }
-  .projects__app-link--gplay {
-    background-image: url("../img/app-link--gplay.png"); }
-  .projects__app-link--steam {
-    background-image: url("../img/app-link--steam.png"); }
 
 .gallery {
-  width: 650px;
-  height: 500px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -521,12 +534,26 @@ body {
   .features__border {
     width: 216px;
     height: 216px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     border: 18px solid #1f90fe;
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    background-color: #4b99ba; }
+    background-color: #4b99ba;
+    transition: linear .2s; }
+  .features__border:hover {
+    width: 180px;
+    height: 180px;
+    border-width: 10px; }
 
 .contacts {
   background-color: #ffffff; }
@@ -595,7 +622,7 @@ body {
     text-align: center;
     color: #2b2a2c; }
   .contacts__social {
-    width: 350px;
+    width: 410px;
     margin: 40px 0 30px 0; }
   .contacts__form-wrap {
     width: 960px;
@@ -666,7 +693,10 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     cursor: pointer;
-    color: #ffffff; }
+    color: #ffffff;
+    transition: linear .1s; }
+  .main-footer__link:hover {
+    opacity: 0.6; }
   .main-footer__link::after {
     content: "";
     display: block;
