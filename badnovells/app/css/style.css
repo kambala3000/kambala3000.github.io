@@ -226,7 +226,7 @@ body {
   .main-header__lang {
     margin-top: 40px;
     padding-right: 20px;
-    height: 37px;
+    height: 36px;
     cursor: pointer;
     background: url("../img/lang-arrow.png") 87px 9px no-repeat;
     transition: background-color linear 0.2s; }
@@ -236,7 +236,7 @@ body {
         background-position: 77px 7px; } }
   @media only screen and (max-width: 992px) and (max-width: 768px) {
     .main-header__lang {
-      height: 37px;
+      height: 36px;
       margin-top: 20px;
       margin-right: 30px;
       background-position: 87px 9px;
@@ -255,7 +255,7 @@ body {
   .main-header__lang-item {
     padding: 0 0 0 10px;
     text-decoration: none;
-    font: 34px "Bebas Neue Regular", Arial, sans-serif;
+    font: 34px/1.1 "Bebas Neue Regular", Arial, sans-serif;
     color: #ffffff; }
     @media only screen and (max-width: 992px) {
       .main-header__lang-item {
@@ -622,7 +622,7 @@ body {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
-    font: 34px/50px "Bebas Neue Regular", Arial, sans-serif;
+    font: 34px/1.5 "Bebas Neue Regular", Arial, sans-serif;
     letter-spacing: 1px;
     color: #ffffff;
     background-color: #3d6dd1; }
@@ -913,7 +913,7 @@ body {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
-    font: 34px/50px "Bebas Neue Regular", Arial, sans-serif;
+    font: 34px/1.5 "Bebas Neue Regular", Arial, sans-serif;
     letter-spacing: 1px;
     color: #3d6dd1;
     background-color: #ffffff; }
@@ -927,7 +927,7 @@ body {
       top: -2%; } }
   @media only screen and (max-width: 1340px) and (max-width: 768px) {
     .features__header {
-      left: -4%;
+      left: -5%;
       top: 1%; } }
   .features__header::after {
     content: "03";
@@ -1145,7 +1145,7 @@ body {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
-    font: 34px/50px "Bebas Neue Regular", Arial, sans-serif;
+    font: 34px/1.5 "Bebas Neue Regular", Arial, sans-serif;
     letter-spacing: 1px;
     color: #ffffff;
     background-color: #3d6dd1; }
@@ -1159,7 +1159,7 @@ body {
       top: -3%; } }
   @media only screen and (max-width: 1340px) and (max-width: 768px) {
     .contacts__header {
-      left: 4.4%;
+      left: 3.4%;
       top: 3%; } }
   .contacts__header::after {
     content: "04";
