@@ -102,6 +102,7 @@ body {
     left: 0;
 }
 
+
 /* MAIN-HEADER SECTION */
 
 .main-header {
@@ -214,28 +215,30 @@ body {
         margin-top: 40px;
         padding-right: 20px;
         height: 36px;
+        display: flex;
+        flex-direction: row;
         cursor: pointer;
-        background: url("#{$images-path}/lang-arrow.png") 87px 9px no-repeat;
+        background: url("#{$images-path}/lang-arrow.png") 82px 9px no-repeat;
         transition: background-color linear 0.2s;
         @media only screen and (max-width: 992px) {
             height: 32px;
-            background-position: 77px 7px;
+            background-position: 72px 7px;
             @media (max-width: 768px) {
                 height: 36px;
                 margin-top: 20px;
                 margin-right: 30px;
-                background-position: 87px 9px;
+                background-position: 82px 9px;
                 order: 2;
             }
         }
     }
     &__lang:hover {
         background-color: $sub-blue;
-        background-position: 87px -25px;
+        background-position: 82px -25px;
         @media only screen and (max-width: 992px) {
-            background-position: 77px -27px;
+            background-position: 72px -27px;
             @media (max-width: 768px) {
-                background-position: 87px -25px;
+                background-position: 82px -25px;
             }
         }
     }
@@ -272,7 +275,7 @@ body {
             }
             @media (max-width: 768px) {
                 width: 320px;
-                margin-top: 90px;
+                margin-top: 70px;
                 margin-bottom: 30px;
                 padding-left: 0;
             }
@@ -854,6 +857,7 @@ body {
     }
 }
 
+
 /* FEATURES SECTION */
 
 .features {
@@ -973,9 +977,9 @@ body {
         }
     }
     &__item:first-child {
-         @media only screen and (max-width: 768px) {
-             margin-top: 0;
-         }
+        @media only screen and (max-width: 768px) {
+            margin-top: 0;
+        }
     }
     &__item:last-child {
         @media only screen and (max-width: 992px) {
@@ -1056,6 +1060,7 @@ body {
         }
     }
 }
+
 
 /* CONTACTS SECTION */
 
@@ -1214,6 +1219,7 @@ body {
         margin-bottom: 55px;
     }
 }
+
 
 /* FOOTER SECTION */
 

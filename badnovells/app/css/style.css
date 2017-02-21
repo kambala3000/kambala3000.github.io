@@ -227,31 +227,37 @@ body {
     margin-top: 40px;
     padding-right: 20px;
     height: 36px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     cursor: pointer;
-    background: url("../img/lang-arrow.png") 87px 9px no-repeat;
+    background: url("../img/lang-arrow.png") 82px 9px no-repeat;
     transition: background-color linear 0.2s; }
     @media only screen and (max-width: 992px) {
       .main-header__lang {
         height: 32px;
-        background-position: 77px 7px; } }
+        background-position: 72px 7px; } }
   @media only screen and (max-width: 992px) and (max-width: 768px) {
     .main-header__lang {
       height: 36px;
       margin-top: 20px;
       margin-right: 30px;
-      background-position: 87px 9px;
+      background-position: 82px 9px;
       -webkit-order: 2;
           -ms-flex-order: 2;
               order: 2; } }
   .main-header__lang:hover {
     background-color: #1f90fe;
-    background-position: 87px -25px; }
+    background-position: 82px -25px; }
     @media only screen and (max-width: 992px) {
       .main-header__lang:hover {
-        background-position: 77px -27px; } }
+        background-position: 72px -27px; } }
   @media only screen and (max-width: 992px) and (max-width: 768px) {
     .main-header__lang:hover {
-      background-position: 87px -25px; } }
+      background-position: 82px -25px; } }
   .main-header__lang-item {
     padding: 0 0 0 10px;
     text-decoration: none;
@@ -283,7 +289,7 @@ body {
   @media only screen and (max-width: 1340px) and (max-width: 768px) {
     .main-header__promo {
       width: 320px;
-      margin-top: 90px;
+      margin-top: 70px;
       margin-bottom: 30px;
       padding-left: 0; } }
   .main-header__greetings {
