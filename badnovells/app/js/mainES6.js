@@ -45,7 +45,9 @@
 	});
 
     $('.js-up').click(function () {
-        $(window).scrollTo(0);
+        $(window).scrollTo(0, 2500, {
+            queue: true
+        });
     });
 
     $('.js-watch-proj').click(function () {
