@@ -1238,6 +1238,7 @@ body {
             width: 970px;
             @media (max-width: 992px) {
                 width: 750px;
+                padding-top: 115px;
             }
             @media (max-width: 768px) {
                 width: 320px;
@@ -1277,19 +1278,36 @@ body {
             }
         }
     }
+    &__title {
+        font: 15px/1.4 "GothamPro Regular", $default-fonts;
+        letter-spacing: 1px;
+        color: $white;
+        @media only screen and (max-width: 992px) {
+            font-size: 14px;
+            @media (max-width: 768px) {
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+    }
+    &__mobile-br {
+        @media only screen and (max-width: 768px) {
+            display: block;
+        }
+    }
     &__link {
         display: inline-block;
         margin-bottom: 7px;
         padding: 0 20px 0 0;
         position: relative;
-        font: 18px/1.4 "GothamPro Regular", $default-fonts;
+        font: 15px/1.4 "GothamPro Regular", $default-fonts;
         letter-spacing: 1px;
         text-decoration: none;
         cursor: pointer;
         color: $white;
         transition: linear .1s;
         @media only screen and (max-width: 1340px) {
-            font-size: 16px;
+            font-size: 15px;
             padding-right: 19px;
             @media (max-width: 992px) {
                 font-size: 14px;
@@ -1297,7 +1315,7 @@ body {
             }
             @media (max-width: 768px) {
                 font-size: 13px;
-                padding-right: 16px;
+                padding-right: 14px;
             }
         }
     }
@@ -1310,7 +1328,7 @@ body {
         width: 16px;
         height: 16px;
         position: absolute;
-        top: 3px;
+        top: 2px;
         right: 0;
         background: url("#{$images-path}/gh-bg.svg") center center no-repeat;
         background-size: cover;
@@ -1320,10 +1338,12 @@ body {
             @media (max-width: 992px) {
                 width: 12px;
                 height: 12px;
+                top: 3px;
             }
             @media (max-width: 768px) {
                 width: 11px;
                 height: 11px;
+                top: 4px;
             }
         }
     }
@@ -1331,8 +1351,8 @@ body {
 
 .up-arrow {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     text-decoration: none;
     color: $white;
     background: url("#{$images-path}/up-arrow.svg") center center no-repeat;
@@ -1341,10 +1361,6 @@ body {
     @media only screen and (max-width: 1340px) {
         width: 25px;
         height: 25px;
-        @media (max-width: 992px) {
-            width: 22px;
-            height: 22px;
-        }
     }
 }
 
