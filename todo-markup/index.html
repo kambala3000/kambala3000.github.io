@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <meta name="description" content="Home page">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-64x64.png" sizes="64x64">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <!-- inject:js -->
+
+    <!-- endinject -->
+</head>
+
+<body>
+
+    <div class="app">
+        <nav class="main-menu">
+            <div class="main-menu__header">
+                <div class="main-menu__header-wrap">
+                    <h4 class="main-menu__header-text">To Do</h4>
+                    <a class="main-menu__func-btn main-menu__func-btn--hide" href="#">
+                        <span class="mdi mdi-backburger"></span>
+                    </a>
+                    <a class="main-menu__func-btn main-menu__func-btn--show" href="#">
+                        <span class="mdi mdi-menu"></span>
+                    </a>
+                </div>
+                <div class="main-menu__mobile-features">
+                    <button class="btn btn--search">
+                        <span class="mdi mdi-magnify"></span>
+                    </button>
+                    <div class="notific">
+                        <a href="#" class="notific__link">
+                            <span class="mdi mdi-bell"></span>
+                            <span class="notific__counter">2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ul class="main-menu__list">
+                <li class="main-menu__list-item">
+                    <a href="#" class="main-menu__item-link">
+                        <span class="mdi mdi-view-dashboard main-menu__item-icon"></span>
+                        <p class="main-menu__item-text">Project 1</p>
+                    </a>
+                </li>
+                <li class="main-menu__list-item">
+                    <a href="#" class="main-menu__item-link">
+                        <span class="mdi mdi-account-multiple main-menu__item-icon"></span>
+                        <p class="main-menu__item-text">Project 2</p>
+                    </a>
+                </li>
+                <li class="main-menu__list-item">
+                    <a href="#" class="main-menu__item-link">
+                        <span class="mdi mdi-folder main-menu__item-icon"></span>
+                        <p class="main-menu__item-text">Project 3</p>
+                    </a>
+                </li>
+                <li class="main-menu__list-item">
+                    <a href="#" class="main-menu__item-link">
+                        <span class="mdi mdi-account-box-outline main-menu__item-icon"></span>
+                        <p class="main-menu__item-text">Project 4</p>
+                    </a>
+                </li>
+                <li class="main-menu__list-item">
+                    <a href="#" class="main-menu__item-link">
+                        <span class="mdi mdi-file-document main-menu__item-icon"></span>
+                        <p class="main-menu__item-text">Project 5</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <div class="main-content__top-bar">
+                <p class="main-content__top-bar-text">Do list</p>
+                <div class="main-content__top-bar-wrap">
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Search...">
+                    </div>
+                    <div class="notific">
+                        <a href="#" class="notific__link">
+                            <span class="mdi mdi-bell"></span>
+                            <span class="notific__counter">2</span>
+                        </a>
+                    </div>
+                    <a class="profile-link" href="#">
+                        <img src="img/profile-img.jpg" class="profile-link__image">
+                        <span class="mdi mdi-chevron-down"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="main-content__content">
+                <main class="main-content__wrap">
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 1</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--red">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">14</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">8 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="100"></progress>
+                                        <span class="mdi mdi-check card__progress-done"></span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">1</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="40"></progress>
+                                        <span class="card__progress-counter">2/5</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/2</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/4</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">5</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">3 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 2</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                        <a class="card__members-counter" href="#">+25</a>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">1 file</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="100"></progress>
+                                        <span class="mdi mdi-check card__progress-done"></span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">15 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 3</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                        <a class="card__members-counter" href="#">+8</a>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">2</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">1 file</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                        <hr class="card__color-line card__color-line--blue">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__checklist">
+                                        <p class="card__checklist-item">
+                                            <input type="checkbox" class="card__checklist-checkbox" id="che1">
+                                            <label for="che1" class="card__checklist-label">Update links in profile settings</label>
+                                        </p>
+                                        <p class="card__checklist-item">
+                                            <input type="checkbox" class="card__checklist-checkbox" id="che2">
+                                            <label for="che2" class="card__checklist-label">The setting icon should be...</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 4</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--red">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">14</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">8 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="40"></progress>
+                                        <span class="card__progress-counter">2/5</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/2</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/4</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">5</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">3 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="100"></progress>
+                                        <span class="mdi mdi-check card__progress-done"></span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">1</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="100"></progress>
+                                        <span class="mdi mdi-check card__progress-done"></span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">1</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="40"></progress>
+                                        <span class="card__progress-counter">2/5</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/2</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/4</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">5</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">3 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                        <hr class="card__color-line card__color-line--blue">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__checklist">
+                                        <p class="card__checklist-item">
+                                            <input type="checkbox" class="card__checklist-checkbox" id="che3">
+                                            <label for="che3" class="card__checklist-label">Update links in profile settings</label>
+                                        </p>
+                                        <p class="card__checklist-item">
+                                            <input type="checkbox" class="card__checklist-checkbox" id="che4">
+                                            <label for="che4" class="card__checklist-label">The setting icon should be...</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 5</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                        <a class="card__members-counter" href="#">+25</a>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">1 file</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="100"></progress>
+                                        <span class="mdi mdi-check card__progress-done"></span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">15 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 6</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/default-member.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                        <a class="card__members-counter" href="#">+8</a>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">2</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">1 file</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                        <hr class="card__color-line card__color-line--blue">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__checklist">
+                                        <p class="card__checklist-item">
+                                            <input type="checkbox" class="card__checklist-checkbox" id="che5">
+                                            <label for="che5" class="card__checklist-label">Update links in profile settings</label>
+                                        </p>
+                                        <p class="card__checklist-item">
+                                            <input type="checkbox" class="card__checklist-checkbox" id="che6">
+                                            <label for="che6" class="card__checklist-label">The setting icon should be...</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">7</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                    <!--TASK START-->
+                    <div class="task">
+                        <div class="task__content">
+                            <div class="task__header">
+                                <h4 class="task__header-text">Приоритет 7</h4>
+                                <div class="task__controls">
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-plus"></span></a>
+                                    <a href="#" class="task__controls-item"><span class="mdi mdi-dots-vertical"></span></a>
+                                </div>
+                            </div>
+                            <div class="task__input-box">
+                                <input type="text" class="task__input" placeholder="Enter name of new card...">
+                                <div class="task__input-controls-box">
+                                    <a href="#" class="task__input-controls task__input-controls--chek">
+                                        <span class="mdi mdi-check task__input-icons"></span>
+                                    </a>
+                                    <a href="#" class="task__input-controls task__input-controls--cancel">
+                                        <span class="mdi mdi-close task__input-icons"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--red">
+                                        <hr class="card__color-line card__color-line--yellow">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/3</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">14</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">8 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__lines">
+                                        <hr class="card__color-line card__color-line--green">
+                                    </div>
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="100"></progress>
+                                        <span class="mdi mdi-check card__progress-done"></span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">1</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                            <!--CARD START-->
+                            <div class="card">
+                                <div class="card__body">
+                                    <p class="card__name">Name name</p>
+                                    <div class="card__members">
+                                        <div class="card__members-wrap">
+                                            <a href="#" class="card__member-link card__member-link--leader">
+                                                <img src="img/members/member1.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member3.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member4.jpg" class="card__member-img">
+                                            </a>
+                                            <a href="#" class="card__member-link">
+                                                <img src="img/members/member2.jpg" class="card__member-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="40"></progress>
+                                        <span class="card__progress-counter">2/5</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/2</span>
+                                    </div>
+                                    <div class="card__progress">
+                                        <progress class="card__progressbar" max="100" value="0"></progress>
+                                        <span class="card__progress-counter">0/4</span>
+                                    </div>
+                                </div>
+                                <div class="card__footer">
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-comment card__footer-icon card__footer-icon--comment"></span>
+                                        <span class="card__footer-text">5</span>
+                                    </a>
+                                    <a href="#" class="card__footer-item">
+                                        <span class="mdi mdi-paperclip card__footer-icon card__footer-icon--attachment"></span>
+                                        <span class="card__footer-text">3 files</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--CARD END-->
+                        </div>
+                    </div>
+                    <!--TASK END-->
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- afterdocument:js -->
+
+
+    <!-- endinject -->
+</body>
+
+</html>
