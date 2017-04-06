@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="792" height="672" version="1" viewBox="0 0 300 300">
+            <style type="text/css" media="screen">
+                <![CDATA[ 
+                .base {
+                    animation: hideshow 2s 1s ease 1;
+                    animation-fill-mode: both;
+                }
+
+                .midline-path {
+                    animation: hideshow 2s 4s ease 1;
+                    animation-fill-mode: both;
+                }
+
+                .midline-text {
+                    animation: hideshow 2s 5s ease 1;
+                    animation-fill-mode: both;
+                }
+
+                .height-path {
+                    animation: hideshow 2s 7s ease 1;
+                    animation-fill-mode: both;
+                }
+
+                .height-text {
+                    animation: hideshow 2s 8s ease 1;
+                    animation-fill-mode: both;
+                }
+
+                @keyframes hideshow {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                ]]>
+            </style>
+            <path fill="none" stroke="#000" stroke-width="1.5" stroke-miterlimit="10" d="M272.3116 158.8104l-85.039-127.56H38.4536l-10.63 63.779-10.63 63.781z"
+            />
+            <text class="base" x="111.6939" y="8.3301" style="line-height:125%;text-align:start" font-style="italic" font-size="14" font-family="Times New Roman"
+                transform="translate(-1.485 10.025)">
+                a
+            </text>
+            <text class="base" x="143.2481" y="169.6924" style="line-height:125%;text-align:start" font-style="italic" font-size="14"
+                font-family="Times New Roman" transform="translate(-1.485 10.025)">
+                b
+            </text>
+            <text x="2.2627" y="156.8135" style="line-height:125%;text-align:start" font-size="14" font-family="Times New Roman" transform="translate(-1.485 10.025)">
+                A
+            </text>
+            <text x="281.0557" y="158.7935" style="line-height:125%;text-align:start" font-size="14" font-family="Times New Roman" transform="translate(-1.485 10.025)">
+                D
+            </text>
+            <text x="190.7949" y="13.9654" style="line-height:125%;text-align:start" font-size="14" font-family="Times New Roman" transform="translate(-1.485 10.025)">
+                C
+            </text>
+            <text x="27.3818" y="15.4859" style="line-height:125%;text-align:start" font-size="14" font-family="Times New Roman" transform="translate(-1.485 10.025)">
+                B
+            </text>
+            <path class="midline-path" fill="#a00" stroke="#a20000" stroke-width=".8929" d="M227.767 91.7082v-.2232c-39.876 0-159.5048.2232-199.381.2232 39.8762 0 159.505.2232 199.381.2232v-.2232z"
+            />
+            <text class="midline-text" x="127.6697" y="76.1139" stroke-width=".4464" style="line-height:11.16071415px;-inkscape-font-specification:'Times New Roman, '"
+                font-size="17.8571" font-family="Times New Roman" letter-spacing="0" word-spacing="0" transform="translate(-1.485 10.025)">
+                <tspan x="127.6697" y="76.1139" style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic" font-size="14.2857">m</tspan>
+            </text>
+            <path class="midline-path" fill="#a20000" stroke="#a20000" stroke-width=".8929" d="M26.4586 58.4998l12.995 4.8268M16.7698 119.519l12.995 4.8268M203.0057 66.2836l12.6237-6.6832M204.3052 69.4307l12.6237-6.6832M241.0626 124.6022l12.6237-6.6832M239.2062 121.7822l12.6237-6.6832"
+            />
+            <path class="height-path" fill="#00007a" stroke="#00007a" stroke-width=".8929" d="M187.2727 31.2507h-.2232c0 25.3836.2232 101.5343.2232 126.918 0-25.3837.2232-101.5344.2232-126.918h-.2233z"
+            />
+            <path class="height-path" fill="none" stroke="#00007a" stroke-width=".7589" d="M187.1842 149.3025h7.8762v8.9263" />
+            <text class="height-text" x="195.2327" y="114.5988" stroke-width=".4464" style="line-height:11.16071415px;-inkscape-font-specification:'Times New Roman, '"
+                font-size="17.8571" font-family="Times New Roman" letter-spacing="0" word-spacing="0" transform="translate(-1.485 10.025)">
+                <tspan x="195.2327" y="114.5988" style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">h</tspan>
+            </text>
+            <text class="height-text" x="198.7712" y="137.9332" stroke-width=".4464" style="line-height:11.16071415px;-inkscape-font-specification:'Times New Roman, '"
+                font-size="17.8571" font-family="Times New Roman" letter-spacing="0" word-spacing="0" transform="translate(-1.485 10.025)">
+                <tspan x="198.7712" y="137.9332" font-size="6.5476">90°</tspan>
+            </text>
+            <text class="base" x="-8.2214" y="216.0891" stroke-width=".4464" style="line-height:11.16071415px" font-size="17.8571" font-family="sans-serif"
+                letter-spacing="0" word-spacing="0">
+                <tspan x="-8.2214" y="216.0891" font-size="16.6667">
+                    <tspan style="-inkscape-font-specification:'Times New Roman, '" font-family="Times New Roman">1.
+                        <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">a</tspan> и
+                        <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">b</tspan> - основания трапеции, </tspan>
+                    <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic" font-family="Times New Roman">a</tspan>
+                    <tspan style="-inkscape-font-specification:'Times New Roman, '" font-family="Times New Roman">||</tspan>
+                    <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic" font-family="Times New Roman">b</tspan>
+                </tspan>
+            </text>
+            <text class="midline-text" x="-8.2214" y="239.4802" stroke-width=".4464" style="line-height:11.16071415px;-inkscape-font-specification:'Times New Roman, '"
+                font-size="17.8571" font-family="Times New Roman" letter-spacing="0" word-spacing="0">
+                <tspan x="-8.2214" y="239.4802">
+                    <tspan font-size="16.6667">2.
+                        <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">m</tspan> - средняя линия трапеции,
+                        <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">m</tspan> = (<tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">a</tspan> +
+                        <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">b</tspan>) / 2</tspan>
+                </tspan>
+            </text>
+            <text class="height-text" x="-6.3649" y="250.9901" stroke-width=".4464" style="line-height:11.16071415px;-inkscape-font-specification:'Times New Roman, '"
+                font-size="17.8571" font-family="Times New Roman" letter-spacing="0" word-spacing="0" transform="translate(-1.485 10.025)">
+                <tspan x="-6.3649" y="250.9901" font-size="16.6667">3.
+                    <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">h</tspan> - высота трапеции,
+                    <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">h</tspan> =
+                    <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">S</tspan> /
+                    <tspan style="-inkscape-font-specification:'Times New Roman, Italic'" font-style="italic">m</tspan>
+                </tspan>
+            </text>
+
+        </svg>
