@@ -1,0 +1,73 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+ul {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #fff; }
+
+.band {
+  width: 800px;
+  margin: 20px auto;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif; }
+  .band__logo {
+    display: block;
+    max-width: 400px;
+    margin: 50px auto; }
+  .band__header {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0 0 15px; }
+  .band__genre {
+    padding: 0 0 0 20px;
+    margin: 0 0 10px; }
+  .band__country {
+    padding: 0 0 0 20px;
+    margin: 0 0 10px; }
+  .band__lang {
+    padding: 0 0 0 20px;
+    margin: 0 0 10px; }
+  .band__site {
+    padding: 0 0 0 20px;
+    font: 400 15px/1 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #23527c; }
+    .band__site:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+  .band__list-header {
+    margin: 15px 0 10px;
+    font-size: 18px; }
+  .band__members-list {
+    list-style: none;
+    margin: 0 0 10px; }
+  .band__member {
+    padding: 0 0 0 20px;
+    line-height: 1.6; }
+  .band__info {
+    margin: 0 0 10px;
+    line-height: 1.4;
+    text-align: justify; }
+  .band__albums-list {
+    list-style: none;
+    margin: 0 0 10px; }
+  .band__album {
+    padding: 0 0 0 20px; }

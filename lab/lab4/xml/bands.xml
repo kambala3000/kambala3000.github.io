@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docbody>
+    <band name="Iron Maiden" date="1975">
+        <logo title="Iron Maiden logo">http://orig09.deviantart.net/87f3/f/2014/112/9/e/iron_maiden_logo_png_by_yaprina-d7fj054.png</logo>
+        <genre>Heavy metal, Power Metal</genre>
+        <country>Веикобритания</country>
+        <lang>Английский</lang>
+        <site>http://ironmaiden.com/</site>
+        <memberslist>
+            <member role="Вокалист">Брюс Дикинсон</member>
+            <member role="Бас-гитарист">Стив Харрис</member>
+            <member role="Барабанщик">Нико МакБрэйн</member>
+            <member role="Гитарист">Дэйв Мюррей</member>
+            <member role="Гитарист">Яник Герс</member>
+            <member role="Гитарист">Адриан Смит</member>
+        </memberslist>
+        <shortinfo>Британская хеви-метал-группа, которая в начале 1980-х гг. являлась одним из известнейших представителей новой волны британского хеви-метала, а позже оказала значительное влияние на развитие метала в целом. Основателем группы, автором большинства песен (как музыки, так и текстов) и бессменным лидером коллектива является бас-гитарист Стив Харрис. Под его руководством группа, претерпев значительные изменения в составе, прошла путь от выступлений в лондонских пабах до интерконтинентальных турне. Немаловажную роль в успехе группы также сыграл менеджер Iron Maiden Род Смоллвуд, который присоединился к группе с момента её основания и остается в ней по сей день.</shortinfo>
+        <albumslist>
+            <album year="1980">Iron Maiden</album>
+            <album year="1981">Killers</album>
+            <album year="1982">The Number of the Beast</album>
+            <album year="1983">Piece of Mind</album>
+            <album year="1984">Powerslave</album>
+            <album year="1986">Somewhere in Time</album>
+            <album year="1988">Seventh Son of a Seventh Son</album>
+            <album year="1990">No Prayer for the Dying</album>
+            <album year="1992">Fear of the Dark</album>
+            <album year="1995">The X Factor</album>
+            <album year="1998">Virtual XI</album>
+            <album year="2000">Brave New World</album>
+            <album year="2003">Dance of Death</album>
+            <album year="2006">A Matter of Life and Death</album>
+            <album year="2010">The Final Frontier</album>
+            <album year="2015">The Book of Souls</album>
+        </albumslist>
+    </band>
+    <band name="Helloween" date="1984">
+        <logo title="Helloween logo">http://logosolusa.com/wp-content/uploads/2016/10/Helloween-Logo-1.jpg</logo>
+        <genre>Speed-metal, Power-metal, Heavy-metal</genre>
+        <country>Германия</country>
+        <lang>Английский</lang>
+        <site>http://helloween.org/</site>
+        <memberslist>
+            <member role="Вокалист">Андреас Дерис</member>
+            <member role="Бас-гитарист">Маркус Гросскопф</member>
+            <member role="Барабанщик">Дани Лёбле</member>
+            <member role="Гитарист">Михаэль Вайкат</member>
+            <member role="Гитарист">Саша Герстнер</member>
+        </memberslist>
+        <shortinfo>Немецкая пауэр-метал группа. Считаются одними из основоположников пауэр-метал[1], а их второй и третий студийные альбомы, Keeper of the Seven Keys, Pt. 1 и Keeper of the Seven Keys, Pt. 2 считаются шедеврами жанра[2][3]. Впервые под этим названием (Helloween) музыканты выступили в 1984 году. Единственные участники, оставшиеся в группе с того момента и до нынешнего времени, — Михаэль Вайкат и Маркус Гросскопф. С 1989 года состав несколько раз менялся. В связи со сменой вокалистов в истории группы обычно выделяют «эпоху Хансена» (1984—1986), «эпоху Киске» (1987—1993) и «эпоху Дериса» (с 1994 по настоящее время).</shortinfo>
+        <albumslist>
+            <album year="1985">Helloween</album>
+            <album year="1985">Walls of Jericho</album>
+            <album year="1987">Keeper of the Seven Keys, Pt. 1</album>
+            <album year="1988">Keeper of the Seven Keys, Pt. 2</album>
+            <album year="1991">Pink Bubbles Go Ape</album>
+            <album year="1993">Chameleon</album>
+            <album year="1994">Master of the Rings</album>
+            <album year="1996">The Time of the Oath</album>
+            <album year="1998">Better Than Raw</album>
+            <album year="2000">The Dark Ride</album>
+            <album year="2003">Rabbit Don’t Come Easy</album>
+            <album year="2005">Keeper of the Seven Keys: The Legacy</album>
+            <album year="2007">Gambling With the Devil</album>
+            <album year="2010">Unarmed — Best of 25th Anniversary</album>
+            <album year="2010">7 Sinners</album>
+            <album year="2013">Straight Out Of Hell</album>
+            <album year="2015">My God-Given Right</album>
+        </albumslist>
+    </band>
+    <band name="Blind Guardian" date="1984">
+        <logo title="Blind Guardian logo">http://www.nuclearblast.de/static/articles/226/226334.png/1000x1000.png</logo>
+        <genre>Speed-metal, Power-metal</genre>
+        <country>Германия</country>
+        <lang>Английский, немецкий</lang>
+        <site>http://www.blind-guardian.com/</site>
+        <memberslist>
+            <member role="Вокалист">Ханси Кюрш</member>
+            <member role="Барабанщик">Фредерик Эмке</member>
+            <member role="Гитарист">Андре Ольбрих</member>
+            <member role="Гитарист">Маркус Зипен</member>
+        </memberslist>
+        <shortinfo>Немецкая метал-группа, образованная в 1984 году в городе Крефельд.Тексты группы, написанные вокалистом Ханси Кюршем, основаны на сюжетах из фантастических произведений: книг Джона Толкина, Майкла Муркока, Стивена Кинга, а также легендах и мифах разных народов. Альбом 1998 года «Nightfall in Middle-Earth» целиком основан на «Сильмариллионе» Толкина.
+        Blind Guardian относительно уникальны в том смысле, что в период с 1987 по 2005 годы состав группы не менялся: в него входили Ханси Кюрш (вокалист и, до 1998 г., бас-гитарист), гитаристы Андре Ольбрих и Маркус Зипен и барабанщик Томен Штаух. В 2005 году Штаух покинул группу; его заменил Фредерик Эмке.</shortinfo>
+        <albumslist>
+            <album year="1988">Battalions of Fear</album>
+            <album year="1989">Follow the Blind</album>
+            <album year="1990">Tales from the Twilight World</album>
+            <album year="1992">Somewhere Far Beyond</album>
+            <album year="1995">Imaginations from the Other Side</album>
+            <album year="1998">Nightfall in Middle-Earth</album>
+            <album year="2002">A Night at the Opera</album>
+            <album year="2006">A Twist in the Myth</album>
+            <album year="2010">At the Edge of Time</album>
+            <album year="2015">Beyond the Red Mirror</album>
+        </albumslist>
+    </band>
+    <band name="Sabaton" date="1999">
+        <logo title="Sabaton logo">https://upload.wikimedia.org/wikipedia/de/thumb/7/74/Sabaton-logo.svg/1280px-Sabaton-logo.svg.png</logo>
+        <genre>Heavy metal, Speed-metal, Power-metal</genre>
+        <country>Швеция</country>
+        <lang>Английский, шведский</lang>
+        <site>http://sabaton.net/</site>
+        <memberslist>
+            <member role="Вокалист">Йоаким Броден</member>
+            <member role="Бас-гитарист">Пэр Сундстрём</member>
+            <member role="Барабанщик">Ханнес Ван Дал</member>
+            <member role="Гитарист">Крис Рёланд</member>
+            <member role="Гитарист">Томми Йоханссон</member>
+        </memberslist>
+        <shortinfo>Шведская хэви-пауэр-метал группа, основанная в декабре 1999 годa. Основной темой для песен являются войны и отдельные сражения. Название группы в переводе с английского означает латный ботинок, часть рыцарского доспеха. Группа Sabaton была сформирована ещё в декабре 1999 году в Фалун, Швеция, когда члены группы под названием Aeon начали реформироваться и готовиться к предстоящей первой записи в Moon Music Studio. Члены-основатели Aeon объединили свои силы с Оскаром Монтелиусом и Йоакимом Броденом в течение года, который видел несколько смен состава, и парни решили начать новую жизнь и изменили название группы на Sabaton. С тех пор и до 2012 года состав группы практически не менялся — в 2001 году к группе присоединился ударник Даниель Муллбак. В 2012 году состав группы сильно поменялся: из прежнего состава осталось только двое человек.</shortinfo>
+        <albumslist>
+            <album year="2005">Primo Victoria</album>
+            <album year="2006">Attero Dominatus</album>
+            <album year="2007">Metalizer</album>
+            <album year="2008">The Art of War</album>
+            <album year="2010">Coat of Arms</album>
+            <album year="2012">Carolus Rex</album>
+            <album year="2014">Heroes</album>
+            <album year="2016">The Last Stand</album>
+        </albumslist>
+    </band>
+</docbody>
