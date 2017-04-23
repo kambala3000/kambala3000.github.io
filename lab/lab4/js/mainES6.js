@@ -1,6 +1,6 @@
 'use strict';
 
-const filePath = '../xml/bands.xml';
+const filePath = './xml/bands.xml';
 const XHRequest = 'onload' in new XMLHttpRequest() ? XMLHttpRequest : XDomainRequest;
 const xhr = new XHRequest();
 
