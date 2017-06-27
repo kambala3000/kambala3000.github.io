@@ -5,43 +5,42 @@ const buttonsBox = document.getElementById("js-buttons-box"),
     historyBox = document.getElementById("js-history");
 
 let status = "",
-    resultFlag = 0;
+    resultFlag = false,
+    operations = ["/", "*", "+", "-"];
 
 buttonsBox.onclick = function(e) {
     let btn = e.target,
-        valBtn = btn.value,
+        btnVal = btn.value,
         current = entryBox.innerHTML,
+        history = historyBox.innerHTML,
         lastOperation = historyBox.innerHTML.slice(-1);
 
-    if (valBtn === "ce" || valBtn === "ac") {
-        if (valBtn === "ce") {
-            const cutLength = current.length;
-            historyBox.innerHTML = historyBox.innerHTML.slice(0, historyBox.innerHTML.length - cutLength);
-            entryBox.innerHTML = "0";
-        } else {
-            entryBox.innerHTML = "0";
-            historyBox.innerHTML = "";
-        }
+    if (btnVal === "ac") {
+        entryBox.innerHTML = "0";
+        historyBox.innerHTML = "";
+        status = "";
+        resultFlag = false;
+    } else if (btnVal === "ce") {
+        historyBox.innerHTML = historyBox.innerHTML.slice(
+            0,
+            historyBox.innerHTML.length - current.length
+        );
+        entryBox.innerHTML = "0";
+    } else if (btnVal === "=") {
+        entryBox.innerHTML = eval(history);
+        historyBox.innerHTML = historyBox.innerHTML + "=" + entryBox.innerHTML; // output
+    } else if (operations.indexOf(btnVal) !== -1) {
+        if (operations.indexOf(lastOperation) !== -1 || history === "") return;
+        entryBox.innerHTML = btnVal;
+        historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
     } else {
-        if (valBtn === "/" || valBtn === "*" || valBtn === "-" || valBtn === "+") {
-            if (current === "/" || current === "*" || current === "-" || current === "+") return;
-            if (lastOperation === "/" || lastOperation === "*" || lastOperation === "-" || lastOperation === "+") return;
-            entryBox.innerHTML = eval(historyBox.innerHTML);
-            resultFlag = 1;
-            //   entryBox.innerHTML = '0';
-        } else {
-            if (lastOperation === "/" || lastOperation === "*" || lastOperation === "-" || lastOperation === "+") {
-                entryBox.innerHTML = "0";
-            }
-            if (entryBox.innerHTML === "0" && valBtn !== ".") {
-                entryBox.innerHTML = entryBox.innerHTML.slice(1);
-            }
-            entryBox.innerHTML = entryBox.innerHTML + valBtn;
+        if (operations.indexOf(lastOperation) !== -1) {
+            entryBox.innerHTML = "";
         }
-        if (current === "/" || current === "*" || current === "-" || current === "+") {
-            entryBox.innerHTML = "0";
+        if (current === "0" && btnVal !== ".") {
+            entryBox.innerHTML = entryBox.innerHTML.slice(1);
         }
-        historyBox.innerHTML = historyBox.innerHTML + valBtn;
+        entryBox.innerHTML = entryBox.innerHTML + btnVal;
+        historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
     }
-    // console.log('kk2');
 };
