@@ -4,21 +4,24 @@ const buttonsBox = document.getElementById("js-buttons-box"),
     entryBox = document.getElementById("js-entry"),
     historyBox = document.getElementById("js-history");
 
-let status = "",
-    resultFlag = false,
-    operations = ["/", "*", "+", "-"];
+let resultFlag = false;
+const operations = {
+    '/': '/',
+    "*": "*",
+    "+": "+",
+    "-": "-"
+}
 
-buttonsBox.onclick = function(e) {
+buttonsBox.onclick = function (e) {
     let btn = e.target,
         btnVal = btn.value,
         current = entryBox.innerHTML,
         history = historyBox.innerHTML,
-        lastOperation = historyBox.innerHTML.slice(-1);
+        lastInput = historyBox.innerHTML.slice(-1);
 
     if (btnVal === "ac") {
         entryBox.innerHTML = "0";
         historyBox.innerHTML = "";
-        status = "";
         resultFlag = false;
     } else if (btnVal === "ce") {
         historyBox.innerHTML = historyBox.innerHTML.slice(
@@ -27,20 +30,45 @@ buttonsBox.onclick = function(e) {
         );
         entryBox.innerHTML = "0";
     } else if (btnVal === "=") {
+        if (history === "") return;
+        resultFlag = true;
         entryBox.innerHTML = eval(history);
         historyBox.innerHTML = historyBox.innerHTML + "=" + entryBox.innerHTML; // output
-    } else if (operations.indexOf(btnVal) !== -1) {
-        if (operations.indexOf(lastOperation) !== -1 || history === "") return;
+    } else if (btnVal in operations) {
+        if (lastInput in operations || history === "") return;
+        if (resultFlag) {
+            historyBox.innerHTML = history.slice(history.indexOf("=") + 1);
+            resultFlag = false;
+        }
         entryBox.innerHTML = btnVal;
         historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
     } else {
-        if (operations.indexOf(lastOperation) !== -1) {
-            entryBox.innerHTML = "";
+        if (lastInput in operations) {
+            if (btnVal === '.') {
+                entryBox.innerHTML = "0" + btnVal;
+                historyBox.innerHTML = historyBox.innerHTML + "0" + btnVal; // output
+            } else {
+                entryBox.innerHTML = btnVal;
+                historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
+            }
+        } else {
+            if (current === "0") {
+                if (btnVal !== ".") {
+                    entryBox.innerHTML = "" + btnVal;
+                    historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
+                } else if (btnVal === ".") {
+                    entryBox.innerHTML = entryBox.innerHTML + btnVal;
+                    historyBox.innerHTML = historyBox.innerHTML + "0" + btnVal; // output
+                }
+            } else {
+                if (btnVal === "." && current.indexOf(".") >= 0) return;
+                if (resultFlag) {
+                    historyBox.innerHTML = history.slice(history.indexOf("=") + 1);
+                    resultFlag = false;
+                }
+                entryBox.innerHTML = entryBox.innerHTML + btnVal;
+                historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
+            }
         }
-        if (current === "0" && btnVal !== ".") {
-            entryBox.innerHTML = entryBox.innerHTML.slice(1);
-        }
-        entryBox.innerHTML = entryBox.innerHTML + btnVal;
-        historyBox.innerHTML = historyBox.innerHTML + btnVal; // output
     }
 };
