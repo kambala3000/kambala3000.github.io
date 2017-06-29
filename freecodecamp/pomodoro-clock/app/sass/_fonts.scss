@@ -1,5 +1,12 @@
 @import "_vars";
 @font-face {
+    font-family: 'Pacifico';
+    src: url('#{$font-path}/pacifico.woff2') format('woff2'),
+        url('#{$font-path}/pacifico.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Roboto';
     src: local('Roboto Light'), local('Roboto-Light'),
         url('#{$font-path}/Robotolight.woff2') format('woff2'),

@@ -21,7 +21,34 @@
 
 <body>
     <main class="container">
-
+        <div class="container__body">
+            <div class="pomodoro">
+                <h1 class="pomodoro__header">Pomodoro Clock</h1>
+                <div class="pomodoro__settings">
+                    <div class="pomodoro__settings-item">
+                        <p class="pomodoro__settings-title">Break length</p>
+                        <button class="pomodoro__settings-btn">-</button>
+                        <span class="pomodoro__settings-timing">5</span>
+                        <button class="pomodoro__settings-btn">+</button>
+                    </div>
+                    <div class="pomodoro__settings-item">
+                        <p class="pomodoro__settings-title">Session length</p>
+                        <button class="pomodoro__settings-btn">-</button>
+                        <span class="pomodoro__settings-timing">25</span>
+                        <button class="pomodoro__settings-btn">+</button>
+                    </div>
+                </div>
+                <div class="pomodoro__timer">
+                    <p class="pomodoro__timer-title">Session</p>
+                    <p class="pomodoro__timer-value">25:00</p>
+                    <span class="pomodoro__timer-fill"></span>
+                </div>
+                <div class="pomodoro__controls">
+                    <button class="pomodoro__btn-start">Start</button>
+                    <button class="pomodoro__btn-reset">Reset</button>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- afterdocument:js -->
     <script src="js/main.js"></script>
