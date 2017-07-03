@@ -25,7 +25,7 @@ ul {
 }
 
 body {
-    background-color: #fff;
+    background-color: $gray-870;
 }
 
 @mixin clearfix() {
@@ -37,4 +37,140 @@ body {
     &:after {
         clear: both;
     }
+}
+
+.is-red {
+    color: $red-500;
+}
+.is-green {
+    color: $green-600;
+}
+
+.container {
+    &__body {
+        width: 800px;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+}
+
+.pomodoro {
+    &__header {
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: 'Pacifico', sans-serif;
+        font-size: 80px;
+        color: $white;
+    }
+    &__settings {
+        margin-bottom: 45px;
+        text-align: center;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+    }
+    &__settings-item {
+        display: inline-block;
+        color: $white;
+        &:first-child {
+            margin-right: 60px;
+        }
+    }
+    &__settings-title {
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+    &__settings-btn {
+        display: inline-block;
+        background-color: transparent;
+        text-align: center;
+        font-weight: 300;
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+        color: $white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    &__settings-timing {
+        display: inline-block;
+        min-width: 48px;
+        padding: 0 7px;
+        font-size: 30px;
+    }
+    &__settings-input {
+        display: inline-block;
+        text-align: center;
+        width: 60px;
+        font-size: 30px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $white;
+    }
+    &__timer {
+        position: relative;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 45px auto;
+        padding-top: 55px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        border-radius: 50%;
+        border: 2px solid $red-500;
+        color: $white;
+        cursor: pointer;
+        z-index: 5;
+    }
+    &__timer-title {
+        margin-bottom: 60px;
+        font-weight: 300;
+        font-size: 50px;
+    }
+    &__timer-value {
+        font-weight: 300;
+        font-size: 60px;
+    }
+    &__timer-fill {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $red-500;
+        z-index: -1;
+    }
+    &__controls {
+        text-align: center;
+    }
+    &__btn-item {
+        width: 96px;
+        padding: 4px 16px;
+        background-color: transparent;
+        text-transform: uppercase;
+        border: 1px solid $gray-850;
+        border-radius: 4px;
+        outline: none;
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        color: $white;
+        background-color: $gray-700;
+        &:hover {
+            background-color: $gray-850;
+        }
+        &--start {
+            margin-right: 20px;
+        }
+        &--reset {
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

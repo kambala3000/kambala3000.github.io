@@ -38,4 +38,127 @@ ul {
   margin: 0; }
 
 body {
-  background-color: #fff; }
+  background-color: #383838; }
+
+.is-red {
+  color: #f44336; }
+
+.is-green {
+  color: #43a047; }
+
+.container__body {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 40px; }
+
+.pomodoro__header {
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Pacifico', sans-serif;
+  font-size: 80px;
+  color: #ffffff; }
+
+.pomodoro__settings {
+  margin-bottom: 45px;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif; }
+
+.pomodoro__settings-item {
+  display: inline-block;
+  color: #ffffff; }
+  .pomodoro__settings-item:first-child {
+    margin-right: 60px; }
+
+.pomodoro__settings-title {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase; }
+
+.pomodoro__settings-btn {
+  display: inline-block;
+  background-color: transparent;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+.pomodoro__settings-timing {
+  display: inline-block;
+  min-width: 48px;
+  padding: 0 7px;
+  font-size: 30px; }
+
+.pomodoro__settings-input {
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff; }
+
+.pomodoro__timer {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 45px auto;
+  padding-top: 55px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 50%;
+  border: 2px solid #f44336;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 5; }
+
+.pomodoro__timer-title {
+  margin-bottom: 60px;
+  font-weight: 300;
+  font-size: 50px; }
+
+.pomodoro__timer-value {
+  font-weight: 300;
+  font-size: 60px; }
+
+.pomodoro__timer-fill {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f44336;
+  z-index: -1; }
+
+.pomodoro__controls {
+  text-align: center; }
+
+.pomodoro__btn-item {
+  width: 96px;
+  padding: 4px 16px;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 1px solid #515151;
+  border-radius: 4px;
+  outline: none;
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #616161; }
+  .pomodoro__btn-item:hover {
+    background-color: #515151; }
+  .pomodoro__btn-item--start {
+    margin-right: 20px; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }

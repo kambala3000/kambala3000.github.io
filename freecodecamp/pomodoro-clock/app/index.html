@@ -23,29 +23,29 @@
     <main class="container">
         <div class="container__body">
             <div class="pomodoro">
-                <h1 class="pomodoro__header">Pomodoro Clock</h1>
+                <h1 class="pomodoro__header"><span class="is-red">Pomodoro</span> <span class="is-green">Clock</span></h1>
                 <div class="pomodoro__settings">
                     <div class="pomodoro__settings-item">
                         <p class="pomodoro__settings-title">Break length</p>
-                        <button class="pomodoro__settings-btn">-</button>
-                        <span class="pomodoro__settings-timing">5</span>
-                        <button class="pomodoro__settings-btn">+</button>
+                        <button class="pomodoro__settings-btn" id="break-reduce" title="Reduce">-</button>
+                        <input type="text" class="pomodoro__settings-input" id="break-length" value="5" maxlength="3" placeholder="0">
+                        <button class="pomodoro__settings-btn" id="break-add" title="Add">+</button>
                     </div>
                     <div class="pomodoro__settings-item">
                         <p class="pomodoro__settings-title">Session length</p>
-                        <button class="pomodoro__settings-btn">-</button>
-                        <span class="pomodoro__settings-timing">25</span>
-                        <button class="pomodoro__settings-btn">+</button>
+                        <button class="pomodoro__settings-btn" id="session-reduce" title="Reduce">-</button>
+                        <input type="text" class="pomodoro__settings-input" id="session-length" value="25" maxlength="3" placeholder="0">
+                        <button class="pomodoro__settings-btn" id="session-add" title="Add">+</button>
                     </div>
                 </div>
-                <div class="pomodoro__timer">
+                <div class="pomodoro__timer" id="timer-block">
                     <p class="pomodoro__timer-title">Session</p>
-                    <p class="pomodoro__timer-value">25:00</p>
+                    <p class="pomodoro__timer-value" id="timer-value">25:00</p>
                     <span class="pomodoro__timer-fill"></span>
                 </div>
                 <div class="pomodoro__controls">
-                    <button class="pomodoro__btn-start">Start</button>
-                    <button class="pomodoro__btn-reset">Reset</button>
+                    <button class="pomodoro__btn-item pomodoro__btn-item--start" id="start-timer">Start</button>
+                    <button class="pomodoro__btn-item pomodoro__btn-item--reset" id="reset-timer">Reset</button>
                 </div>
             </div>
         </div>
