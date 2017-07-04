@@ -41,3 +41,19 @@ btnReduceSession.addEventListener("click", function() {
 btnIncSession.addEventListener("click", function() {
     incValue(this, inputSessionLength);
 });
+
+btnStartTimer.addEventListener("click", startTimer);
+
+function startTimer() {
+    timerCountDown(inputSessionLength.value, inputBreakLength.value);
+}
+
+function timerCountDown(sessionTime, breakTime) {
+    let sessionSeconds = sessionTime * 60;
+    let breakSeconds = breakTime * 60;
+    const timer = setInterval(function() {
+        if (sessionSeconds < 2) clearInterval(timer);
+        sessionSeconds--;
+        console.log(sessionSeconds);
+    }, 100); // 1000
+}
