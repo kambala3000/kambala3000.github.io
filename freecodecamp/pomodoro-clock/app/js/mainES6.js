@@ -2,10 +2,10 @@
 
 const inputs = document.getElementsByClassName("pomodoro__settings-input"),
     btnReduceBreak = document.getElementById("break-reduce"),
-    btnAddBreak = document.getElementById("break-add"),
+    btnIncBreak = document.getElementById("break-inc"),
     inputBreakLength = document.getElementById("break-length"),
     btnReduceSession = document.getElementById("session-reduce"),
-    btnAddSession = document.getElementById("session-add"),
+    btnIncSession = document.getElementById("session-inc"),
     inputSessionLength = document.getElementById("session-length"),
     nodeTimerBlock = document.getElementById("timer-block"),
     nodeTimerValue = document.getElementById("timer-value"),
@@ -18,3 +18,26 @@ for (let i = 0; i < inputs.length; i++) {
         this.value = this.value.replace(/[^0-9]/g, "");
     };
 }
+
+function incValue(btn, input) {
+    if (btn.value === "+") {
+        if (+input.value > 998) return;
+        input.value++;
+    } else {
+        if (+input.value < 2) return;
+        input.value--;
+    }
+}
+
+btnReduceBreak.addEventListener("click", function() {
+    incValue(this, inputBreakLength);
+});
+btnIncBreak.addEventListener("click", function() {
+    incValue(this, inputBreakLength);
+});
+btnReduceSession.addEventListener("click", function() {
+    incValue(this, inputSessionLength);
+});
+btnIncSession.addEventListener("click", function() {
+    incValue(this, inputSessionLength);
+});
