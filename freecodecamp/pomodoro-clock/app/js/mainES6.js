@@ -54,6 +54,11 @@ function timerCountDown(sessionTime, breakTime) {
     const timer = setInterval(function() {
         if (sessionSeconds < 2) clearInterval(timer);
         sessionSeconds--;
+        let minutes = Math.floor(sessionSeconds / 60);
+        if (minutes < 10) minutes = "0" + minutes;
+        let seconds = Math.floor(sessionSeconds % 60);
+        if (seconds < 10) seconds = "0" + seconds;
+        nodeTimerValue.innerHTML = `${minutes}:${seconds}`;
         console.log(sessionSeconds);
     }, 100); // 1000
 }
