@@ -45,20 +45,36 @@ btnIncSession.addEventListener("click", function () {
 btnStartTimer.addEventListener("click", startTimer);
 
 function startTimer() {
-    timerCountDown(inputSessionLength.value, inputBreakLength.value);
+    if (this.value === "start") {
+        // let sessionLength = inputSessionLength.value;
+        timerCountDown(inputSessionLength.value, inputBreakLength.value);
+        this.value = "pause";
+        this.innerHTML = "Pause";
+    } else {
+        this.value = "start";
+        this.innerHTML = "Start";
+    }
 }
 
 function timerCountDown(sessionTime, breakTime) {
     var sessionSeconds = sessionTime * 60;
     var breakSeconds = breakTime * 60;
-    var timer = setInterval(function () {
+    var haveHours = sessionTime - 60 >= 0;
+    var timer = setInterval(function timerFunc() {
         if (sessionSeconds < 2) clearInterval(timer);
         sessionSeconds--;
-        var minutes = Math.floor(sessionSeconds / 60);
+        var hours = Math.floor(sessionSeconds / 3600);
+        if (hours < 10) hours = "0" + hours;
+        var minutes = Math.floor(sessionSeconds % 3600 / 60);
         if (minutes < 10) minutes = "0" + minutes;
-        var seconds = Math.floor(sessionSeconds % 60);
+        var seconds = Math.floor(sessionSeconds % 3600 % 60);
         if (seconds < 10) seconds = "0" + seconds;
-        nodeTimerValue.innerHTML = minutes + ":" + seconds;
+        if (haveHours) {
+            nodeTimerValue.innerHTML = hours + ":" + minutes + ":" + seconds;
+        } else {
+            nodeTimerValue.innerHTML = minutes + ":" + seconds;
+        }
         console.log(sessionSeconds);
-    }, 100); // 1000
+        return timerFunc;
+    }(), 100); // 1000
 }
