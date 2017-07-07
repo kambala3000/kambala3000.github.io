@@ -27,6 +27,7 @@ function incValue(btn, input) {
         if (+input.value < 2) return;
         input.value--;
     }
+    if (input === inputSessionLength) formatTime(input.value);
 }
 
 btnReduceBreak.addEventListener("click", function() {
@@ -41,13 +42,17 @@ btnReduceSession.addEventListener("click", function() {
 btnIncSession.addEventListener("click", function() {
     incValue(this, inputSessionLength);
 });
+inputSessionLength.addEventListener("input", function() {
+    console.log("inputSessionLength event");
+    formatTime(this.value);
+});
 
 btnStartTimer.addEventListener("click", startTimer);
 
 function startTimer() {
-    if (this.value === "start") {
-        // let sessionLength = inputSessionLength.value;
-        timerCountDown(inputSessionLength.value, inputBreakLength.value);
+    const timerToggle = this.value === "start" ? true : false;
+    timerCountDown(inputSessionLength.value, inputBreakLength.value, timerToggle);
+    if (timerToggle) {
         this.value = "pause";
         this.innerHTML = "Pause";
     } else {
@@ -56,28 +61,36 @@ function startTimer() {
     }
 }
 
-function timerCountDown(sessionTime, breakTime) {
+function timerCountDown(sessionTime, breakTime, isBegin) {
     let sessionSeconds = sessionTime * 60;
     let breakSeconds = breakTime * 60;
-    const haveHours = sessionTime - 60 >= 0;
+    console.log(isBegin);
     const timer = setInterval(
         (function timerFunc() {
             if (sessionSeconds < 2) clearInterval(timer);
             sessionSeconds--;
-            let hours = Math.floor(sessionSeconds / 3600);
-            if (hours < 10) hours = "0" + hours;
-            let minutes = Math.floor(sessionSeconds % 3600 / 60);
-            if (minutes < 10) minutes = "0" + minutes;
-            let seconds = Math.floor(sessionSeconds % 3600 % 60);
-            if (seconds < 10) seconds = "0" + seconds;
-            if (haveHours) {
-                nodeTimerValue.innerHTML = `${hours}:${minutes}:${seconds}`;
-            } else {
-                nodeTimerValue.innerHTML = `${minutes}:${seconds}`;
-            }
+            const newSessionTime = sessionSeconds / 60;
+            formatTime(newSessionTime);
+
             console.log(sessionSeconds);
             return timerFunc;
         })(),
-        100
-    ); // 1000
+        1000
+    );
+}
+
+function formatTime(overallMinutes) {
+    const overallSeconds = overallMinutes * 60;
+    const haveHours = overallMinutes - 60 >= 0;
+    let hours = Math.floor(overallSeconds / 3600);
+    if (hours < 10) hours = "0" + hours;
+    let minutes = Math.floor(overallSeconds % 3600 / 60);
+    if (minutes < 10) minutes = "0" + minutes;
+    let seconds = Math.floor(overallSeconds % 3600 % 60);
+    if (seconds < 10) seconds = "0" + seconds;
+    if (haveHours) {
+        nodeTimerValue.innerHTML = `${hours}:${minutes}:${seconds}`;
+    } else {
+        nodeTimerValue.innerHTML = `${minutes}:${seconds}`;
+    }
 }
