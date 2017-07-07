@@ -16,6 +16,7 @@ const inputs = document.getElementsByClassName("pomodoro__settings-input"),
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].oninput = function() {
         this.value = this.value.replace(/[^0-9]/g, "");
+        resetTimer();
     };
 }
 
@@ -27,7 +28,7 @@ function incValue(btn, input) {
         if (+input.value < 2) return;
         input.value--;
     }
-    if (input === inputSessionLength) formatTime(input.value);
+    resetTimer();
 }
 
 btnReduceBreak.addEventListener("click", function() {
@@ -42,16 +43,16 @@ btnReduceSession.addEventListener("click", function() {
 btnIncSession.addEventListener("click", function() {
     incValue(this, inputSessionLength);
 });
-inputSessionLength.addEventListener("input", function() {
-    console.log("inputSessionLength event");
-    formatTime(this.value);
-});
 
 btnStartTimer.addEventListener("click", startTimer);
+btnResetTimer.addEventListener("click", resetTimer);
+
+let timer = null;
+let sessionSeconds = "0";
+let breakSeconds = "0";
 
 function startTimer() {
     const timerToggle = this.value === "start" ? true : false;
-    timerCountDown(inputSessionLength.value, inputBreakLength.value, timerToggle);
     if (timerToggle) {
         this.value = "pause";
         this.innerHTML = "Pause";
@@ -59,27 +60,39 @@ function startTimer() {
         this.value = "start";
         this.innerHTML = "Start";
     }
+    timerCountDown(timerToggle);
 }
 
-function timerCountDown(sessionTime, breakTime, isBegin) {
-    let sessionSeconds = sessionTime * 60;
-    let breakSeconds = breakTime * 60;
+function timerCountDown(isBegin) {
+    sessionSeconds = inputSessionLength.value * 60;
+    breakSeconds = inputBreakLength.value * 60;
     console.log(isBegin);
-    const timer = setInterval(
-        (function timerFunc() {
-            if (sessionSeconds < 2) clearInterval(timer);
-            sessionSeconds--;
-            const newSessionTime = sessionSeconds / 60;
-            formatTime(newSessionTime);
+    if (isBegin) {
+        timer = setInterval(
+            (function timerFunc() {
+                if (sessionSeconds < 2) clearInterval(timer);
+                sessionSeconds--;
+                const newSessionTime = sessionSeconds / 60;
+                displayTime(newSessionTime);
 
-            console.log(sessionSeconds);
-            return timerFunc;
-        })(),
-        1000
-    );
+                console.log(sessionSeconds);
+                return timerFunc;
+            })(),
+            1000
+        );
+    } else {
+        console.log(timer); // rework
+        clearTimeout(timer);
+    }
 }
 
-function formatTime(overallMinutes) {
+function resetTimer() {
+    clearInterval(timer);
+    displayTime(inputSessionLength.value);
+    console.log("reseted");
+}
+
+function displayTime(overallMinutes) {
     const overallSeconds = overallMinutes * 60;
     const haveHours = overallMinutes - 60 >= 0;
     let hours = Math.floor(overallSeconds / 3600);
