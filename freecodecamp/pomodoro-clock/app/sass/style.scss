@@ -91,6 +91,10 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
+        &:disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
     }
     &__settings-timing {
         display: inline-block;
@@ -107,6 +111,10 @@ body {
         outline: none;
         background-color: transparent;
         color: $white;
+        cursor: text;
+        &:disabled {
+            cursor: default;
+        }
     }
     &__timer {
         position: relative;

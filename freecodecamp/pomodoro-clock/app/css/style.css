@@ -86,6 +86,9 @@ body {
   border: none;
   outline: none;
   cursor: pointer; }
+  .pomodoro__settings-btn:disabled {
+    opacity: 0.5;
+    cursor: default; }
 
 .pomodoro__settings-timing {
   display: inline-block;
@@ -101,7 +104,10 @@ body {
   border: none;
   outline: none;
   background-color: transparent;
-  color: #ffffff; }
+  color: #ffffff;
+  cursor: text; }
+  .pomodoro__settings-input:disabled {
+    cursor: default; }
 
 .pomodoro__timer {
   position: relative;
