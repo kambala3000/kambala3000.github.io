@@ -14,6 +14,12 @@ var inputs = document.getElementsByClassName("pomodoro__settings-input"),
     btnStartTimer = document.getElementById("start-timer"),
     btnResetTimer = document.getElementById("reset-timer");
 
+var timer = null,
+    sessionSeconds = "0",
+    breakSeconds = "0",
+    wasPause = false,
+    timerToggle = void 0;
+
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].oninput = function () {
         this.value = this.value.replace(/[^0-9]/g, "");
@@ -24,9 +30,15 @@ function incValue(btn, input) {
     if (btn.value === "+") {
         if (+input.value > 998) return;
         input.value++;
+        if (!wasPause && btn === btnIncSession) {
+            displayTime(input.value);
+        }
     } else {
         if (+input.value < 2) return;
         input.value--;
+        if (!wasPause && btn === btnReduceSession) {
+            displayTime(input.value);
+        }
     }
 }
 
@@ -46,11 +58,6 @@ btnIncSession.addEventListener("click", function () {
 btnStartTimer.addEventListener("click", startTimer);
 btnResetTimer.addEventListener("click", resetTimer);
 
-var timer = null;
-var sessionSeconds = "0";
-var breakSeconds = "0";
-var timerToggle = void 0;
-
 function startTimer() {
     timerToggle = this.value === "start" ? true : false;
     if (timerToggle) {
@@ -64,10 +71,13 @@ function startTimer() {
 }
 
 function timerCountDown() {
-    sessionSeconds = inputSessionLength.value * 60;
-    breakSeconds = inputBreakLength.value * 60;
     console.log("timerToggle: " + timerToggle);
     if (timerToggle) {
+        if (!wasPause) {
+            sessionSeconds = inputSessionLength.value * 60;
+            breakSeconds = inputBreakLength.value * 60;
+        }
+        console.log("wasPause: " + wasPause);
         disabledToggle(true);
         timer = setInterval(function timerFunc() {
             if (sessionSeconds < 2) clearInterval(timer);
@@ -79,6 +89,8 @@ function timerCountDown() {
             return timerFunc;
         }(), 1000);
     } else {
+        wasPause = true;
+        console.log("wasPause: " + wasPause);
         disabledToggle(false);
         clearTimeout(timer);
     }
@@ -86,10 +98,14 @@ function timerCountDown() {
 
 function resetTimer() {
     timerToggle = false;
+    wasPause = false;
+    btnStartTimer.value = "start";
+    btnStartTimer.innerHTML = "Start";
     disabledToggle(false);
     clearInterval(timer);
     displayTime(inputSessionLength.value);
     console.log("timerToggle: " + timerToggle);
+    console.log("wasPause: " + wasPause);
     console.log("reseted");
 }
 
