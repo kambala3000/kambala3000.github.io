@@ -21,7 +21,8 @@ let timer = null,
     breakSeconds = "0",
     wasPause = false,
     timerToggle = false,
-    sessionsCounter = 0;
+    sessionsCounter = 0,
+    fillPerc = 0;
 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].oninput = function() {
@@ -33,16 +34,11 @@ function incValue(btn, input) {
     if (btn.value === "+") {
         if (+input.value > 998) return;
         input.value++;
-        if (!wasPause && btn === btnIncSession) {
-            displayTime(input.value);
-        }
     } else {
         if (+input.value < 2) return;
         input.value--;
-        if (!wasPause && btn === btnReduceSession) {
-            displayTime(input.value);
-        }
     }
+    resetTimer();
 }
 
 btnReduceBreak.addEventListener("click", function() {
@@ -96,6 +92,9 @@ function timerCountDown() {
                     const newSessionTime = sessionSeconds / 60;
                     displayTime(newSessionTime);
 
+                    fillPerc = 100 - sessionSeconds * 100 / (inputSessionLength.value * 60);
+                    nodeTimerFill.style.height = fillPerc + "%";
+
                     console.log(sessionSeconds);
                 } else {
                     if (breakSeconds < 2) {
@@ -130,6 +129,8 @@ function resetTimer() {
     btnStartTimer.value = "start";
     btnStartTimer.innerHTML = "Start";
     nodeTimerTitle.innerHTML = "Session";
+    fillPerc = 0;
+    nodeTimerFill.style.height = "0%";
     disabledToggle(false);
     clearInterval(timer);
     displayTime(inputSessionLength.value);

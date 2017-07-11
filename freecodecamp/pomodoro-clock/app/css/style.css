@@ -119,7 +119,7 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   border-radius: 50%;
-  border: 2px solid #f44336;
+  border: 2px solid #e53935;
   color: #ffffff;
   z-index: 5; }
 
@@ -148,7 +148,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #f44336;
+  background-color: #e53935;
   z-index: -1; }
 
 .pomodoro__controls {

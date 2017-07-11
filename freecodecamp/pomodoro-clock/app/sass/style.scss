@@ -126,7 +126,7 @@ body {
         text-align: center;
         font-family: 'Roboto', sans-serif;
         border-radius: 50%;
-        border: 2px solid $red-500;
+        border: 2px solid $red-600;
         color: $white;
         z-index: 5;
     }
@@ -156,7 +156,7 @@ body {
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: $red-500;
+        background-color: $red-600;
         z-index: -1;
     }
     &__controls {
