@@ -83,19 +83,19 @@ function timerCountDown() {
         console.log("wasPause: " + wasPause);
         if (!wasPause) {
             sessionSeconds = inputSessionLength.value * 60;
-            breakSeconds = inputBreakLength.value * 60;
         }
         disabledToggle(true);
         timer = setInterval(function timerFunc() {
             if (sessionSeconds > 0) {
-                nodeTimerTitle.innerHTML = "Session"; // rework
+                if (sessionSeconds < 2) breakSeconds = inputBreakLength.value * 60;
+                nodeTimerTitle.innerHTML = "Session";
                 sessionSeconds--;
                 var newSessionTime = sessionSeconds / 60;
                 displayTime(newSessionTime);
 
                 console.log(sessionSeconds);
             } else {
-                if (breakSeconds < 2) clearInterval(timer);
+                if (breakSeconds < 2) sessionSeconds = inputSessionLength.value * 60;
                 nodeTimerTitle.innerHTML = "Break";
                 breakSeconds--;
                 var newBreakTime = breakSeconds / 60;
