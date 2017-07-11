@@ -121,13 +121,23 @@ body {
   border-radius: 50%;
   border: 2px solid #f44336;
   color: #ffffff;
-  cursor: pointer;
   z-index: 5; }
 
 .pomodoro__timer-title {
-  margin-bottom: 60px;
+  margin-bottom: 12px;
   font-weight: 300;
   font-size: 50px; }
+
+.pomodoro__timer-sessions-counter {
+  min-height: 46px;
+  margin-bottom: 12px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 46px; }
+  .pomodoro__timer-sessions-counter:before {
+    content: "\2191";
+    font-size: 35px;
+    padding-right: 2px; }
 
 .pomodoro__timer-value {
   font-weight: 300;

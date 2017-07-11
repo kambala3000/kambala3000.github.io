@@ -10,6 +10,7 @@ var inputs = document.getElementsByClassName("pomodoro__settings-input"),
     inputSessionLength = document.getElementById("session-length"),
     nodeTimerBlock = document.getElementById("timer-block"),
     nodeTimerTitle = document.getElementById("timer-title"),
+    nodeSessionsCounter = document.getElementById("timer-sessions-counter"),
     nodeTimerValue = document.getElementById("timer-value"),
     nodeTimerFill = document.getElementById("timer-fill"),
     btnStartTimer = document.getElementById("start-timer"),
@@ -19,7 +20,8 @@ var timer = null,
     sessionSeconds = "0",
     breakSeconds = "0",
     wasPause = false,
-    timerToggle = false;
+    timerToggle = false,
+    sessionsCounter = 0;
 
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].oninput = function () {
@@ -95,7 +97,11 @@ function timerCountDown() {
 
                 console.log(sessionSeconds);
             } else {
-                if (breakSeconds < 2) sessionSeconds = inputSessionLength.value * 60;
+                if (breakSeconds < 2) {
+                    sessionSeconds = inputSessionLength.value * 60;
+                    sessionsCounter++;
+                    nodeSessionsCounter.innerHTML = sessionsCounter;
+                }
                 nodeTimerTitle.innerHTML = "Break";
                 breakSeconds--;
                 var newBreakTime = breakSeconds / 60;
@@ -104,7 +110,7 @@ function timerCountDown() {
                 console.log(breakSeconds);
             }
             return timerFunc;
-        }(), 100);
+        }(), 1000);
     } else {
         wasPause = true;
         console.log("wasPause: " + wasPause);
@@ -116,6 +122,8 @@ function timerCountDown() {
 function resetTimer() {
     timerToggle = false;
     wasPause = false;
+    sessionsCounter = 0;
+    nodeSessionsCounter.innerHTML = "0";
     btnStartTimer.value = "start";
     btnStartTimer.innerHTML = "Start";
     nodeTimerTitle.innerHTML = "Session";

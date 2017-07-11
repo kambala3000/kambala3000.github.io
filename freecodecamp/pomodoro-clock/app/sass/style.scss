@@ -128,13 +128,24 @@ body {
         border-radius: 50%;
         border: 2px solid $red-500;
         color: $white;
-        cursor: pointer;
         z-index: 5;
     }
     &__timer-title {
-        margin-bottom: 60px;
+        margin-bottom: 12px;
         font-weight: 300;
         font-size: 50px;
+    }
+    &__timer-sessions-counter {
+        min-height: 46px;
+        margin-bottom: 12px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 46px;
+        &:before {
+            content: "\2191";
+            font-size: 35px;
+            padding-right: 2px;
+        }
     }
     &__timer-value {
         font-weight: 300;
