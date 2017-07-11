@@ -9,6 +9,7 @@ const inputs = document.getElementsByClassName("pomodoro__settings-input"),
     btnIncSession = document.getElementById("session-inc"),
     inputSessionLength = document.getElementById("session-length"),
     nodeTimerBlock = document.getElementById("timer-block"),
+    nodeTimerTitle = document.getElementById("timer-title"),
     nodeTimerValue = document.getElementById("timer-value"),
     nodeTimerFill = document.getElementById("timer-fill"),
     btnStartTimer = document.getElementById("start-timer"),
@@ -18,7 +19,7 @@ let timer = null,
     sessionSeconds = "0",
     breakSeconds = "0",
     wasPause = false,
-    timerToggle;
+    timerToggle = false;
 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].oninput = function() {
@@ -55,6 +56,12 @@ btnIncSession.addEventListener("click", function() {
     incValue(this, inputSessionLength);
 });
 
+inputSessionLength.addEventListener("input", function() {
+    if (!wasPause) {
+        displayTime(this.value);
+    }
+});
+
 btnStartTimer.addEventListener("click", startTimer);
 btnResetTimer.addEventListener("click", resetTimer);
 
@@ -73,23 +80,33 @@ function startTimer() {
 function timerCountDown() {
     console.log(`timerToggle: ${timerToggle}`);
     if (timerToggle) {
+        console.log(`wasPause: ${wasPause}`);
         if (!wasPause) {
             sessionSeconds = inputSessionLength.value * 60;
             breakSeconds = inputBreakLength.value * 60;
         }
-        console.log(`wasPause: ${wasPause}`);
         disabledToggle(true);
         timer = setInterval(
             (function timerFunc() {
-                if (sessionSeconds < 2) clearInterval(timer);
-                sessionSeconds--;
-                const newSessionTime = sessionSeconds / 60;
-                displayTime(newSessionTime);
+                if (sessionSeconds > 0) {
+                    nodeTimerTitle.innerHTML = "Session"; // rework
+                    sessionSeconds--;
+                    const newSessionTime = sessionSeconds / 60;
+                    displayTime(newSessionTime);
 
-                console.log(sessionSeconds);
+                    console.log(sessionSeconds);
+                } else {
+                    if (breakSeconds < 2) clearInterval(timer);
+                    nodeTimerTitle.innerHTML = "Break";
+                    breakSeconds--;
+                    const newBreakTime = breakSeconds / 60;
+                    displayTime(newBreakTime);
+
+                    console.log(breakSeconds);
+                }
                 return timerFunc;
             })(),
-            1000
+            100
         );
     } else {
         wasPause = true;
@@ -104,6 +121,7 @@ function resetTimer() {
     wasPause = false;
     btnStartTimer.value = "start";
     btnStartTimer.innerHTML = "Start";
+    nodeTimerTitle.innerHTML = "Session";
     disabledToggle(false);
     clearInterval(timer);
     displayTime(inputSessionLength.value);
