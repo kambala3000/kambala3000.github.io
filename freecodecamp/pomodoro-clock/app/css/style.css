@@ -121,6 +121,7 @@ body {
   border-radius: 50%;
   border: 2px solid #e53935;
   color: #ffffff;
+  transition: border-color 1s linear;
   z-index: 5; }
 
 .pomodoro__timer-title {
@@ -148,7 +149,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #e53935;
   z-index: -1; }
 
 .pomodoro__controls {

@@ -76,9 +76,7 @@ function startTimer() {
 }
 
 function timerCountDown() {
-    console.log(`timerToggle: ${timerToggle}`);
     if (timerToggle) {
-        console.log(`wasPause: ${wasPause}`);
         if (!wasPause) {
             sessionSeconds = inputSessionLength.value * 60;
         }
@@ -86,28 +84,35 @@ function timerCountDown() {
         timer = setInterval(
             (function timerFunc() {
                 if (sessionSeconds > 0) {
-                    if (sessionSeconds < 2) breakSeconds = inputBreakLength.value * 60;
+                    if (sessionSeconds < 2) {
+                        breakSeconds = inputBreakLength.value * 60;
+                        fillPerc = 0;
+                        nodeTimerFill.style.height = "0%";
+                    }
                     nodeTimerTitle.innerHTML = "Session";
                     sessionSeconds--;
                     const newSessionTime = sessionSeconds / 60;
                     displayTime(newSessionTime);
-
                     fillPerc = 100 - sessionSeconds * 100 / (inputSessionLength.value * 60);
                     nodeTimerFill.style.height = fillPerc + "%";
-
-                    console.log(sessionSeconds);
+                    nodeTimerFill.style.backgroundColor = "#E53935";
+                    nodeTimerBlock.style.borderColor = "#E53935";
                 } else {
                     if (breakSeconds < 2) {
                         sessionSeconds = inputSessionLength.value * 60;
                         sessionsCounter++;
                         nodeSessionsCounter.innerHTML = sessionsCounter;
+                        fillPerc = 0;
+                        nodeTimerFill.style.height = "0%";
                     }
                     nodeTimerTitle.innerHTML = "Break";
                     breakSeconds--;
                     const newBreakTime = breakSeconds / 60;
                     displayTime(newBreakTime);
-
-                    console.log(breakSeconds);
+                    fillPerc = 100 - breakSeconds * 100 / (inputBreakLength.value * 60);
+                    nodeTimerFill.style.height = fillPerc + "%";
+                    nodeTimerFill.style.backgroundColor = "#5E35B1";
+                    nodeTimerBlock.style.borderColor = "#5E35B1";
                 }
                 return timerFunc;
             })(),
@@ -115,7 +120,6 @@ function timerCountDown() {
         );
     } else {
         wasPause = true;
-        console.log(`wasPause: ${wasPause}`);
         disabledToggle(false);
         clearTimeout(timer);
     }
@@ -134,9 +138,6 @@ function resetTimer() {
     disabledToggle(false);
     clearInterval(timer);
     displayTime(inputSessionLength.value);
-    console.log(`timerToggle: ${timerToggle}`);
-    console.log(`wasPause: ${wasPause}`);
-    console.log("reseted");
 }
 
 function disabledToggle(state) {
@@ -146,7 +147,6 @@ function disabledToggle(state) {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].disabled = state;
     }
-    console.log(`state: ${state}`);
 }
 
 function displayTime(overallMinutes) {
