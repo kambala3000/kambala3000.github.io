@@ -27,6 +27,7 @@ var timer = null,
 for (var i = 0; i < inputs.length; i++) {
     inputs[i].oninput = function () {
         this.value = this.value.replace(/[^0-9]/g, "");
+        resetTimer();
     };
 }
 
@@ -132,6 +133,7 @@ function resetTimer() {
     nodeTimerTitle.innerHTML = "Session";
     fillPerc = 0;
     nodeTimerFill.style.height = "0%";
+    nodeTimerBlock.style.borderColor = "#E53935";
     disabledToggle(false);
     clearInterval(timer);
     displayTime(inputSessionLength.value);
