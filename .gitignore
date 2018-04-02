@@ -10,7 +10,6 @@
 /build
 
 # misc
-*.css
 /.vscode
 /.idea
 /temp/
